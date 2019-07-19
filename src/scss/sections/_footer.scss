@@ -1,0 +1,20 @@
+.footer{
+    margin: 40px 25px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_left{
+        p:last-child{
+            margin: 0;
+        }
+    }
+    &_right{
+        max-width: 368px;
+    }
+    a{
+        text-decoration: underline;
+        &:hover, &:focus{
+            text-decoration: none;
+        }
+    }
+}

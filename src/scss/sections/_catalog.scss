@@ -1,0 +1,120 @@
+.catalog{
+    margin: 0 25px;
+    &_tabs{
+        font-size: 18px;
+        font-family: "VTB Group Book";
+        display: flex;
+        list-style: none;
+        margin: 0;
+    }
+    &_tab{
+        width: 50%;
+        button{
+            border-radius: 9px 9px 0 0;
+            width: 100%;
+            text-align: center;
+            padding: 16px;
+            background-color: $primary-color;
+            color: $white;
+            transition: background-color 250ms;
+            &:hover, &:focus{
+                background-color: darken($primary-color, 5);
+            }
+        }
+        &.is_active button{
+            background-color: $white;
+            color: $black;
+        }
+    }
+    &_content{
+        background-color: $white;
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        border-radius: 0 0 9px 9px;
+        display: flex;
+    }
+    &_left{
+        max-width: 310px;
+        border-right: 1px solid $light-gray;
+    }
+    &_items{
+        flex: 1 1 auto;
+        &_filters{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid $light-gray;
+            &--bottom{
+                padding: 26px 0 40px;
+                border: 0;
+                margin: 0 35px;
+            }
+        }
+        &_filter{
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            select{
+                margin-left: 6px;
+                padding: 0 20px 0 0;
+                height: auto;
+                border: 0;
+                font-size: 14px;
+                font-family: "VTB Group Book";
+                text-decoration: underline;
+                background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%226%22%20viewBox%3D%220%200%209%206%22%3E%3Cpath%20transform%3D%22rotate%2845%204%202%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%22.31%22%20d%3D%22M5.373-2H7.19v6.3H7.15v.018H.85V2.5h4.523z%22%2F%3E%3C%2Fsvg%3E);
+                background-position: right -20px center;
+            }
+        }
+    }
+    &_item{
+        margin: 0 34px 0 20px;
+        padding: 28px 16px 20px 20px;
+        border-bottom: 1px solid $light-gray;
+        display: flex;
+        align-items: center;
+        &_img{
+            max-width: 120px;
+            flex: 0 0 auto;
+        }
+        &_info{
+            flex: 1 1 auto;
+            padding: 0 30px;
+        }
+        &_header{
+            font-family: 'VTB Group Demi';
+            font-size: 18px;
+            &:hover, &:focus{
+                text-decoration: underline;
+            }
+        }
+        &_params{
+            margin: 20px 0 0;
+            display: flex;
+            list-style: none;
+            font-family: "VTB Group Book";
+            font-size: 13px;
+            li + li{
+                margin-left: 20px;
+            }
+            span{
+                color: $dark-gray;
+            }
+        }
+        &_buy{
+            flex: 0 0 auto;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &_price{
+            font-family: 'VTB Group Demi';
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}

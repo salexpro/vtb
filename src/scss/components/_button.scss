@@ -1,0 +1,16 @@
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+.button{
+    &.icon{
+        display: flex;
+        align-items: center;
+        padding: 8px 23px;
+        margin: 42px auto 0;
+        svg{
+            margin-right: 14px;
+        }
+    }
+}

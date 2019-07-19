@@ -1,0 +1,77 @@
+.header{
+    background-color: $white;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'VTB Group Book';
+    border-bottom: 1px solid #e9eef6;
+    button{
+        color: #8f9399;
+    }
+    &_search{
+        width: 100%;
+        max-width: 360px;
+        position: relative;
+        input{
+            height: auto;
+            padding: 8px 20px;
+            padding-right: 50px;
+        }
+        &_button{
+            position: absolute;
+            right: 10px;
+            top: 0;
+            padding: 10px;
+        }
+    }
+    &_info{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        font-size: 16px;
+        li{
+            padding: 14px 20px;
+            + li{
+                border-left: 1px solid #e9eef6;
+            }
+        }
+    }
+    &_lang{
+        button{
+            display: flex;
+            align-items: center;
+            color: $primary-color;
+        }
+        svg{
+            margin-right: 10px;
+        }
+    }
+    &_user{
+        display: flex;
+        align-items: center;
+        button:not([class]){
+            display: flex;
+            align-items: center;
+            svg{
+                margin-right: 10px;
+            }
+        }
+    }
+    &_notify{
+        margin-left: 20px;
+        position: relative;
+    }
+    &_cart{
+        padding-right: 0;
+        button{
+            display: flex;
+            align-items: center;
+        }
+        &_icon{
+            position: relative;
+            margin-right: 15px;
+        }
+    }
+}

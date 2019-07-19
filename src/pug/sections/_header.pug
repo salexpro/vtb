@@ -1,0 +1,25 @@
+header.header
+    form.header_search
+        input(type="search" placeholder="Поиск" required)
+        button.header_search_button
+            +icon('search', [15, 18])
+    ul.header_info
+        li.header_lang
+            button
+                +icon('internet', [22, 22])
+                | RU
+        li.header_user
+            button
+                +icon('user', [20, 22])
+                | ООО "Погода в дом"
+            button.header_notify
+                +icon('notification', [20, 22])
+                span.badge
+                    | 5
+        li.header_cart
+            button
+                .header_cart_icon
+                    +icon('cart', [25, 22])
+                    span.badge
+                        | 2
+                | Корзина

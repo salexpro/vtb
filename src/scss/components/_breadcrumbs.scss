@@ -1,0 +1,11 @@
+.breadcrumbs{
+    font-family: "VTB Group Book";
+    li:not(:last-child)::after{
+        display: inline-block;
+        width: 4px;
+        height: 7px;
+        background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%227%22%20viewBox%3D%220%200%204%207%22%3E%3Cpath%20transform%3D%22rotate%28-45%202%203.5%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%220.31%22%20d%3D%22M2.461%201h1.273v4.2H3.6v.043H-.6V3.97h3.061z%22%2F%3E%3C%2Fsvg%3E);
+        background-size: contain;
+        background-position: center;
+    }
+}

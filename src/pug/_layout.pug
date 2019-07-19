@@ -1,0 +1,24 @@
+block const
+-
+    const title  = `${name ?  `${name} - ` : ''}ВТБ Безнес Коннект`;
+    const descr  = 'Description';
+    const domain = 'vtb.salex.pro'
+
+//- Components
+include components/_icons
+include components/_menu
+
+doctype html
+html(lang="ru")
+    include components/_head
+    body
+        main.off-canvas-content.wrap(data-off-canvas-content)
+            include sections/_leftMenu
+            .content
+                include sections/_header
+                block content
+                include sections/_footer
+            //- include components/_popup
+        //- include components/_offcanvas
+        block js
+            script(src="./js/app.min.js")

@@ -1,0 +1,8 @@
+mixin menu(data)
+    ul.menu&attributes(attributes)
+        each item in data
+            li(class=item.active ? 'active' : '')
+                a(href=item.link)
+                    .menu_icon
+                        +icon(...item.icon)
+                    =item.title
