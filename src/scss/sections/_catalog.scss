@@ -1,5 +1,5 @@
 .catalog{
-    margin: 0 25px;
+    margin: 25px 25px 0;
     &_tabs{
         font-size: 18px;
         font-family: "VTB Group Book";
@@ -9,19 +9,21 @@
     }
     &_tab{
         width: 50%;
-        button{
+        a{
+            display: block;
             border-radius: 9px 9px 0 0;
             width: 100%;
             text-align: center;
-            padding: 16px;
+            padding: 14px;
             background-color: $primary-color;
             color: $white;
             transition: background-color 250ms;
+            outline: none;
             &:hover, &:focus{
                 background-color: darken($primary-color, 5);
             }
         }
-        &.is_active button{
+        &.is_active a{
             background-color: $white;
             color: $black;
         }
@@ -30,13 +32,18 @@
         background-color: $white;
         box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
         border-radius: 0 0 9px 9px;
-        display: flex;
+        display: none;
+        &.is_active{
+            display: flex;
+        }
     }
     &_left{
-        max-width: 310px;
+        // max-width: 310px;
+        flex: 0 0 310px;
         border-right: 1px solid $light-gray;
     }
     &_items{
+        position: relative;
         flex: 1 1 auto;
         &_filters{
             display: flex;
@@ -45,6 +52,7 @@
             margin: 0 20px;
             padding: 15px 0;
             border-bottom: 1px solid $light-gray;
+            font-family: "VTB Group Book";
             &--bottom{
                 padding: 26px 0 40px;
                 border: 0;
@@ -55,13 +63,13 @@
             display: flex;
             align-items: center;
             white-space: nowrap;
+            color: #8f9399;
             select{
                 margin-left: 6px;
                 padding: 0 20px 0 0;
                 height: auto;
                 border: 0;
                 font-size: 14px;
-                font-family: "VTB Group Book";
                 text-decoration: underline;
                 background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%226%22%20viewBox%3D%220%200%209%206%22%3E%3Cpath%20transform%3D%22rotate%2845%204%202%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%22.31%22%20d%3D%22M5.373-2H7.19v6.3H7.15v.018H.85V2.5h4.523z%22%2F%3E%3C%2Fsvg%3E);
                 background-position: right -20px center;
@@ -74,9 +82,48 @@
         border-bottom: 1px solid $light-gray;
         display: flex;
         align-items: center;
+        &--suppliers{
+            padding: 25px 24px 24px 10px;
+            align-items: stretch;
+            .catalog_item{
+                &_img{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid $secondary-color;
+                    margin-bottom: 12px;
+                }
+                &_header{
+                    font-size: 16px;
+                }
+                &_info{
+                    padding: 5px 40px 0;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        &_left{
+            flex: 0 0 auto;
+        }
+        &_right{
+            align-self: center;
+        }
         &_img{
             max-width: 120px;
             flex: 0 0 auto;
+        }
+        &_country{
+            font-family: "VTB Group Book";
+            font-size: 11px;
+            span{
+                font-size: 12px;
+                margin-right: 5px;
+            }
         }
         &_info{
             flex: 1 1 auto;
@@ -89,6 +136,47 @@
                 text-decoration: underline;
             }
         }
+        &_approved{
+            display: inline-block;
+            margin-left: 10px;
+            color: $primary-color;
+        }
+        &_rating{
+            display: flex;
+            font-family: "VTB Group Book";
+            font-size: 12px;
+            align-items: center;
+            margin-top: 4px;
+            &-stars{
+                display: flex;
+                margin-right: 5px;
+                svg + svg{
+                    margin-left: 2px;
+                }
+            }
+        }
+        &_descr{
+            font-size: 13px;
+            color: $dark-gray;
+            font-family: "VTB Group Book";
+            margin-top: 11px;
+        }
+        &_cats{
+            display: flex;
+            font-family: "VTB Group Book";
+            font-size: 13px;
+            list-style: none;
+            margin: auto 0 0;
+            li + li{
+                margin-left: 10px;
+            }
+            a{
+                color: #1f3d82;
+                &:hover, &:focus{
+                    text-decoration: underline;
+                }
+            }
+        }
         &_params{
             margin: 20px 0 0;
             display: flex;
@@ -99,7 +187,7 @@
                 margin-left: 20px;
             }
             span{
-                color: $dark-gray;
+                color: $medium-gray;
             }
         }
         &_buy{
@@ -115,6 +203,133 @@
             font-size: 22px;
             text-align: center;
             margin-bottom: 10px;
+        }
+        &_link{
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #1f3d82;
+            font-size: 13px;
+            font-family: "VTB Group Book";
+            & + &{
+                margin-top: 15px;
+            }
+            &-icon{
+                width: 21px;
+                margin-right: 7px;
+                display: flex;
+                justify-content: center;
+                color: rgba($body-font-color, 0.6);
+                transition: color 250ms;
+            }
+            &:hover, &:focus{
+                .catalog_item_link-icon{
+                    color: $body-font-color;
+                }
+            }
+        }
+    }
+
+    &_menu{
+        position: absolute;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        padding: 5px 15px;
+        font-family: "VTB Group Book";
+        columns: 2;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: 300ms;
+        border-radius: 0 0 9px;
+        &.is-open{
+            visibility: visible;
+            z-index: 2;
+            opacity: 1;
+        }
+        &_item{
+            display: table;
+            padding: 20px 5px;
+            border-bottom: 1px solid $light-gray;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        &_header{
+            display: table;
+            font-family: "VTB Group Demi";
+            color: #1f3d82;
+            margin-bottom: 9px;
+        }
+        &_list{
+            list-style: none;
+            margin: 0;
+            li+li{
+                margin-top: 6px;
+            }
+            a{
+                &:hover, &:focus{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &_filters{
+        padding: 24px 30px 20px 20px;
+        &_header{
+            font-family: "VTB Group Demi";
+            font-size: 18px;
+            margin-bottom: 22px;
+        }
+        &_accordion{
+            list-style: none;
+            margin: 0;
+            font-family: "VTB Group Book";
+            > li{
+                &[aria-expanded="true"] .catalog_filters_accordion-item{
+                    &::after{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &-item{
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 9px;
+                &::after{
+                    content: '';
+                    width: 10px;
+                    height: 6px;
+                    margin-left: 6px;
+                    margin-top: 2px;
+                    vertical-align: middle;
+                    transform: rotate(0);
+                    transition: transform 250ms;
+                    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20transform%3D%22rotate%28180%205%203%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M5.48.723l.02.02.02-.02%204.758%204.622-.954.926L5.5%202.557%201.674%206.27.72%205.345z%22%2F%3E%3C%2Fsvg%3E);
+                }
+            }
+            &-content{
+                list-style: none;
+                margin: 0;
+                padding-bottom: 28px;
+                padding-left: 2px;
+                li + li{
+                    margin-top: 10px;
+                }
+            }
+        }
+        &_buttons{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            .button{
+                min-width: 120px;
+            }
         }
     }
 }

@@ -1,0 +1,25 @@
+mixin filters
+    .catalog_items_filters&attributes(attributes)
+        .catalog_items_filter
+            | Показывать по:
+            select
+                option 10
+                option 20
+                option 50
+        nav(aria-label='Страницы')
+            ul.pagination
+                li.pagination-previous.disabled
+                    +icon('arrow_left', [6, 11])
+                li.current
+                    span.show-for-sr Вы на странице
+                    |  1
+                li
+                    a(href='#', aria-label='Страница 2') 2
+                li
+                    a(href='#', aria-label='Страница 3') 3
+                li.ellipsis(aria-hidden='true')
+                li
+                    a(href='#', aria-label='Page 450') 450
+                li.pagination-next
+                    a(href='#', aria-label='Next page')
+                        +icon('arrow_right', [6, 11])

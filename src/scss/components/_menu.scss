@@ -1,44 +1,11 @@
 .menu{
-    &--left{
-        font-size: 13px;
-    }
-    &--items{
-        li.active a{
-            &::after{
-                opacity: 0.6;
-                background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2213%22%20viewBox%3D%220%200%209%2013%22%3E%3Cpath%20transform%3D%22rotate%2890%29%20translate%282%20-11%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M4.268%202.581l.232.232.232-.232%206.462%206.461-1.377%201.377L4.5%205.102-.817%2010.42l-1.377-1.377z%22%2F%3E%3C%2Fsvg%3E);
-            }
-        }
-        a{
-            &::before{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 10px;
-                width: calc(100% - 20px);
-                border-bottom: 1px solid $light-gray;
-            }
-            &::after{
-                content: '';
-                position: absolute;
-                right: 10px;
-                width: 9px;
-                height: 13px;
-                opacity: 0.3;
-                background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2213%22%20viewBox%3D%220%200%209%2013%22%3E%3Cpath%20transform%3D%22rotate%2890%29%20translate%282%20-11%29%22%20d%3D%22M4.268%202.581l.232.232.232-.232%206.462%206.461-1.377%201.377L4.5%205.102-.817%2010.42l-1.377-1.377z%22%2F%3E%3C%2Fsvg%3E);
-            }
-        }
-        .menu_icon{
-            width: 28px;
-        }
-    }
     &_icon{
         width: 25px;
         display: flex;
         justify-content: center;
         margin-right: 12px;
         opacity: 0.25;
-        transition: opacity 300ms;
+        transition: opacity 250ms;
     }
     li{
         &.active{
@@ -63,9 +30,52 @@
         align-items: center;
         transition: color 250ms, background-color 250ms;
         min-height: 42px;
-        &:hover{
+        line-height: 1.3;
+        &:hover, &.hover{
             background-color: $secondary-color;
             color: $primary-color;
+        }
+    }
+
+    &--left{
+        font-size: 13px;
+    }
+    &--items.menu{
+        li.active a{
+            &::after{
+                
+            }
+        }
+        a{
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                width: calc(100% - 20px);
+                border-bottom: 1px solid $light-gray;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                right: 10px;
+                width: 9px;
+                height: 13px;
+                opacity: 0.3;
+                background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2213%22%20viewBox%3D%220%200%209%2013%22%3E%3Cpath%20transform%3D%22rotate%2890%29%20translate%282%20-11%29%22%20d%3D%22M4.268%202.581l.232.232.232-.232%206.462%206.461-1.377%201.377L4.5%205.102-.817%2010.42l-1.377-1.377z%22%2F%3E%3C%2Fsvg%3E);
+            }
+            &.hover{
+                .menu_icon{
+                    opacity: 1;
+                }
+                &::after{
+                    opacity: 0.6;
+                    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2213%22%20viewBox%3D%220%200%209%2013%22%3E%3Cpath%20transform%3D%22rotate%2890%29%20translate%282%20-11%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M4.268%202.581l.232.232.232-.232%206.462%206.461-1.377%201.377L4.5%205.102-.817%2010.42l-1.377-1.377z%22%2F%3E%3C%2Fsvg%3E);
+                }
+            }
+        }
+        .menu_icon{
+            width: 28px;
         }
     }
 }
