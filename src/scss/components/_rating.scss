@@ -1,0 +1,30 @@
+.rating{
+    display: flex;
+    font-family: "VTB Group Book";
+    font-size: 12px;
+    align-items: center;
+    margin-top: 4px;
+    &--large{
+        font-size: 18px;
+        margin: 0;
+        .rating_stars{
+            margin-right: 10px;
+            svg{
+                width: 17px;
+                height: 16px;
+                + svg{
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+    &_stars{
+        display: flex;
+        margin-right: 5px;
+        svg + svg{
+            margin-left: 2px;
+        }
+    }
+    &_num{
+    }
+}

@@ -3221,6 +3221,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/components/_rating.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_rating.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/index.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3228,6 +3238,16 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/index.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/pages/item.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/item.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3258,6 +3278,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_header.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_item.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_item.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3427,6 +3457,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/components/_rating.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_rating.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_catalog.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -3466,6 +3509,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/sections/_item.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_item.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_leftMenu.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -3490,7 +3546,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 585248821.77479005
+	"lastBuiltDate": 585561332.76912498
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

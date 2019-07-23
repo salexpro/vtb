@@ -1,0 +1,191 @@
+.item{
+    box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+    border-radius: 9px;
+    background-color: $white;
+    overflow: hidden;
+    &_title{
+        background-color: $secondary-color;
+        padding: 18px 30px;
+    }
+    &_content{
+        padding: 35px 20px 55px;
+        &_top{
+            padding: 0 10px 45px;
+            display: flex;
+            border-bottom: 1px solid $light-gray;
+        }
+    }
+    &_images{
+        &_main{
+            border-radius: 4px;
+            border: 1px solid $light-gray;
+            min-width: 310px;
+            min-height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 17px;
+        }
+        &_carousel{
+            display: flex;
+            position: relative;
+            &-controls{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 8px;
+                color: $primary-color;
+                &.disabled{
+                    color: #8f9399;
+                }
+                &--prev{
+                    right: 100%;
+                }
+                &--next{
+                    left: 100%;
+                }
+            }
+        }
+        &_small{
+            min-width: 93px;
+            min-height: 66px;
+            border-radius: 4px;
+            border: 1px solid $light-gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & + & {
+                margin-left: 15px;
+            }
+        }
+    }
+    &_info{
+        flex: 1 1 auto;
+        padding: 30px 28px 0 50px;
+        &_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        &_art{
+            font-family: "VTB Group Book";
+            font-size: 13px;
+            color: $dark-gray;
+        }
+    }
+    &_list{
+        font-size: 13px;
+        list-style: none;
+        margin: 0;
+        font-family: "VTB Group Book";
+        line-height: 1.54;
+        span{
+            color: $medium-gray;
+            margin-right: 5px;
+        }
+    }
+    &_buy{
+        &_cart{
+            width: 220px;
+            height: 146px;
+            border-radius: 4px;
+            border: 1px solid $light-gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        &_price{
+            font-family: "VTB Group Demi";
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+        &_seller{
+            padding: 15px 20px;
+            border-radius: 4px;
+            border: 1px solid $light-gray;
+            max-width: 220px;
+            &-img{
+                margin-bottom: 17px;
+            }
+            &-name{
+                font-family: 'VTB Group Book';
+                b{
+                    color: $medium-gray;
+                    font-family: 'VTB Group';
+                    display: block;
+                }
+            }
+            &-link{
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                color: #1f3d82;
+                font-size: 13px;
+                font-family: "VTB Group Book";
+                svg{
+                    color: rgba($body-font-color, 0.6);
+                    transition: color 250ms;
+                    margin-right: 7px;
+                }
+                &:hover, &:focus{
+                    svg{
+                        color: $body-font-color;
+                    }
+                }
+            }
+        }
+    }
+    &_details{
+        padding: 40px 30px 0;
+        font-family: 'VTB Group Book';
+        position: relative;
+        &.folded{
+            padding-bottom: 55px;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 204px;
+                background-image: linear-gradient(180deg, rgba($white, 0) 0%, rgba($white, 0.93) 43%, $white 100%);
+            }
+        }
+        &_text{
+            color: $dark-gray;
+            margin-bottom: 50px;
+        }
+        &_specs{
+            display: flex;
+            .cell{
+                flex: 1 1 50%;
+            }
+        }
+        &_block{
+            & + &{
+                margin-top: 20px;
+            }
+            h3{
+                color: #1f3d82;
+            }
+            ul{
+                line-height: 1.3;
+                font-size: 14px;
+            }
+        }
+        &_button{
+            position: absolute;
+            z-index: 2;
+            font-size: 20px;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            padding: 20px;
+            color: $primary-color;
+            font-family: 'VTB Group Book';
+        }
+    }
+}

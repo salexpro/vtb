@@ -191,7 +191,7 @@ section.catalog
                             .catalog_item_img
                                 img(src=item.img, alt=item.title)
                             .catalog_item_info
-                                a.catalog_item_header(href="#")
+                                a.catalog_item_header(href="/item.html")
                                     =item.title
                                 ul.catalog_item_params
                                     li
@@ -346,12 +346,7 @@ section.catalog
                                     if item.approved
                                         span.catalog_item_approved
                                             +icon('check', [14, 11])
-                                .catalog_item_rating
-                                    .catalog_item_rating-stars
-                                        each _, i in Array(5)
-                                            +icon((i+1 <= item.rating) ? 'star_filled' : 'star_empty', [11, 10])
-                                    span.catalog_item_rating-num
-                                        =item.rating
+                                +rating(item.rating)
                                 if item.descr
                                     p.catalog_item_descr
                                         =item.descr

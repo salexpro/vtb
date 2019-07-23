@@ -141,20 +141,6 @@
             margin-left: 10px;
             color: $primary-color;
         }
-        &_rating{
-            display: flex;
-            font-family: "VTB Group Book";
-            font-size: 12px;
-            align-items: center;
-            margin-top: 4px;
-            &-stars{
-                display: flex;
-                margin-right: 5px;
-                svg + svg{
-                    margin-left: 2px;
-                }
-            }
-        }
         &_descr{
             font-size: 13px;
             color: $dark-gray;

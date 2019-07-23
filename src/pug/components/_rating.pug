@@ -1,0 +1,7 @@
+mixin rating(num)
+    .rating&attributes(attributes)
+        .rating_stars
+            each _, i in Array(5)
+                +icon((i+1 <= num) ? 'star_filled' : 'star_empty', [11, 10])
+        span.rating_num
+            =num

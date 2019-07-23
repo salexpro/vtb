@@ -63,6 +63,7 @@
 @import 'components/breadcrumbs';
 @import 'components/pagination';
 @import 'components/checkbox';
+@import 'components/rating';
 // @import 'components/offcanvas';
 
 $flag-icon-css-path: '../assets/img/flags';
@@ -72,4 +73,5 @@ $flag-icon-css-path: '../assets/img/flags';
 @import 'sections/header';
 @import 'sections/leftMenu';
 @import 'sections/catalog';
+@import 'sections/item';
 @import 'sections/footer';

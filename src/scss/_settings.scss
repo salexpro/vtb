@@ -129,13 +129,13 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: "VTB Group Demi";
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-margin-bottom: 0;
 $header-styles: (
   small: (
     'h1': ('fs': 24),
@@ -146,9 +146,9 @@ $header-styles: (
     'h6': ('fs': 16),
   ),
   medium: (
-    'h1': ('fs': 48),
-    'h2': ('fs': 40),
-    'h3': ('fs': 31),
+    'h1': ('fs': 18),
+    'h2': ('fs': 23, 'mb': 20),
+    'h3': ('fs': 14, 'mb': 20),
     'h4': ('fs': 25),
     'h5': ('fs': 20),
     'h6': ('fs': 16),
