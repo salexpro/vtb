@@ -1,0 +1,245 @@
+.supplier{
+    box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+    border-radius: 9px;
+    background-color: $white;
+    overflow: hidden;
+    &_title{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_content{
+        padding: 20px 20px 60px;
+    }
+    &_info{
+        padding: 0 0 40px 20px;
+        border-bottom: 1px solid $light-gray;
+        display: flex;
+        &_left{
+            flex: 0 0 auto;
+            text-align: center;
+            padding-top: 40px;
+        }
+        &_img{
+            margin-bottom: 14px;
+        }
+        &_content{
+            padding: 40px 22px 0;
+            max-width: 586px;
+            margin-right: auto;
+        }
+        &_descr{
+            color: $dark-gray;
+            font-family: $book-font-family;
+            margin: 10px 0 22px;
+        }
+        &_links{
+            display: flex;
+            .catalog_item_link{
+                + .catalog_item_link{
+                    margin: 0 0 0 40px;
+                }
+            }
+        }
+        &_contact{
+            border-radius: 4px;
+            border: 1px solid $light-gray;
+            padding: 30px 58px 20px 25px;
+            h3{
+                font-family: $book-font-family;
+                font-weight: 600;
+                font-size: 16px;
+                color: #1f3d82;
+                margin-bottom: 10px;
+            }
+            table{
+                border-spacing: 0;
+                font-family: $book-font-family;
+                td{
+                    padding: 10px 0;
+                    &:first-child{
+                        color: $medium-gray;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+    &_details{
+        padding: 30px 20px 50px;
+        border-bottom: 1px solid $light-gray;
+        &_text{
+            font-family: $book-font-family;
+            color: $dark-gray;
+            margin: 0;
+            max-width: 730px;
+        }
+    }
+    &_cols{
+        display: flex;
+        padding-top: 32px;
+        &_left{
+            flex: 1 1 auto;
+            margin-right: 20px;
+        }
+        &_right{
+            flex: 0 0 300px;
+        }
+    }
+    &_logistics{
+        padding: 10px 30px 35px;
+        border-bottom: 1px solid $light-gray;
+        &_list{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 16px;
+            font-family: $book-font-family;
+            margin: 0 0 35px;
+            li{
+                flex: 1 1 50%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 35px;
+                &:nth-child(odd){
+                    padding-right: 20px;
+                }
+            }
+        }
+        &_icon{
+            flex: 0 0 24px;
+            width: 24px;
+            height: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.25;
+            margin-right: 10px;
+        }
+        &_header{
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+        &_companies{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            list-style: none;
+            li + li{
+                margin-left: 30px;
+            }
+        }
+    }
+    &_brands{
+        padding: 35px 30px 90px;
+        border-bottom: 1px solid $light-gray;
+        position: relative;
+        &_lists{
+            margin-top: 30px;
+            font-family: $book-font-family;
+            columns: 5;
+        }
+        &_list{
+            margin: 0;
+            list-style: none;
+            font-size: 13px;
+            margin: 0 0 20px;
+            line-height: 1.38;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            li:first-child{
+                &:first-letter{
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+            }
+        }
+        &_button{
+            position: absolute;
+            z-index: 2;
+            font-size: 20px;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            padding: 20px;
+            color: $primary-color;
+            font-family: $book-font-family;
+        }
+    }
+    &_cats{
+        padding: 38px 30px 0;
+        &_list{
+            margin: 40px 0 0;
+            list-style: none;
+            font-family: $book-font-family;
+            font-size: 13px;
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                display: block;
+                border-radius: 4px;
+                border: 1px solid $medium-gray;
+                padding: 10px 15px;
+                color: #1f3d82;
+                margin: 0 10px 10px 0;
+            }
+        }
+    }
+    &_item{
+        border-radius: 4px;
+        border: 1px solid $light-gray;
+        padding: 20px 14px 20px 20px;
+        display: flex;
+        & + & {
+            margin-top: 20px;
+        }
+        &_left{
+            flex: 0 0 120px;
+            text-align: center;
+            margin-right: 12px;
+        }
+        &_img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            min-height: 85px;
+        }
+        &_price{
+            font-family: 'VTB Group Demi';
+            font-size: 18px;
+        }
+        &_right{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &_title{
+            font-family: $book-font-family;
+            &:hover, &:focus{
+                text-decoration: underline;
+            }
+        }
+        &_cart{
+            display: flex;
+            align-items: center;
+            color: $primary-color;
+            font-family: $book-font-family;
+            font-size: 13px;
+            margin-top: auto;
+            height: 23px;
+            svg{
+                color: $black;
+                opacity: 0.41;
+                margin-right: 7px;
+                transition: 250ms;
+            }
+            &:hover{
+                svg{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .pagination{
-    font-family: "VTB Group Book";
+    font-family: $book-font-family;
     &-next, &-previous{
         vertical-align: top;
         a{

@@ -83,6 +83,7 @@ $white: #fff;
 $body-background: $white;
 $body-font-color: #2f3442;
 $body-font-family: 'VTB Group', Helvetica, Roboto, Arial, sans-serif;
+$book-font-family: 'VTB Group Book', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -129,7 +130,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "VTB Group Demi";
+$header-font-family: 'VTB Group Demi', Helvetica, Roboto, Arial, sans-serif;;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -277,7 +278,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: 'VTB Group Book';
+$button-font-family: $book-font-family;
 $button-padding: 11px 19px;
 $button-margin: 0;
 $button-fill: solid;

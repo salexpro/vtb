@@ -1,5 +1,5 @@
 .breadcrumbs{
-    font-family: "VTB Group Book";
+    font-family: $book-font-family;
     li:not(:last-child)::after{
         display: inline-block;
         width: 4px;

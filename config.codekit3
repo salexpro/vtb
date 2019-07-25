@@ -15,16 +15,8 @@
 		"uuidString": "6DF9D747-8413-4879-B214-3F05CAB77409"
 		}
 	],
-"creatorBuild": "29156",
+"creatorBuild": "31486",
 "files": {
-	"/.babelrc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/.babelrc",
-		"oF": 1
-		},
 	"/.browserslistrc": {
 		"cB": 0,
 		"ft": 8192,
@@ -48,6 +40,23 @@
 		"oA": 1,
 		"oAP": "/build/.gitignore",
 		"oF": 1
+		},
+	"/babel.config.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/babel.config.min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
 		},
 	"/build.zip": {
 		"cB": 0,
@@ -249,6 +258,116 @@
 		"oA": 2,
 		"oAP": "/build/assets/fonts/VTB/VTBGroup-Light.woff2",
 		"oF": 0
+		},
+	"/src/assets/img/companies/delko.png": {
+		"ft": 32768,
+		"iS": 3346,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/delko.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/delko@2x.png": {
+		"ft": 32768,
+		"iS": 7267,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/delko@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/delovie_linii.png": {
+		"ft": 32768,
+		"iS": 4207,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/delovie_linii.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/delovie_linii@2x.png": {
+		"ft": 32768,
+		"iS": 10725,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/delovie_linii@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/gazelkin.png": {
+		"ft": 32768,
+		"iS": 2975,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/gazelkin.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/gazelkin@2x.png": {
+		"ft": 32768,
+		"iS": 7448,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/gazelkin@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/gruzovichkof.png": {
+		"ft": 32768,
+		"iS": 6123,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/gruzovichkof.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/gruzovichkof@2x.png": {
+		"ft": 32768,
+		"iS": 21259,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/gruzovichkof@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/vodovoz.png": {
+		"ft": 32768,
+		"iS": 3499,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/vodovoz.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/companies/vodovoz@2x.png": {
+		"ft": 32768,
+		"iS": 12030,
+		"oA": 0,
+		"oAP": "/build/assets/img/companies/vodovoz@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"/src/assets/img/flags/4x3/ad.svg": {
 		"ft": 2097152,
@@ -3050,6 +3169,16 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/shop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/shop.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/startup.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3065,6 +3194,26 @@
 		"miP": 0,
 		"oA": 0,
 		"oAP": "/build/assets/img/icons/triangle.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/truck.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/truck.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/warehouse.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/warehouse.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 1103269715967,
@@ -3090,6 +3239,28 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/related.jpg": {
+		"ft": 16384,
+		"iS": 5895,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/related.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/src/assets/img/related@2x.jpg": {
+		"ft": 16384,
+		"iS": 18034,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/related@2x.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/src/CNAME": {
 		"cB": 0,
 		"ft": 8192,
@@ -3106,7 +3277,7 @@
 		"oA": 0,
 		"oAP": "/build/js/app.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 1
 		},
 	"/src/js/lib/fastnav.js": {
@@ -3251,6 +3422,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/supplier.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/supplier.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/sections/_catalog.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3298,6 +3479,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_leftMenu.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_supplier.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_supplier.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3534,6 +3725,19 @@
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
+		},
+	"/src/scss/sections/_supplier.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_supplier.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		}
 	},
 "hooks": [
@@ -3546,10 +3750,11 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 585561332.76912498
+	"lastBuiltDate": 585784468.65985
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
@@ -3561,6 +3766,7 @@
 	"babelConfigType": 2,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
+	"babelExcludeString": "'node_modules/**', 'bower_components/**', /\\/core-js\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
@@ -3780,14 +3986,13 @@
 			}
 		},
 	"babelRetainLines": 0,
+	"babelUseBuiltInsType": 0,
 	"bowerAbbreviatedPath": "bower_components",
-	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
-	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 1,
+	"bowerForceLatestOnConflict": 1,
+	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead, IE >= 9",
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 1,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -3930,7 +4135,7 @@
 			}
 		},
 	"esLintConfigFileHandlingType": 2,
-	"esLintECMAVersion": 7,
+	"esLintECMAVersion": 5,
 	"esLintEnvironmentsMask": 8193,
 	"esLintRules": {
 		"accessor-pairs": {
@@ -4789,6 +4994,10 @@
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
+		"prefer-named-capture-group": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
@@ -5542,6 +5751,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"npmAbbreviatedPath": "",
+	"npmCreatePackageLock": 1,
+	"npmInstallOptionalDependencies": 0,
+	"npmSaveExactVersion": 0,
+	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, docs, node_modules, build.zip",

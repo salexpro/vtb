@@ -13,4 +13,4 @@ const pageWidget = pages => {
     });
 }
 
-pageWidget(['index', 'item']);
+pageWidget(['index', 'item', 'supplier']);

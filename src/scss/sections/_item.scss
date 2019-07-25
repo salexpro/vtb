@@ -69,7 +69,7 @@
             margin-bottom: 16px;
         }
         &_art{
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             font-size: 13px;
             color: $dark-gray;
         }
@@ -78,7 +78,7 @@
         font-size: 13px;
         list-style: none;
         margin: 0;
-        font-family: "VTB Group Book";
+        font-family: $book-font-family;
         line-height: 1.54;
         span{
             color: $medium-gray;
@@ -111,7 +111,7 @@
                 margin-bottom: 17px;
             }
             &-name{
-                font-family: 'VTB Group Book';
+                font-family: $book-font-family;
                 b{
                     color: $medium-gray;
                     font-family: 'VTB Group';
@@ -124,7 +124,7 @@
                 white-space: nowrap;
                 color: #1f3d82;
                 font-size: 13px;
-                font-family: "VTB Group Book";
+                font-family: $book-font-family;
                 svg{
                     color: rgba($body-font-color, 0.6);
                     transition: color 250ms;
@@ -140,7 +140,7 @@
     }
     &_details{
         padding: 40px 30px 0;
-        font-family: 'VTB Group Book';
+        font-family: $book-font-family;
         position: relative;
         &.folded{
             padding-bottom: 55px;
@@ -185,7 +185,7 @@
             transform: translateX(-50%);
             padding: 20px;
             color: $primary-color;
-            font-family: 'VTB Group Book';
+            font-family: $book-font-family;
         }
     }
 }

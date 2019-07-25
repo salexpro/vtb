@@ -2,7 +2,7 @@
     margin: 25px 25px 0;
     &_tabs{
         font-size: 18px;
-        font-family: "VTB Group Book";
+        font-family: $book-font-family;
         display: flex;
         list-style: none;
         margin: 0;
@@ -52,7 +52,7 @@
             margin: 0 20px;
             padding: 15px 0;
             border-bottom: 1px solid $light-gray;
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             &--bottom{
                 padding: 26px 0 40px;
                 border: 0;
@@ -118,7 +118,7 @@
             flex: 0 0 auto;
         }
         &_country{
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             font-size: 11px;
             span{
                 font-size: 12px;
@@ -144,12 +144,12 @@
         &_descr{
             font-size: 13px;
             color: $dark-gray;
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             margin-top: 11px;
         }
         &_cats{
             display: flex;
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             font-size: 13px;
             list-style: none;
             margin: auto 0 0;
@@ -167,7 +167,7 @@
             margin: 20px 0 0;
             display: flex;
             list-style: none;
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             font-size: 13px;
             li + li{
                 margin-left: 20px;
@@ -196,7 +196,7 @@
             white-space: nowrap;
             color: #1f3d82;
             font-size: 13px;
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             & + &{
                 margin-top: 15px;
             }
@@ -205,7 +205,7 @@
                 margin-right: 7px;
                 display: flex;
                 justify-content: center;
-                color: rgba($body-font-color, 0.6);
+                color: rgba($body-font-color, 0.4);
                 transition: color 250ms;
             }
             &:hover, &:focus{
@@ -224,7 +224,7 @@
         height: 100%;
         background: $white;
         padding: 5px 15px;
-        font-family: "VTB Group Book";
+        font-family: $book-font-family;
         columns: 2;
         opacity: 0;
         z-index: -1;
@@ -274,7 +274,7 @@
         &_accordion{
             list-style: none;
             margin: 0;
-            font-family: "VTB Group Book";
+            font-family: $book-font-family;
             > li{
                 &[aria-expanded="true"] .catalog_filters_accordion-item{
                     &::after{
