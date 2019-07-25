@@ -1,0 +1,86 @@
+.auction
+    .auction_left
+        section.auction_item
+            h1.auction_item_title
+                span Xiaomi
+                b.auction_item_status
+                    | Опубликовано
+            .auction_item_content
+                ul.auction_item_list
+                    li
+                        span Категория товара: 
+                        | 95.22.10.110 - Сотовые телефоны
+                    li
+                        span Спецификация/требования к предмету закупки: 
+                        a(href="#" target="_blank") Спецификация.pdf
+                        .auction_item_list-icon
+                            +icon('file', [15, 17])
+                    li
+                        span Форма сбора коммерческих предложений: 
+                        a(href="#" target="_blank") КП.pdf
+                        .auction_item_list-icon
+                            +icon('file', [15, 17])
+                    li
+                        span Условия поставки: 
+                        | Доставка нашей компанией
+                    li
+                        span Оплата товара: 
+                        | 100% после заключения договора
+                    li
+                        span Начальная цена: 
+                        b 14 500 ₽
+                hr
+                ul.auction_item_list
+                    li
+                        span Организатор: 
+                        | ИП Оганнисян Амаяк Артурович
+                    li
+                        span Дата начала: 
+                        | 09.04.2019
+                    li
+                        span Дата окончания: 
+                        | 09.07.2019
+        section.auction_discuss
+            h2.h1.auction_discuss_header
+                | Обсуждение
+            form.auction_discuss_form
+                input(type="text" name="message" placeholder="Ваш комментарий")
+                button.button.hollow
+                    | Отправить
+            .auction_discuss_comments
+                .auction_discuss_comment
+                    .auction_discuss_comment_top
+                        b.auction_discuss_comment-name
+                            | Алексей
+                        time.auction_discuss_comment-date(datetime="2019-04-10")
+                            | 10.04.2019
+                    p.auction_discuss_comment-message
+                        | Рассматриваем вариант ежемесечной поставки
+
+    section.auction_offers
+        h2.h1.auction_offers_header
+            | Предложения
+        form.auction_offers_form
+            input(type="text" name="bet" placeholder="Ваша ставка")
+            .auction_offers_form-row
+                input(type="text" name="offer" placeholder="Предложение")
+                button.button
+                    | Принять участие
+        .auction_offers_items
+            each _ in Array(2)
+                each s in ['14 500', '29 000']
+                    .auction_offers_item
+                        b.auction_offers_item-bet
+                            =s
+                            | 
+                            | ₽
+                        p.auction_offers_item-offer
+                            | Подтверждаем соответствие к требованиям
+            each _ in Array(5)                
+                .auction_offers_item
+                    b.auction_offers_item-bet
+                        | 14 500 ₽
+                    p.auction_offers_item-offer
+                        | Подтверждаем соответствие к требованиям
+
+        

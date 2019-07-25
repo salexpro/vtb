@@ -1,0 +1,135 @@
+.auction{
+    margin: 30px 25px 0;
+    display: flex;
+    justify-content: space-between;
+    &_left{
+        flex: 0 1 calc(50% - 10px);
+    }
+    &_item{
+        border-radius: 9px;
+        overflow: hidden;
+        background-color: $white;
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        margin-bottom: 20px;
+        &_title{
+            background-color: $secondary-color;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &_status{
+            color: #1f3d82;
+            font-size: 13px;
+        }
+        &_content{
+            padding: 20px 20px 40px;
+        }
+        &_list{
+            list-style: none;
+            margin: 0;
+            font-family: $book-font-family;
+            li+li{
+                margin-top: 15px;
+            }
+            span{
+                color: $medium-gray;
+            }
+            a{
+                color: $primary-color;
+                &:hover, &:focus{
+                    text-decoration: underline;
+                }
+            }
+            &-icon{
+                opacity: 0.6;
+                float: right;
+            }
+        }
+    }
+    &_discuss{
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        border-radius: 9px;
+        background-color: $white;
+        padding: 18px 20px 20px;
+        &_header{
+            margin-bottom: 20px;
+        }
+        &_form{
+            display: flex;
+            margin-bottom: 35px;
+            [type="text"]{
+                padding: 11px 15px;
+                height: auto;
+                margin-right: 30px;
+            }
+            .button{
+                padding: 14px 33px;
+            }
+        }
+        &_comment{
+            border-bottom: 1px solid $light-gray;
+            margin-bottom: 16px;
+            &_top{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 5px;
+            }
+            &-name{
+                color: #1f3d82;
+                font-family: $header-font-family;
+            }
+            &-date{
+                font-family: $book-font-family;
+                color: $medium-gray;
+            }
+            &-message{
+                font-family: $book-font-family;
+            }
+        }
+    }
+    &_offers{
+        flex: 0 1 calc(50% - 10px);
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        border-radius: 9px;
+        background-color: $white;
+        padding: 18px 20px 5px;
+        &_header{
+            margin-bottom: 20px;
+        }
+        &_form{
+            margin-bottom: 10px;
+            [type="text"]{
+                max-width: calc(100% - 170px);
+                height: auto;
+                padding: 9px 15px;
+            }
+            &-row{
+                display: flex;
+                margin-top: 10px;
+            }
+            .button{
+                margin-left: 30px;
+                padding: 12px 13px;
+            }
+        }
+        &_item{
+            min-height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & + & {
+                border-top: 1px solid $light-gray;
+            }
+            &-bet{
+                font-family: $header-font-family;
+                color: #1f3d82;
+            }
+            &-offer{
+                margin: 0;
+                font-family: $book-font-family;
+            }
+        }
+    }
+}

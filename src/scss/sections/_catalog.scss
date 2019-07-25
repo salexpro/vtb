@@ -130,7 +130,7 @@
             padding: 0 30px;
         }
         &_header{
-            font-family: 'VTB Group Demi';
+            font-family: $header-font-family;
             font-size: 18px;
             &:hover, &:focus{
                 text-decoration: underline;
@@ -185,7 +185,7 @@
             justify-content: space-between;
         }
         &_price{
-            font-family: 'VTB Group Demi';
+            font-family: $header-font-family;
             font-size: 22px;
             text-align: center;
             margin-bottom: 10px;

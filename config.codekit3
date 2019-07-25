@@ -3277,7 +3277,7 @@
 		"oA": 0,
 		"oAP": "/build/js/app.min.js",
 		"oF": 0,
-		"sC": 0,
+		"sC": 3,
 		"tS": 1
 		},
 	"/src/js/lib/fastnav.js": {
@@ -3402,6 +3402,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/auction.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/auction.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/index.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3429,6 +3439,16 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/supplier.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_auction.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_auction.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3661,6 +3681,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/sections/_auction.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_auction.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_catalog.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -3750,7 +3783,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 585784468.65985
+	"lastBuiltDate": 585790224.17003405
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
