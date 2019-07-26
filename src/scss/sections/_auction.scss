@@ -2,6 +2,19 @@
     margin: 30px 25px 0;
     display: flex;
     justify-content: space-between;
+    &--create{
+        flex-wrap: wrap;
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        border-radius: 9px;
+        background-color: $white;
+        padding: 30px 66px 35px 30px;
+        select{
+            // background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213%22%20height%3D%2210%22%20viewBox%3D%220%200%2013%2010%22%3E%3Cpath%20transform%3D%22rotate%28180%206.5%205%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M6.73.62l1.376%201.376-.23.23%205.779%205.778-1.377%201.376L6.5%203.602.722%209.38-.655%208.004l5.778-5.779-.229-.229L6.271.62%206.5.849z%22%2F%3E%3C%2Fsvg%3E);
+            background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20transform%3D%22rotate%28180%205%203%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M5.48.723l.02.02.02-.02%204.758%204.622-.954.926L5.5%202.557%201.674%206.27.72%205.345z%22%2F%3E%3C%2Fsvg%3E);
+            background-size: 15px;
+            background-position: right 13px center;
+        }
+    }
     &_left{
         flex: 0 1 calc(50% - 10px);
     }
@@ -130,6 +143,100 @@
                 margin: 0;
                 font-family: $book-font-family;
             }
+        }
+    }
+
+    &_add{
+        flex: 0 1 calc(50% - 15px);
+        &_header{
+            margin-bottom: 27px;
+        }
+        &_form{
+            &-input{
+                margin-bottom: 15px;
+            }
+            &-row{
+                display: flex;
+                justify-content: space-between;
+                > [class^="auction_add_form"]{
+                    flex: 0 1 calc(50% - 11px)
+                }
+            }
+            &-file{
+                margin-top: 10px;
+                &.uploaded{
+                    label.button{
+                        display: none;
+                    }
+                }
+                label{
+                    font-family: $book-font-family;
+                    margin-bottom: 1em;
+                    &.button{
+                        position: relative;
+                        min-height: 45px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            margin-right: 10px;
+                        }
+                        [type="file"]{
+                            opacity: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: -1;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+                &_name{
+                    min-height: 45px;
+                    display: flex;
+                    align-items: center;
+                    font-family: $book-font-family;
+                    font-size: 12px;
+                    > svg{
+                        margin-right: 10px;
+                        color: $medium-gray;
+                    }
+                }
+                &_remove{
+                    color: $primary-color;
+                    margin-left: auto;
+                }
+            }
+            &-add{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 54px;
+                label{
+                    font-family: $book-font-family;
+                }
+                .button{
+                    min-height: 45px;
+                    flex: 0 1 calc(50% - 15px)
+                }
+            }
+        }
+    }
+    &_spec{
+        flex: 0 1 calc(50% - 15px);
+        &_header{
+            margin-top: 7px;
+            margin-bottom: 27px;
+        }
+    }
+    &_buttons{
+        flex: 1 1 100%;
+        margin-top: 5px;
+        .button{
+            padding: 14px;
+            min-width: 166px;
+            margin-top: 20px;
         }
     }
 }

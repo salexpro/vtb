@@ -1,6 +1,6 @@
 
-mixin check(id, label)
+mixin check(id, label, is_chacked)
     .checkbox
-        input(type="checkbox" id=id)
+        input(type="checkbox" id=id checked=is_chacked ? 'checked' : false)
         label(for=id)
             =label

@@ -13,4 +13,4 @@ const pageWidget = pages => {
     });
 }
 
-pageWidget(['index', 'item', 'supplier', 'auction']);
+pageWidget(['index', 'item', 'supplier', 'auction', 'auction_create']);

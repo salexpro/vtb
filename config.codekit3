@@ -3402,6 +3402,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/auction-create.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/auction-create.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/auction.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3449,6 +3459,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_auction.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_auction_create.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_auction_create.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3783,7 +3803,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 585790224.17003405
+	"lastBuiltDate": 585796012.11516297
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
