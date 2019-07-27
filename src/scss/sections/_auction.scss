@@ -2,15 +2,20 @@
     margin: 30px 25px 0;
     display: grid;
     grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "item offers"
         "discuss offers";
     @include breakpoint(medium down){
+        grid-template-columns: 1fr;
         grid-template-areas:
             "item"
             "offers"
             "discuss";
         margin: 15px 15px 0;
+    }
+    @include breakpoint(small down){
+        margin: 15px 10px 0;
     }
     &--create{
         flex-wrap: wrap;
@@ -18,11 +23,28 @@
         border-radius: 9px;
         background-color: $white;
         padding: 30px 66px 35px 30px;
+        grid-row-gap: 0;
+        grid-template-areas: 
+            "add spec"
+            "buttons buttons";
+        @include breakpoint(medium down){
+            padding: 30px 20px 37px;
+            grid-template-areas: 
+            "add"
+            "spec"
+            "buttons";
+        }
+        @include breakpoint(small down){
+            padding: 20px 10px 40px;
+        }
         select{
             // background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213%22%20height%3D%2210%22%20viewBox%3D%220%200%2013%2010%22%3E%3Cpath%20transform%3D%22rotate%28180%206.5%205%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M6.73.62l1.376%201.376-.23.23%205.779%205.778-1.377%201.376L6.5%203.602.722%209.38-.655%208.004l5.778-5.779-.229-.229L6.271.62%206.5.849z%22%2F%3E%3C%2Fsvg%3E);
             background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20transform%3D%22rotate%28180%205%203%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M5.48.723l.02.02.02-.02%204.758%204.622-.954.926L5.5%202.557%201.674%206.27.72%205.345z%22%2F%3E%3C%2Fsvg%3E);
             background-size: 15px;
             background-position: right 13px center;
+            @include breakpoint(small down){
+                background-size: 13px;
+            }
         }
     }
     &_item{
@@ -264,26 +286,58 @@
     }
 
     &_add{
-        flex: 0 1 calc(50% - 15px);
+        grid-area: add;
         &_header{
             margin-bottom: 27px;
+            @include breakpoint(small down){
+                margin-bottom: 18px;
+            }
         }
         &_form{
             &-input{
                 margin-bottom: 15px;
+                @include breakpoint(small down){
+                    margin-bottom: 10px;
+                    input, select{
+                        padding: 10px 15px;
+                        height: auto;
+                        font-size: 13px;
+                    }
+                    select{
+                        padding-right: 0;
+                    }
+                }
             }
             &-row{
                 display: flex;
                 justify-content: space-between;
+                @include breakpoint(small down){
+                    display: block;
+                }
                 > [class^="auction_add_form"]{
                     flex: 0 1 calc(50% - 11px)
                 }
             }
             &-file{
                 margin-top: 10px;
+                @include breakpoint(small down){
+                    margin-top: 20px;
+                }
                 &.uploaded{
-                    label.button{
-                        display: none;
+                    min-height: 89px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding-bottom: 14px;
+                    @include breakpoint(small down){
+                        min-height: auto;
+                        padding-bottom: 20px;
+                    }
+                    label{
+                        margin: 0;
+                        &.button{
+                            display: none;
+                        }
                     }
                 }
                 label{
@@ -315,12 +369,22 @@
                     align-items: center;
                     font-family: $book-font-family;
                     font-size: 12px;
+                    // word-break: break-word;
+                    @include breakpoint(small down){
+                        min-height: auto;
+                        margin-top: 15px;
+                    }
                     > svg{
+                        flex: 0 0 auto;
                         margin-right: 10px;
                         color: $medium-gray;
                     }
+                    span{
+                        padding-right: 10px;
+                    }
                 }
                 &_remove{
+                    flex: 0 0 auto;
                     color: $primary-color;
                     margin-left: auto;
                 }
@@ -330,30 +394,59 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 54px;
+                @include breakpoint(medium down){
+                    margin: 0;
+                }
+                @include breakpoint(small down){
+                    display: block;
+                    margin-top: 20px;
+                }
                 label{
                     font-family: $book-font-family;
                 }
                 .button{
                     min-height: 45px;
-                    flex: 0 1 calc(50% - 15px)
+                    flex: 0 1 calc(50% - 15px);
+                    min-width: 170px;
+                    @include breakpoint(small down){
+                        width: 100%;
+                        margin-top: 13px;
+                    }
                 }
             }
         }
     }
     &_spec{
-        flex: 0 1 calc(50% - 15px);
+        grid-area: spec;
         &_header{
             margin-top: 7px;
             margin-bottom: 27px;
+            @include breakpoint(medium down){
+                margin-top: 25px;
+                margin-bottom: 14px;
+            }
+            @include breakpoint(small down){
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
         }
     }
     &_buttons{
-        flex: 1 1 100%;
+        grid-area: buttons;
         margin-top: 5px;
+        @include breakpoint(medium down){
+            margin-top: 30px;
+        }
+        @include breakpoint(small down){
+            margin-top: 20px;
+        }
         .button{
             padding: 14px;
             min-width: 166px;
             margin-top: 20px;
+            @include breakpoint(small down){
+                width: 100%;
+            }
         }
     }
 }
