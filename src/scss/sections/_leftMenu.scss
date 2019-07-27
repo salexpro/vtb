@@ -2,10 +2,19 @@
     flex: 0 0 220px;
     padding-top: 20px;
     border-right: 1px solid $light-gray;
+    @include breakpoint(medium down){
+        flex: 0 0 180px;
+    }
+    @include breakpoint(small down){
+        display: none;
+    }
 }
 
 .logo{
     display: table;
     margin: auto;
     margin-bottom: 40px;
+    @include breakpoint(medium down){
+        max-width: 120px;
+    }
 }

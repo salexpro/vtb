@@ -8,6 +8,7 @@ block const
 include components/_icons
 include components/_menu
 include components/_rating
+include components/_header_components
 
 doctype html
 html(lang="ru")
@@ -20,6 +21,6 @@ html(lang="ru")
                 block content
                 include sections/_footer
             //- include components/_popup
-        //- include components/_offcanvas
+        include components/_offcanvas
         block js
             script(src="./js/app.min.js")

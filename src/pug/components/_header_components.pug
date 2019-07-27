@@ -1,0 +1,11 @@
+mixin search
+    form.header_search&attributes(attributes)
+        input(type="search" placeholder="Поиск" required)
+        button.header_search_button
+            +icon('search', [15, 18])
+
+mixin lang(tag)
+    #{tag}.header_lang&attributes(attributes)
+        button
+            +icon('internet', [22, 22])
+            | RU

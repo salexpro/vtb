@@ -80,7 +80,7 @@ section.catalog
                 | Поставщики
     .catalog_tab_content(data-tabs-content="catalogTabs")
         #catalogGoods.catalog_content.is_active
-            .catalog_left
+            #itemsLeft.catalog_left
                 +menu([
                     {
                         icon: ['startup', [20, 20]],
@@ -184,7 +184,7 @@ section.catalog
                     }
                 ], true)(class="vertical menu--items")
             .catalog_items
-                +filters
+                +filters('top', 'itemsLeft')
                 each item in itemsGoods
                     each item in itemsGoods
                         .catalog_item
@@ -269,7 +269,7 @@ section.catalog
                                 a(href="#") Хранение одежды и обуви
 
         #catalogSuppliers.catalog_content
-            .catalog_left
+            #filtersLeft.catalog_left.catalog_left--filters
                 form.catalog_filters
                     p.catalog_filters_header
                         | Фильтр
@@ -278,7 +278,7 @@ section.catalog
                             a.catalog_filters_accordion-item(href='#') Тип поставщика
                             ul.catalog_filters_accordion-content.is-active
                                 li
-                                    +check('fManufacturer', 'Производитель')
+                                    +check('fManufacturer', 'Производитель', true)
                                 li
                                     +check('fWholesaler', 'Оптовик')
                                 li
@@ -330,7 +330,7 @@ section.catalog
                     
 
             .catalog_items
-                +filters
+                +filters('top', 'filtersLeft')
                 each _ in Array(2)
                     each item in itemsSuppliers
                         .catalog_item.catalog_item--suppliers

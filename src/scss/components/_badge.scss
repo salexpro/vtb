@@ -5,4 +5,15 @@
     top: -4px;
     border: 1px solid $white;
     box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 8px;
+    @include breakpoint(medium down){
+        right: -6px;
+        top: -3px;
+        width: 12px;
+        height: 8px;
+    }
 }

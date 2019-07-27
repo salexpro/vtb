@@ -1,13 +1,36 @@
 .pagination{
     font-family: $book-font-family;
+    li{
+        @include breakpoint(medium down){
+            margin: 0;
+        }
+    }
+    a{
+        @include breakpoint(medium down){
+            font-size: 13px;
+            padding: 2px 5px;
+        }
+    }
     &-next, &-previous{
         vertical-align: top;
         a{
             margin: 0;
             padding: 5px 7px;
+            color: $primary-color;
+            @include breakpoint(medium down){
+                padding: 5px 5px;
+            }
         }
         &.disabled{
             padding: 5px 7px;
+            @include breakpoint(medium down){
+                padding: 5px 5px;
+            }
+        }
+    }
+    .ellipsis::after{
+        @include breakpoint(medium down){
+            padding: 2px 5px;
         }
     }
 }

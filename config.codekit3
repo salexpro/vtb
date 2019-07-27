@@ -15,7 +15,7 @@
 		"uuidString": "6DF9D747-8413-4879-B214-3F05CAB77409"
 		}
 	],
-"creatorBuild": "31486",
+"creatorBuild": "31491",
 "files": {
 	"/.browserslistrc": {
 		"cB": 0,
@@ -51,12 +51,6 @@
 		"oF": 1,
 		"sC": 3,
 		"tS": 1
-		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
 		},
 	"/build.zip": {
 		"cB": 0,
@@ -3352,6 +3346,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/components/_header_components.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_header_components.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/components/_icons.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3803,7 +3807,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 585796012.11516297
+	"lastBuiltDate": 585914648.81624198
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

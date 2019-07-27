@@ -1,5 +1,13 @@
-mixin filters
+mixin filters(position, tab)
     .catalog_items_filters&attributes(attributes)
+        if (position == 'top')
+            button.catalog_items_button(data-toggle=tab)
+                if tab == 'itemsLeft'
+                    +icon('list', [21, 16])
+                    | Категории
+                else if tab == 'filtersLeft'
+                    +icon('filter', [17, 16])
+                    | Фильтр
         .catalog_items_filter
             | Показывать по:
             select

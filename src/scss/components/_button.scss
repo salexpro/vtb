@@ -9,8 +9,17 @@ button {
         align-items: center;
         padding: 8px 23px;
         margin: 42px auto 0;
+        @include breakpoint(medium down){
+            margin-top: 37px;
+        }
         svg{
             margin-right: 14px;
+        }
+    }
+    &.hollow{
+        @include breakpoint(small down){
+            padding-top: 9px;
+            padding-bottom: 9px;
         }
     }
 }

@@ -39,14 +39,35 @@
 
     &--left{
         font-size: 13px;
-    }
-    &--items.menu{
-        li.active a{
-            &::after{
-                
+        @include breakpoint(medium down){
+            font-size: 12px;
+        }
+        .menu_icon{
+            @include breakpoint(medium down){
+                width: 20px;
+                height: 17px;
+                svg{
+                    width: auto;
+                    height: auto;
+                }
             }
         }
         a{
+            @include breakpoint(medium down){
+                padding: 13px 10px;
+            }
+        }
+    }
+    &--items.menu{
+        a{
+            padding-right: 25px;
+            @include breakpoint(large down){
+                padding-right: 40px;
+            }
+            @include breakpoint(small down){
+                padding-left: 10px;
+                padding-right: 25px;
+            }
             &::before{
                 content: '';
                 position: absolute;
@@ -54,6 +75,13 @@
                 left: 10px;
                 width: calc(100% - 20px);
                 border-bottom: 1px solid $light-gray;
+                @include breakpoint(large down){
+                    width: calc(100% - 35px);
+                }
+                @include breakpoint(small down){
+                    width: calc(100% - 10px);
+                    left: 5px;
+                }
             }
             &::after{
                 content: '';
@@ -63,6 +91,12 @@
                 height: 13px;
                 opacity: 0.3;
                 background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2213%22%20viewBox%3D%220%200%209%2013%22%3E%3Cpath%20transform%3D%22rotate%2890%29%20translate%282%20-11%29%22%20d%3D%22M4.268%202.581l.232.232.232-.232%206.462%206.461-1.377%201.377L4.5%205.102-.817%2010.42l-1.377-1.377z%22%2F%3E%3C%2Fsvg%3E);
+                @include breakpoint(large down){
+                    right: 25px;
+                }
+                @include breakpoint(small down){
+                    right: 10px;
+                }
             }
             &.hover{
                 .menu_icon{
@@ -76,6 +110,12 @@
         }
         .menu_icon{
             width: 28px;
+        }
+    }
+    &--mobile{
+        font-size: 13px;
+        a{
+            padding: 13px 15px;
         }
     }
 }

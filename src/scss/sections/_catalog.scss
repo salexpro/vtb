@@ -1,14 +1,35 @@
 .catalog{
     margin: 25px 25px 0;
+    @include breakpoint(medium down){
+        margin: 20px 15px;
+    }
+    @include breakpoint(small down){
+        margin: 15px 10px;
+    }
     &_tabs{
         font-size: 18px;
         font-family: $book-font-family;
         display: flex;
         list-style: none;
         margin: 0;
+        position: relative;
+        z-index: 2;
+        @include breakpoint(medium down){
+            font-size: 14px;
+        }
     }
     &_tab{
         width: 50%;
+        &:first-child a {
+            @include breakpoint(large down){
+                border-top-right-radius: 0;
+            }
+        }
+        &:last-child a {
+            @include breakpoint(large down){
+                border-top-left-radius: 0;
+            }
+        }
         a{
             display: block;
             border-radius: 9px 9px 0 0;
@@ -17,15 +38,21 @@
             padding: 14px;
             background-color: $primary-color;
             color: $white;
-            transition: background-color 250ms;
+            transition: color 250ms, background-color 250ms;
             outline: none;
+            @include breakpoint(medium down){
+                padding: 13px;
+            }
+            @include breakpoint(small down){
+                padding: 9px;
+            }
             &:hover, &:focus{
                 background-color: darken($primary-color, 5);
             }
         }
         &.is_active a{
             background-color: $white;
-            color: $black;
+            color: $body-font-color;
         }
     }
     &_content{
@@ -33,6 +60,7 @@
         box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
         border-radius: 0 0 9px 9px;
         display: none;
+        position: relative;
         &.is_active{
             display: flex;
         }
@@ -41,6 +69,38 @@
         // max-width: 310px;
         flex: 0 0 310px;
         border-right: 1px solid $light-gray;
+        @include breakpoint(large down){
+            position: absolute;
+            top: 0 !important;
+            left: 0 !important;
+            max-width: 330px;
+            opacity: 0;
+            z-index: -1;
+            visibility: hidden;
+            transition: opacity 300ms, visibility 300ms, z-index 300ms;
+            background: $white;
+            margin-top: 53px;
+            border-radius: 0 0 9px 9px;
+            box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+            max-height: calc(100% - 53px);
+            overflow: auto;
+            border: 0;
+            &.is-open{
+                visibility: visible;
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+        @include breakpoint(medium down){
+            margin-top: 46px;
+            max-height: calc(100% - 46px);
+        }
+        &--filters{
+            @include breakpoint(large down){
+                max-width: none;
+                width: 100%;
+            }
+        }
     }
     &_items{
         position: relative;
@@ -53,10 +113,26 @@
             padding: 15px 0;
             border-bottom: 1px solid $light-gray;
             font-family: $book-font-family;
+            @include breakpoint(medium down){
+                padding: 12px 0;
+                margin: 0 10px;
+                font-size: 13px;
+            }
+            @include breakpoint(small down){
+                margin: 0 5px;
+            }
             &--bottom{
                 padding: 26px 0 40px;
                 border: 0;
                 margin: 0 35px;
+                @include breakpoint(medium down){
+                    margin: 0 10px;
+                    padding: 20px 0 26px;
+                }
+                @include breakpoint(small down){
+                    padding: 22px 0 24px;
+                    justify-content: flex-end;
+                }
             }
         }
         &_filter{
@@ -64,6 +140,9 @@
             align-items: center;
             white-space: nowrap;
             color: #8f9399;
+            @include breakpoint(small down){
+                display: none;
+            }
             select{
                 margin-left: 6px;
                 padding: 0 20px 0 0;
@@ -73,6 +152,41 @@
                 text-decoration: underline;
                 background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%226%22%20viewBox%3D%220%200%209%206%22%3E%3Cpath%20transform%3D%22rotate%2845%204%202%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%22.31%22%20d%3D%22M5.373-2H7.19v6.3H7.15v.018H.85V2.5h4.523z%22%2F%3E%3C%2Fsvg%3E);
                 background-position: right -20px center;
+                @include breakpoint(medium down){
+                    font-size: 13px;
+                    margin-left: 10px;
+                    width: auto;
+                    padding-right: 15px;
+                    background-position: right -15px center;
+                }
+            }
+        }
+        &_button{
+            display: none;
+            align-items: center;
+            margin: -15px 0 -15px -20px;
+            border-radius: 9px 9px 0 0;
+            height: 53px;
+            padding: 0 15px;
+            font-family: $book-font-family;
+            color: $primary-color;
+            transition: background-color 250ms;
+            @include breakpoint(large down){
+                display: flex;
+            }
+            @include breakpoint(medium down){
+                padding: 0 12px;
+                margin: -12px 0 -12px -10px;
+                height: 46px;
+            }
+            @include breakpoint(small down){
+                margin-left: -5px;
+            }
+            svg{
+                margin-right: 10px;
+            }
+            &:hover, &:focus, &[aria-expanded="true"]{
+                background-color: $secondary-color;
             }
         }
     }
@@ -82,9 +196,27 @@
         border-bottom: 1px solid $light-gray;
         display: flex;
         align-items: center;
+        @include breakpoint(medium down){
+            margin: 0 10px;
+            padding: 24px 6px 15px;
+        }
+        @include breakpoint(small down){
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 5px 74px;
+            margin: 0 5px;
+        }
         &--suppliers{
             padding: 25px 24px 24px 10px;
             align-items: stretch;
+            @include breakpoint(medium down){
+                padding: 22px 0 18px;
+                flex-wrap: wrap;
+            }
+            @include breakpoint(small down){
+                padding: 14px 5px;
+            }
             .catalog_item{
                 &_img{
                     display: flex;
@@ -96,14 +228,30 @@
                     overflow: hidden;
                     border: 1px solid $secondary-color;
                     margin-bottom: 12px;
+                    @include breakpoint(medium down){
+                        width: 35px;
+                        height: 35px;
+                        margin: 0;
+                    }
                 }
                 &_header{
                     font-size: 16px;
+                    @include breakpoint(medium down){
+                        font-size: 14px;
+                    }
                 }
                 &_info{
                     padding: 5px 40px 0;
                     display: flex;
                     flex-direction: column;
+                    @include breakpoint(medium down){
+                        padding: 3px 0 0 15px;
+                        flex: 1 1 calc(100% - 35px)
+                    }
+                    @include breakpoint(small down){
+                        padding: 0 0 0 10px;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -112,14 +260,33 @@
         }
         &_right{
             align-self: center;
+            @include breakpoint(medium down){
+                flex: 1 1 100%;
+                margin-left: 50px;
+                display: flex;
+                align-items: center;
+                margin-top: 14px;
+            }
+            @include breakpoint(small down){
+                margin-left: 0;
+                order: 2;
+                justify-content: space-between;
+                max-width: 260px;
+            }
         }
         &_img{
             max-width: 120px;
             flex: 0 0 auto;
+            @include breakpoint(medium down){
+                max-width: 70px;
+            }
         }
         &_country{
             font-family: $book-font-family;
             font-size: 11px;
+            @include breakpoint(medium down){
+                display: none;
+            }
             span{
                 font-size: 12px;
                 margin-right: 5px;
@@ -128,10 +295,22 @@
         &_info{
             flex: 1 1 auto;
             padding: 0 30px;
+            @include breakpoint(medium down){
+                padding: 0 15px;
+            }
+            @include breakpoint(small down){
+                order: 1;
+                padding: 0;
+                margin-top: 20px;
+            }
         }
         &_header{
             font-family: $header-font-family;
             font-size: 18px;
+            color: #4a4a4a;
+            @include breakpoint(medium down){
+                font-size: 14px;
+            }
             &:hover, &:focus{
                 text-decoration: underline;
             }
@@ -146,15 +325,35 @@
             color: $dark-gray;
             font-family: $book-font-family;
             margin-top: 11px;
+            @include breakpoint(medium down){
+                margin-bottom: 0;
+            }
+            @include breakpoint(small down){
+                margin: 15px 0 0 -45px;
+            }
         }
         &_cats{
             display: flex;
+            flex-wrap: wrap;
             font-family: $book-font-family;
             font-size: 13px;
             list-style: none;
             margin: auto 0 0;
-            li + li{
-                margin-left: 10px;
+            @include breakpoint(medium down){
+                font-size: 12px;
+                margin-top: 8px;
+            }
+            @include breakpoint(small down){
+                margin: 11px 0 0 -45px;
+            }
+            li{
+                margin-right: 10px;
+                @include breakpoint(small down){
+                    margin-bottom: 6px;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
             }
             a{
                 color: #1f3d82;
@@ -169,6 +368,12 @@
             list-style: none;
             font-family: $book-font-family;
             font-size: 13px;
+            @include breakpoint(medium down){
+                margin-top: 10px;
+            }
+            @include breakpoint(small down){
+                margin-top: 15px;
+            }
             li + li{
                 margin-left: 20px;
             }
@@ -183,12 +388,31 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            @include breakpoint(small down){
+                justify-content: center;
+                .button{
+                    position: absolute;
+                    bottom: 20px;
+                    min-width: 170px;
+                    
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
         }
         &_price{
             font-family: $header-font-family;
             font-size: 22px;
             text-align: center;
             margin-bottom: 10px;
+            @include breakpoint(medium down){
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+            @include breakpoint(small down){
+                margin: 0;
+                font-size: 16px;
+            }
         }
         &_link{
             display: flex;
@@ -199,6 +423,12 @@
             font-family: $book-font-family;
             & + &{
                 margin-top: 15px;
+                @include breakpoint(medium down){
+                    margin: 0 0 0 40px;
+                }
+                @include breakpoint(small down){
+                    margin: 0;
+                }
             }
             &-icon{
                 width: 21px;
@@ -231,6 +461,13 @@
         visibility: hidden;
         transition: 300ms;
         border-radius: 0 0 9px;
+        @include breakpoint(medium down){
+            border-radius: 0 0 9px 9px;
+            columns: 1;
+        }
+        @include breakpoint(small down){
+            padding: 0 5px;
+        }
         &.is-open{
             visibility: visible;
             z-index: 2;
@@ -243,6 +480,9 @@
             -webkit-column-break-inside: avoid;
             page-break-inside: avoid;
             break-inside: avoid;
+            @include breakpoint(medium down){
+                padding: 18px 5px;
+            }
         }
         &_header{
             display: table;
@@ -266,10 +506,19 @@
 
     &_filters{
         padding: 24px 30px 20px 20px;
+        @include breakpoint(large down){
+            padding: 25px 26px 60px;
+        }
+        @include breakpoint(small down){
+            padding: 20px 20px 60px;
+        }
         &_header{
             font-family: "VTB Group Demi";
             font-size: 18px;
             margin-bottom: 22px;
+            @include breakpoint(large down){
+                display: none;
+            }
         }
         &_accordion{
             list-style: none;
@@ -311,6 +560,7 @@
         }
         &_buttons{
             margin-top: 30px;
+            max-width: 260px;
             display: flex;
             justify-content: space-between;
             .button{

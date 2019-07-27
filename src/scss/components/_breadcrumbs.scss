@@ -1,11 +1,48 @@
 .breadcrumbs{
     font-family: $book-font-family;
-    li:not(:last-child)::after{
-        display: inline-block;
-        width: 4px;
-        height: 7px;
-        background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%227%22%20viewBox%3D%220%200%204%207%22%3E%3Cpath%20transform%3D%22rotate%28-45%202%203.5%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%220.31%22%20d%3D%22M2.461%201h1.273v4.2H3.6v.043H-.6V3.97h3.061z%22%2F%3E%3C%2Fsvg%3E);
-        background-size: contain;
-        background-position: center;
+    @include breakpoint(medium down){
+        margin: 20px 15px;
+    }
+    @include breakpoint(small down){
+        margin: 15px 10px;
+    }
+    li{
+        @include breakpoint(medium down){
+            font-size: 13px;
+            &:first-child{
+                display: none;
+            }
+        }
+        &:not(:last-child){
+            @include breakpoint(small down){
+                display: none;
+            }
+            &::after{
+                display: inline-block;
+                width: 4px;
+                height: 7px;
+                background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%227%22%20viewBox%3D%220%200%204%207%22%3E%3Cpath%20transform%3D%22rotate%28-45%202%203.5%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%220.31%22%20d%3D%22M2.461%201h1.273v4.2H3.6v.043H-.6V3.97h3.061z%22%2F%3E%3C%2Fsvg%3E);
+                background-size: contain;
+                background-position: center;
+            }
+        }
+        &:last-child{
+            @include breakpoint(small down){
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 4px;
+                    height: 7px;
+                    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%227%22%20viewBox%3D%220%200%204%207%22%3E%3Cpath%20transform%3D%22rotate%28-45%202%203.5%29%22%20fill%3D%22%231e4bd2%22%20opacity%3D%220.31%22%20d%3D%22M2.461%201h1.273v4.2H3.6v.043H-.6V3.97h3.061z%22%2F%3E%3C%2Fsvg%3E);
+                    background-size: contain;
+                    background-position: center;
+                    transform: scale(-1, 1);
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+    a{
+        color: #4a4a4a;
     }
 }

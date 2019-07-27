@@ -1,4 +1,39 @@
 mixin menu(data, mod)
+    - 
+        data = data || [
+            {
+                icon: ['clip', [21, 20]],
+                title: 'Заказы',
+                link: '#'
+            },
+            {
+                icon: ['package', [20, 20]],
+                title: 'Товары и поставщики',
+                link: '/',
+                active: (page == 'main')
+            },
+            {
+                icon: ['barcode', [18, 20]],
+                title: 'Торги',
+                link: '/auction.html'
+            },
+            {
+                icon: ['magazine', [18, 20]],
+                title: 'Каталог товаров',
+                link: '#'
+            },
+            {
+                icon: ['package_up', [18, 22]],
+                title: 'Экспорт менеджер',
+                link: '#'
+            },
+            {
+                icon: ['hat', [25, 20]],
+                title: 'Академия экспорта',
+                link: '#'
+            },
+        ]
+
     ul.menu&attributes(attributes)
         each item, i in data
             li(class=item.active || (item.link && item.link.includes(page)) ? 'active' : '')
