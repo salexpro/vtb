@@ -21,7 +21,7 @@ if($itemsDrop.length){
     dropLeft();
 }
 
-$('.item_details_button, .supplier_details_button').click(function() {
+$('.item_details_button, .supplier_details_button, .auction_offers_button').click(function() {
     $(this).parent().removeClass('folded')
 })
 
