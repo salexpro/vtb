@@ -2,18 +2,27 @@ import $ from 'jquery';
 import svg4everybody from 'svg4everybody';
 import {Foundation} from './lib/foundation-explicit-pieces';
 
-let itemsLeft = false, filtersLeft = false;
+const $itemsDrop = $('#itemsLeft'),
+      $filtersDrop = $('#filtersLeft');
+let itemsLeft = false, 
+    filtersLeft = false;
 const dropLeft = () => {
-    if (!Foundation.MediaQuery.atLeast('xlarge') && !itemsLeft) {
-        itemsLeft = new Foundation.Dropdown($('#itemsLeft'), {closeOnClick: true});
-        filtersLeft = new Foundation.Dropdown($('#filtersLeft'), {closeOnClick: true});
-    } else if(itemsLeft){
+    if (!Foundation.MediaQuery.atLeast('xlarge') && !itemsLeft && !filtersLeft) {
+        itemsLeft = new Foundation.Dropdown($itemsDrop, {closeOnClick: true});
+        filtersLeft = new Foundation.Dropdown($filtersDrop, {closeOnClick: true});
+    } else if(itemsLeft && filtersLeft){
         itemsLeft.foundation('_destroy');
         filtersLeft.foundation('_destroy');
     }
 }
 
-$(window).resize(() => {dropLeft()})
-dropLeft();
+if($itemsDrop.length){
+    $(window).resize(() => {dropLeft()})
+    dropLeft();
+}
+
+$('.item_details_button').click(function() {
+    $(this).parent().removeClass('folded')
+})
 
 svg4everybody();

@@ -6,35 +6,88 @@
     &_title{
         background-color: $secondary-color;
         padding: 18px 30px;
+        @include breakpoint(medium down){
+            padding: 19px 20px;
+        }
+        @include breakpoint(small down){
+            padding: 12px 10px;
+        }
     }
     &_content{
         padding: 35px 20px 55px;
+        @include breakpoint(medium down){
+            padding: 15px 10px 10px;
+        }
+        @include breakpoint(small down){
+            padding: 20px 10px 0;
+        }
         &_top{
             padding: 0 10px 45px;
             display: flex;
             border-bottom: 1px solid $light-gray;
+            @include breakpoint(medium down){
+                flex-wrap: wrap;
+                padding: 0 18px 25px;
+            }
+            @include breakpoint(small down){
+                position: relative;
+                padding: 0 5px;
+                border-bottom: 0;
+            }
         }
     }
     &_images{
+        flex: 0 1 310px;
+        @include breakpoint(medium down){
+            flex: 0 1 225px;
+            margin-right: 37px;
+        }
+        @include breakpoint(small down){
+            flex: 0 1 115px;
+            margin: 0;
+        }
         &_main{
             border-radius: 4px;
             border: 1px solid $light-gray;
-            min-width: 310px;
-            min-height: 240px;
+            height: 240px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 17px;
+            @include breakpoint(medium down){
+                height: 170px;
+                padding: 18px 20px;
+                img{
+                    max-height: 100%;
+                }
+            }
+            @include breakpoint(small down){
+                height: 90px;
+                padding: 10px 15px;
+                margin: 0;
+            }
         }
         &_carousel{
             display: flex;
             position: relative;
+            @include breakpoint(small down){
+                display: none;
+            }
             &-controls{
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 padding: 8px;
                 color: $primary-color;
+                @include breakpoint(medium down){
+                    padding: 4px;
+                    width: 15px;
+                    svg{
+                        width: auto;
+                        height: auto;
+                        max-width: 100%;
+                    }
+                }
                 &.disabled{
                     color: #8f9399;
                 }
@@ -47,13 +100,21 @@
             }
         }
         &_small{
-            min-width: 93px;
-            min-height: 66px;
+            flex: 0 1 93px;
+            height: 66px;
             border-radius: 4px;
             border: 1px solid $light-gray;
             display: flex;
             align-items: center;
             justify-content: center;
+            @include breakpoint(medium down){
+                flex: 0 1 68px;
+                padding: 3px;
+                height: 48px;
+                img{
+                    max-height: 100%;
+                }
+            }
             & + & {
                 margin-left: 15px;
             }
@@ -62,16 +123,34 @@
     &_info{
         flex: 1 1 auto;
         padding: 30px 28px 0 50px;
+        @include breakpoint(large down){
+            padding-left: 30px;
+        }
+        @include breakpoint(medium down){
+            flex: 1 1 calc(100% - 262px);
+            min-width: 220px;
+            padding: 10px 0 0;
+            align-self: flex-end;
+        }
+        @include breakpoint(small down){
+            flex: 1 1 100%;
+            margin: 0 -5px;
+            padding-top: 23px;
+        }
         &_top{
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 16px;
+            @include breakpoint(small down){
+                margin-bottom: 12px;
+            }
         }
         &_art{
             font-family: $book-font-family;
             font-size: 13px;
             color: $dark-gray;
+            margin-left: 10px;
         }
     }
     &_list{
@@ -86,8 +165,18 @@
         }
     }
     &_buy{
+        flex: 0 1 220px;
+        @include breakpoint(medium down){
+            flex: 1 1 100%;
+            margin: 0 -18px;
+            display: flex;
+            margin-top: 25px;
+        }
+        @include breakpoint(small down){
+            margin: 10px -10px 0;
+        }
         &_cart{
-            width: 220px;
+            width: 100%;
             height: 146px;
             border-radius: 4px;
             border: 1px solid $light-gray;
@@ -96,22 +185,75 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+            @include breakpoint(medium down){
+                flex: 0 0 auto;
+                border: 0;
+                height: auto;
+                width: auto;
+                order: 1;
+                margin: 0;
+                padding-left: 24px;
+            }
+            @include breakpoint(small down){
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: calc(100% - 115px);
+                height: 90px;
+                padding: 0;
+                .button{
+                    font-size: 12px;
+                    padding: 10px 18px;
+                }
+            }
         }
         &_price{
-            font-family: "VTB Group Demi";
+            font-family: $header-font-family;
             font-size: 22px;
             margin-bottom: 18px;
+            @include breakpoint(medium down){
+                margin-bottom: 10px;
+            }
+            @include breakpoint(small down){
+                font-size: 16px;
+            }
         }
         &_seller{
             padding: 15px 20px;
             border-radius: 4px;
             border: 1px solid $light-gray;
             max-width: 220px;
+            @include breakpoint(medium down){
+                max-width: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 11px 15px;
+            }
+            @include breakpoint(small down){
+                width: 100%;
+                padding: 14px 13px;
+                flex-wrap: nowrap;
+            }
             &-img{
                 margin-bottom: 17px;
+                @include breakpoint(medium down){
+                    max-width: 67px;
+                    margin: 5px 25px 5px 0;
+                }
+                @include breakpoint(small down){
+                    display: none;
+                }
             }
             &-name{
                 font-family: $book-font-family;
+                @include breakpoint(medium down){
+                    margin: 5px 25px 5px 0;
+                }
+                @include breakpoint(small down){
+                    margin: 0 30px 0 0;
+                    font-size: 13px;
+                }
                 b{
                     color: $medium-gray;
                     font-family: 'VTB Group';
@@ -125,6 +267,9 @@
                 color: #1f3d82;
                 font-size: 13px;
                 font-family: $book-font-family;
+                @include breakpoint(medium down){
+                    margin: 5px 0;
+                }
                 svg{
                     color: rgba($body-font-color, 0.6);
                     transition: color 250ms;
@@ -142,31 +287,69 @@
         padding: 40px 30px 0;
         font-family: $book-font-family;
         position: relative;
-        &.folded{
-            padding-bottom: 55px;
-            &::after{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 204px;
-                background-image: linear-gradient(180deg, rgba($white, 0) 0%, rgba($white, 0.93) 43%, $white 100%);
-            }
+        @include breakpoint(medium down){
+            padding: 26px 10px 0;
+        }
+        @include breakpoint(small down){
+            padding: 23px 0 0;
         }
         &_text{
             color: $dark-gray;
             margin-bottom: 50px;
+            @include breakpoint(medium down){
+                font-size: 13px;
+                margin-bottom: 35px;
+                line-height: 1.38;
+            }
+            @include breakpoint(small down){
+                margin-bottom: 30px;
+            }
         }
         &_specs{
             display: flex;
+            justify-content: space-between;
+            @include breakpoint(medium down){
+                margin-top: 20px;
+                &:not(.folded){
+                    padding-bottom: 30px;
+                }
+            }
+            @include breakpoint(small down){
+                flex-direction: column;
+            }
+            &.folded{
+                max-height: 340px;
+                overflow: hidden;
+                @include breakpoint(small down){
+                    max-height: 365px;
+                }
+                .item_details_button{
+                    display: block;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 204px;
+                    background-image: linear-gradient(180deg, rgba($white, 0) 0%, rgba($white, 0.93) 43%, $white 100%);
+                    @include breakpoint(small down){
+                        border-bottom: 45px solid $white;
+                        height: 150px;
+                    }
+                }
+            }
             .cell{
-                flex: 1 1 50%;
+                flex: 0 1 calc(50% - 10px);
             }
         }
         &_block{
             & + &{
                 margin-top: 20px;
+                @include breakpoint(small down){
+                    margin-top: 18px;
+                }
             }
             h3{
                 color: #1f3d82;
@@ -174,9 +357,13 @@
             ul{
                 line-height: 1.3;
                 font-size: 14px;
+                @include breakpoint(small down){
+                    font-size: 13px;
+                }
             }
         }
         &_button{
+            display: none;
             position: absolute;
             z-index: 2;
             font-size: 20px;
@@ -186,6 +373,17 @@
             padding: 20px;
             color: $primary-color;
             font-family: $book-font-family;
+            user-select: none;
+            @include breakpoint(medium down){
+                font-size: 16px;
+                padding: 10px;
+                bottom: 25px;
+                white-space: nowrap;
+            }
+            @include breakpoint(small down){
+                bottom: 42px;
+                font-size: 14px;
+            }
         }
     }
 }

@@ -486,7 +486,7 @@
         }
         &_header{
             display: table;
-            font-family: "VTB Group Demi";
+            font-family: $header-font-family;
             color: #1f3d82;
             margin-bottom: 9px;
         }
@@ -513,7 +513,7 @@
             padding: 20px 20px 60px;
         }
         &_header{
-            font-family: "VTB Group Demi";
+            font-family: $header-font-family;
             font-size: 18px;
             margin-bottom: 22px;
             @include breakpoint(large down){

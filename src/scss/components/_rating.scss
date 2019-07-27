@@ -7,11 +7,18 @@
     &--large{
         font-size: 18px;
         margin: 0;
+        @include breakpoint(small down){
+            font-size: 14px;
+        }
         .rating_stars{
             margin-right: 10px;
             svg{
                 width: 17px;
-                height: 16px;
+                height: 18px;
+                @include breakpoint(small down){
+                    width: 14px;
+                    height: 13px;
+                }
                 + svg{
                     margin-left: 3px;
                 }
