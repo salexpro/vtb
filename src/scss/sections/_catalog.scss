@@ -319,6 +319,16 @@
             display: inline-block;
             margin-left: 10px;
             color: $primary-color;
+            @include breakpoint(small down){
+                width: 10px;
+                svg{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @include breakpoint(small down){
+                margin-left: 7px;
+            }
         }
         &_descr{
             font-size: 13px;
