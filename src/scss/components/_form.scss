@@ -3,6 +3,13 @@
         padding-top: 22px;
         padding-bottom: 42px;
         position: relative;
+        grid-area: form;
+        @include breakpoint(medium down){
+            padding: 40px 0 0;
+        }
+        @include breakpoint(small down){
+            padding-top: 25px;
+        }
         &::after{
             content: '';
             position: absolute;
@@ -10,12 +17,16 @@
             top: 0;
             height: 100%;
             border-right: 1px solid #e9eef6;
+            @include breakpoint(medium down){
+                display: none;
+            }
         }
     }
     &_header{
         margin-bottom: 27px;
         @include breakpoint(small down){
             margin-bottom: 18px;
+            font-size: 18px;
         }
         &--secondary{
             margin-top: 7px;
@@ -160,12 +171,29 @@
     &_label{
         color: $medium-gray;
         font-family: $book-font-family;
-        text-align: right;
+        &--status{
+            text-align: right;
+            @include breakpoint(small down){
+                order: -1;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
     }
     &_bottom{
         margin-top: 15px;
         .button{
             margin-top: 5px;
+            @include breakpoint(small down){
+                margin-top: 28px;
+            }
+        }
+        .form_row{
+            @include breakpoint(small down){
+                display: flex;
+                flex-direction: column;
+                
+            }
         }
     }
     &_buttons{
@@ -174,11 +202,16 @@
         padding-top: 15px;
         .form_label{
             flex: 1 1 100%;
-            text-align: left;
             margin-bottom: 20px;
+            @include breakpoint(small down){
+                font-size: 12px;
+            }
         }
         .button + .button{
             margin-left: 20px;
+            @include breakpoint(small down){
+                margin: 15px auto 0;
+            }
         }
     }
     select{

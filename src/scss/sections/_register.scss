@@ -3,18 +3,43 @@
     border-radius: 9px;
     margin: 30px 25px 0;
     background-color: $white;
+    @include breakpoint(medium down){
+        margin: 15px;
+    }
+    @include breakpoint(small down){
+        margin: 15px 10px;
+    }
     &_top{
         background-color: $secondary-color;
         min-height: 70px;
         display: flex;
         align-items: center;
         margin: 0;
+        border-radius: 9px 9px 0 0;
+        @include breakpoint(medium down){
+            min-height: 60px;
+            font-size: 16px;
+        }
+        @include breakpoint(small down){
+            min-height: 42px;
+            font-size: 14px;
+        }
     }
     &_content{
         padding: 25px 20px;
         display: grid;
         grid-template-columns: calc(50% - 20px) calc(50% - 120px);
+        grid-template-areas: 'form info';
         justify-content: space-between;
+        @include breakpoint(medium down){
+            grid-template-areas: 'info'
+                                 'form';
+            grid-template-columns: 1fr;
+            padding: 30px 20px 34px;
+        }
+        @include breakpoint(small down){
+            padding: 20px 10px 24px;
+        }
     }
     &_info{
         display: flex;
@@ -23,14 +48,53 @@
         justify-content: space-between;
         padding-top: 15px;
         padding-bottom: 55px;
+        grid-area: info;
+        @include breakpoint(medium down){
+            display: grid;
+            grid-template-areas: 'p button'
+                                 'steps steps';
+            grid-column-gap: 30px;
+            align-items: center;
+            padding: 0 0 40px;
+            border-bottom: 1px solid #e9eef6;
+            br{
+                display: none;
+            }
+        }
+        @include breakpoint(small down){
+            grid-template-areas: 'p'
+                                'button'
+                                'steps';
+            justify-items: center;
+            padding-bottom: 25px;
+        }
         p{
             color: $dark-gray;
             font-family: $book-font-family;
+            @include breakpoint(medium down){
+                margin: 0;
+            }
+            @include breakpoint(small down){
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
         }
     }
     &_steps{
         margin-top: auto;
         padding-top: 40px;
+        @include breakpoint(medium down){
+            grid-area: steps;
+            padding-top: 45px;
+            text-align: center;
+        }
+        @include breakpoint(small down){
+            padding-top: 25px;
+            width: 100%;
+            .h1{
+                font-size: 18px;
+            }   
+        }
         &_list{
             margin: 30px 0 0;
             list-style: none;
@@ -39,6 +103,20 @@
             font-family: $book-font-family;
             font-size: 18px;
             font-weight: 300;
+            @include breakpoint(medium down){
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                max-width: 520px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+            }
+            @include breakpoint(small down){
+                margin-top: 20px;
+                font-size: 12px;
+                max-width: 300px;
+            }
             li{
                 position: relative;
                 counter-increment: steps;
@@ -46,8 +124,28 @@
                 align-items: center;
                 color: $medium-gray;
                 transition: color 300ms;
+                @include breakpoint(medium down){
+                    display: block;
+                    max-width: 120px;
+                    position: static;
+                    @include breakpoint(small down){
+                        max-width: 96px;
+                    }
+                    &:last-child{
+                        &::after{
+                            left: auto;
+                            right: 60px;
+                            @include breakpoint(small down){
+                                right: 48px;
+                            }
+                        }
+                    }
+                }
                 + li {
                     margin-top: 35px;
+                    @include breakpoint(medium down){
+                        margin: 0;
+                    }
                     &::after{
                         content: '';
                         position: absolute;
@@ -56,6 +154,18 @@
                         height: 35px;
                         border-right: 2px solid #e9eef6;
                         transition: border-color 300ms;
+                        @include breakpoint(medium down){
+                            top: 28px;
+                            left: 60px;
+                            height: auto;
+                            width: calc(50% - 60px);
+                            border-bottom: 2px solid #e9eef6;
+                        }
+                        @include breakpoint(small down){
+                            top: 22px;
+                            left: 48px;
+                            width: calc(50% - 48px);
+                        }
                     }
                 }
                 &::before{
@@ -74,6 +184,20 @@
                     font-weight: 600;
                     border-radius: 50%;
                     transition: background-color 300ms, color 300ms;
+                    @include breakpoint(medium down){
+                        position: relative;
+                        z-index: 2;
+                        width: 55px;
+                        height: 55px;
+                        font-size: 31px;
+                        margin: 0 auto 10px;
+                    }
+                    @include breakpoint(small down){
+                        margin-bottom: 16px;
+                        width: 45px;
+                        height: 45px;
+                        font-size: 24px;
+                    }
                 }
                 &.is_active{
                     color: $body-font-color;

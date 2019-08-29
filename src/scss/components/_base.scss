@@ -58,4 +58,7 @@ input:disabled, input[readonly], textarea:disabled, textarea[readonly]{
     max-width: 1200px;
     padding: 0 20px;
     margin: auto;
+    @include breakpoint(small down){
+        padding: 0 10px;
+    }
 }

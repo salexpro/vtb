@@ -259,16 +259,52 @@
             }
         }
     }
+    &_login.flat{
+        @include breakpoint(medium down){
+            min-width: 123px;
+            min-height: 36px;
+            padding: 10px 30px;
+        }
+        @include breakpoint(small down){
+            min-width: 80px;
+            width: auto;
+            margin: 0;
+        }
+    }
     &--register{
+        @include breakpoint(small down){
+            padding: 10px 10px 10px 20px;
+        }
         .header{
             &_logo{
                 display: block;
                 max-width: none;
                 margin-left: 8px;
+                @include breakpoint(medium down){
+                    margin-left: 15px;
+                    max-width: 120px;
+                }
+                @include breakpoint(small down){
+                    margin-left: 0;
+                    max-width: 105px;
+                }
             }
             &_info{
                 border-right: 1px solid #e9eef6;
                 margin-right: 30px;
+                @include breakpoint(medium down){
+                    margin-right: 15px;
+                }
+                @include breakpoint(small down){
+                    border: 0;
+                    margin: 0;
+                }
+            }
+            &_lang{
+                @include breakpoint(small down){
+                    display: block;
+                    padding: 5px 10px;
+                }
             }
         }
     }
