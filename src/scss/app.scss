@@ -64,6 +64,7 @@
 @import 'components/pagination';
 @import 'components/checkbox';
 @import 'components/rating';
+@import 'components/form';
 // @import 'components/offcanvas';
 
 $flag-icon-css-path: '../assets/img/flags';
@@ -76,4 +77,5 @@ $flag-icon-css-path: '../assets/img/flags';
 @import 'sections/item';
 @import 'sections/supplier';
 @import 'sections/auction';
+@import 'sections/register';
 @import 'sections/footer';

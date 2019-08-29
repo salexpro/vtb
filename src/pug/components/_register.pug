@@ -1,0 +1,86 @@
+mixin register(data)
+    -
+        const steps = [
+            'Данные пользователя',
+            'Данные компании',
+            'Завершение регистрации'
+        ]
+    section.register
+        h1.h2.register_top
+            span.container
+                | Регистрация
+        .container.register_content
+            form.form.form--register
+                h2.h1.form_header
+                    =steps[data.step - 1]
+                case data.step
+                    when 1
+                        .form_input
+                            input(type="text" name="name" placeholder="Имя*" required)
+                        .form_input
+                            input(type="text" name="surname" placeholder="Фамилия*" required)
+                        .form_input
+                            input(type="tel" name="phone" placeholder="Телефон*" required)
+                        .form_row
+                            .form_input
+                                input(type="text" name="code" placeholder="Код подтверждения*" required disabled)
+                            .form_input
+                                bitton.button.hollow(type="button" disabled)
+                                    | Отправить код
+                        .form_bottom
+                            .form_row
+                                .form_input
+                                    +check('terms', 'Соглашаюсь с офертой')
+                                .form_label.form_label--status
+                                    | Отправить код повторно через 1:25
+                            button.button.flat
+                                | Следующий шаг
+                    when 2
+                        .form_input
+                            select(name="country" required)
+                                option(value="" selected disabled) Страна*
+                        .form_input
+                            select(name="city" required)
+                                option(value="" selected disabled) Основной город*
+                        .form_input
+                            select(name="inn" required)
+                                option(value="" selected disabled) ИНН*
+                        .form_input
+                            select(name="ecp" required)
+                                option(value="" selected disabled) Электронная цифровая подпись*
+                        .form_buttons
+                            button.button.hollow.flat(type="button")
+                                | Предыдущий шаг
+                            button.button.flat
+                                | Следующий шаг
+                    when 3
+                        .form_input
+                            input(type="text" name="company_name" placeholder="Название компании*" required)
+                        .form_input
+                            input(type="email" name="email" placeholder="Электронная почта*" required)
+                        .form_row
+                            .form_input
+                                input(type="password" name="password" placeholder="Пароль*" required)
+                            .form_input
+                                input(type="password" name="password_confirmation" placeholder="Подтверждение пароля*" required)
+                        .form_buttons
+                            p.form_label
+                                | После нажатия на кнопку “Завершить регистрацию”, мы отправим вам письмо, для проверки адреса электронной почты.
+                            button.button.hollow.flat(type="button")
+                                | Предыдущий шаг
+                            button.button.flat
+                                | Завершить регистрацию
+            .register_info
+                p
+                    | Если вы уже являетесь клиентом ВТБ, то вы можете
+                    br
+                    | воспользоваться логином и паролем ВТБ Бизнес-Онлайн
+                a.button.flat(href="#")
+                    | Войти через ВТБ Бизнес- Онлайн
+                .register_steps
+                    h2.h1
+                        | Шаги регистрации
+                    ol.register_steps_list
+                        each step, i in steps
+                            li(class=(i < data.step) ? 'is_active' : false)
+                                =step

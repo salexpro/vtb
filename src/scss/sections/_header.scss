@@ -23,7 +23,7 @@
             display: none;
         }
     }
-    button{
+    button:not(.button){
         color: #8f9399;
     }
     &_search{
@@ -91,7 +91,7 @@
         }
     }
     &_lang{
-        button{
+        button:not([class]){
             display: flex;
             align-items: center;
             color: $primary-color;
@@ -256,6 +256,19 @@
             margin: 0 15px 14px;
             svg{
                 margin-right: 12px;
+            }
+        }
+    }
+    &--register{
+        .header{
+            &_logo{
+                display: block;
+                max-width: none;
+                margin-left: 8px;
+            }
+            &_info{
+                border-right: 1px solid #e9eef6;
+                margin-right: 30px;
             }
         }
     }

@@ -1,0 +1,12 @@
+extends ../layouts/_main
+
+block const
+    -
+        const page = 'register'
+        const name = 'Регистрация'
+
+block content
+    include ../components/_register
+    +register({
+        step: 3
+    })

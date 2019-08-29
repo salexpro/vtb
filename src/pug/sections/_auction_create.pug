@@ -1,87 +1,87 @@
 form.auction.auction--create
     .auction_add
-        h1.h2.auction_add_header
+        h1.h2.form_header
             | Новая закупка
-        .auction_add_form
-            .auction_add_form-input
+        .form
+            .form_input
                 input(type="text" placeholder="Наименование закупки*" required)
-            .auction_add_form-input
+            .form_input
                 input(type="text" placeholder="Общая информация о закупке*" required)
-            .auction_add_form-input
+            .form_input
                 select(required)
                     option(value="" selected disabled)
                         | Категория товаров*
-            .auction_add_form-row
-                .auction_add_form-input
+            .form_row
+                .form_input
                     input(type="text" placeholder="Начальная цена с НДС")
-                .auction_add_form-input
+                .form_input
                     input(type="text" placeholder="Валюта")
-            .auction_add_form-input
+            .form_input
                 input(type="text" placeholder="Контактное лицо (ФИО)*" required)
-            .auction_add_form-input
+            .form_input
                 input(type="tel" placeholder="Контактный телефон*" required)
-            .auction_add_form-input
+            .form_input
                 input(type="text" placeholder="Заказчик*" required)
-            .auction_add_form-row
-                .auction_add_form-file
+            .form_row
+                .form_file
                     label Требования
                     label.button.hollow
                         input(type="file")
                         +icon('clip', [17, 16])
                         | Добавить
-                .auction_add_form-file.uploaded
+                .form_file.uploaded
                     label Форма коммерческого предложения
-                    .auction_add_form-file_name
+                    .form_file_name
                         +icon('clip', [17, 16])
                         span Коммерческое_&thinsp;предложение.pdf
-                        button.auction_add_form-file_remove(type="button")
+                        button.form_file_remove(type="button")
                             +icon('close', [12, 11])
 
                     label.button.hollow
                         input(type="file")
                         +icon('clip', [17, 16])
                         | Добавить
-            .auction_add_form-input
+            .form_input
                 input(type="text" placeholder="Условия поставки и оплаты товара*" required)
-            .auction_add_form-row
-                .auction_add_form-input
+            .form_row
+                .form_input
                     input(type="text" placeholder="Дата начала приема заявок*" required)
-                .auction_add_form-input
+                .form_input
                     input(type="text" placeholder="Дата окончания приема заявок*" required)
-            .auction_add_form-row
-                .auction_add_form-input
+            .form_row
+                .form_input
                     input(type="text" placeholder="Время начала приема заявок*" required)
-                .auction_add_form-input
+                .form_input
                     input(type="text" placeholder="Время окончания приема заявок*" required)
     .auction_spec
-        h2.h1.auction_spec_header
+        h2.h1.form_header.form_header--secondary
             | Спецификация №1
-        .auction_add_form
-            .auction_add_form-input
+        .form
+            .form_input
                 input(type="text" placeholder="Наименование*" required)
-            .auction_add_form-input
+            .form_input
                 input(type="text" placeholder="Описание")
-            .auction_add_form-input
+            .form_input
                 select(required)
                     option(value="" selected disabled)
                         | Код позиции по ОКПД2*
-            .auction_add_form-row
-                .auction_add_form-input
+            .form_row
+                .form_input
                     input(type="text" placeholder="Цена за единицу")
-                .auction_add_form-input
+                .form_input
                     input(type="text" placeholder="Количество")
-            .auction_add_form-input
+            .form_input
                 select
                     option(value="" selected disabled)
                         | Единица измерения
-            .auction_add_form-row
-                .auction_add_form-input
+            .form_row
+                .form_input
                     input(type="text" placeholder="Ставка НДС*" required)
-                .auction_add_form-input
+                .form_input
                     input(type="text" placeholder="Сумма НДС")
-            .auction_add_form-input
+            .form_input
                 input(type="text" placeholder="Итог*" required)
-            .auction_add_form-add
+            .form_add
                 label Добавить еще спецификацию
                 button.button.hollow(type="button")
                     | Добавить

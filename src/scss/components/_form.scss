@@ -1,0 +1,193 @@
+.form{
+    &--register{
+        padding-top: 22px;
+        padding-bottom: 42px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            left: calc(100% + 70px);
+            top: 0;
+            height: 100%;
+            border-right: 1px solid #e9eef6;
+        }
+    }
+    &_header{
+        margin-bottom: 27px;
+        @include breakpoint(small down){
+            margin-bottom: 18px;
+        }
+        &--secondary{
+            margin-top: 7px;
+            margin-bottom: 27px;
+            @include breakpoint(medium down){
+                margin-top: 25px;
+                margin-bottom: 14px;
+            }
+            @include breakpoint(small down){
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &_input{
+        margin-bottom: 15px;
+        @include breakpoint(small down){
+            margin-bottom: 10px;
+            input, select{
+                padding: 10px 15px;
+                height: auto;
+                font-size: 13px;
+            }
+            select{
+                padding-right: 0;
+            }
+        }
+        .hollow{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &_row{
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(small down){
+            display: block;
+        }
+        > [class^="form_"]{
+            flex: 0 1 calc(50% - 11px)
+        }
+    }
+    &_file{
+        margin-top: 10px;
+        @include breakpoint(small down){
+            margin-top: 20px;
+        }
+        &.uploaded{
+            min-height: 89px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 14px;
+            @include breakpoint(small down){
+                min-height: auto;
+                padding-bottom: 20px;
+            }
+            label{
+                margin: 0;
+                &.button{
+                    display: none;
+                }
+            }
+        }
+        label{
+            font-family: $book-font-family;
+            margin-bottom: 1em;
+            &.button{
+                position: relative;
+                min-height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg{
+                    margin-right: 10px;
+                }
+                [type="file"]{
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        &_name{
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            font-family: $book-font-family;
+            font-size: 12px;
+            // word-break: break-word;
+            @include breakpoint(small down){
+                min-height: auto;
+                margin-top: 15px;
+            }
+            > svg{
+                flex: 0 0 auto;
+                margin-right: 10px;
+                color: $medium-gray;
+            }
+            span{
+                padding-right: 10px;
+            }
+        }
+        &_remove{
+            flex: 0 0 auto;
+            color: $primary-color;
+            margin-left: auto;
+        }
+    }
+    &_add{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 54px;
+        @include breakpoint(medium down){
+            margin: 0;
+        }
+        @include breakpoint(small down){
+            display: block;
+            margin-top: 20px;
+        }
+        label{
+            font-family: $book-font-family;
+        }
+        .button{
+            min-height: 45px;
+            flex: 0 1 calc(50% - 15px);
+            min-width: 170px;
+            @include breakpoint(small down){
+                width: 100%;
+                margin-top: 13px;
+            }
+        }
+    }
+    &_label{
+        color: $medium-gray;
+        font-family: $book-font-family;
+        text-align: right;
+    }
+    &_bottom{
+        margin-top: 15px;
+        .button{
+            margin-top: 5px;
+        }
+    }
+    &_buttons{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        .form_label{
+            flex: 1 1 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .button + .button{
+            margin-left: 20px;
+        }
+    }
+    select{
+        // background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213%22%20height%3D%2210%22%20viewBox%3D%220%200%2013%2010%22%3E%3Cpath%20transform%3D%22rotate%28180%206.5%205%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M6.73.62l1.376%201.376-.23.23%205.779%205.778-1.377%201.376L6.5%203.602.722%209.38-.655%208.004l5.778-5.779-.229-.229L6.271.62%206.5.849z%22%2F%3E%3C%2Fsvg%3E);
+        background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20transform%3D%22rotate%28180%205%203%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M5.48.723l.02.02.02-.02%204.758%204.622-.954.926L5.5%202.557%201.674%206.27.72%205.345z%22%2F%3E%3C%2Fsvg%3E);
+        background-size: 15px;
+        background-position: right 13px center;
+        @include breakpoint(small down){
+            background-size: 13px;
+        }
+    }
+}

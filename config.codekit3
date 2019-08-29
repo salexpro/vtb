@@ -3483,7 +3483,7 @@
 		"oAP": "/build/assets/img/suppliers/sss_big.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/src/assets/img/suppliers/sss_big@2x.jpg": {
@@ -3494,7 +3494,7 @@
 		"oAP": "/build/assets/img/suppliers/sss_big@2x.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/src/assets/img/suppliers/volgaprom.jpg": {
@@ -3581,16 +3581,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
-		},
-	"/src/pug/_layout.pug": {
-		"cB": 1,
-		"cOD": 0,
-		"ft": 512,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/_layout.html",
-		"oF": 0,
-		"oS": 0
 		},
 	"/src/pug/components/_breadcrumbs.pug": {
 		"cB": 1,
@@ -3692,6 +3682,26 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/components/_register.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_register.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/layouts/_main.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_main.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/auction-create.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3729,6 +3739,36 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/item.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/pages/register-2.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/register-2.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/pages/register-3.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/register-3.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/pages/register.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/register.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3841,11 +3881,11 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "/build/css/app.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/components/_badge.scss": {
@@ -3922,6 +3962,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/build/scss/css/_fonts.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/src/scss/components/_form.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_form.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -4069,6 +4122,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/sections/_register.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_register.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_supplier.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4093,7 +4159,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 585953926.67359304
+	"lastBuiltDate": 588777116.03099096
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

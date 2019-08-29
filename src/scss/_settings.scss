@@ -71,7 +71,7 @@ $global-lineheight: 1.3;
 $foundation-palette: (
   primary: #1e4bd2,
   secondary: #e4f6ff,
-  success: #3adb76,
+  success: #69a981,
   warning: #ffae00,
   alert: #e62632,
 );
@@ -303,7 +303,7 @@ $button-sizes: (
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
-$button-opacity-disabled: 0.25;
+$button-opacity-disabled: 0.5;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -443,7 +443,7 @@ $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
 $input-background: $white;
 $input-background-focus: $white;
-$input-background-disabled: $light-gray;
+$input-background-disabled: inherit;
 $input-border: 1px solid $medium-gray;
 $input-border-focus: 1px solid $dark-gray;
 $input-padding: rem-calc(15);
