@@ -300,13 +300,13 @@ $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
   default: 1rem,
-  large: 1.25rem,
+  large: 1rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.5;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+$button-transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s;
 
 // 12. Button Group
 // ----------------
@@ -378,12 +378,12 @@ $drilldown-arrow-size: 6px;
 // 17. Dropdown
 // ------------
 
-$dropdown-padding: 1rem;
-$dropdown-background: $body-background;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-padding: 0;
+$dropdown-background: $white;
+$dropdown-border: none;
 $dropdown-font-size: 1rem;
-$dropdown-width: 300px;
-$dropdown-radius: $global-radius;
+$dropdown-width: 150px;
+$dropdown-radius: 9px;
 $dropdown-sizes: (
   tiny: 100px,
   small: 200px,

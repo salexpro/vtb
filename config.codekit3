@@ -3722,6 +3722,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/documents.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/documents.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/index.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3812,6 +3822,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/sections/_documents.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_documents.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/sections/_footer.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3842,13 +3862,13 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/src/pug/sections/_leftMenu.pug": {
+	"/src/pug/sections/_left_menu.pug": {
 		"cB": 1,
 		"cOD": 0,
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_leftMenu.html",
+		"oAP": "/build/_left_menu.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -4044,6 +4064,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/components/_table.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_table.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_auction.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4066,6 +4099,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/build/scss/css/_catalog.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/src/scss/sections/_documents.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_documents.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -4109,7 +4155,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/src/scss/sections/_leftMenu.scss": {
+	"/src/scss/sections/_left_menu.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -4117,7 +4163,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_leftMenu.css",
+		"oAP": "/build/scss/css/_left_menu.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -4159,7 +4205,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 588791118.48943996
+	"lastBuiltDate": 589590485.99686098
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

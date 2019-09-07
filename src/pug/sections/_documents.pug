@@ -1,0 +1,72 @@
+section.documents
+    .documents_top
+        h1.h2
+            | Документооборот
+        .documents_top_buttons
+            buttton.button.hollow.large.icon
+                +icon('plus', [14, 14])
+                | Создать
+            button.button.hollow.large.icon
+                +icon('save', [14, 14])
+                | Сохранить
+    form.documents_search
+        input(type="search" name="word" placeholder="Поиск")
+        select.clear(name="document")
+            option(value="" selected disabled) Документ
+        select.clear(name="type")
+            option(value="" selected disabled) Тип
+        select.clear(name="status")
+            option(value="" selected disabled) Статус
+        select.clear(name="date")
+            option(value="" selected disabled) Дата/Период
+        button.button.hollow.icon.alert(type="button" disabled)
+            +icon('close', [12, 11])
+            | Очистить
+
+    table.table
+        thead
+            tr
+                th № Заказа
+                th № Документа
+                th Получатель
+                th Статус
+                th Ответственный
+                th
+                    |Отправленно/
+                    br
+                    | Получено
+                th Тип документа
+        tbody
+            tr
+                td 1137659-П
+                td 
+                    button(data-toggle="doc") 1137659-П
+                td OOO “Бизнес-Коннект”
+                td Ожидает пописания
+                td Абуд И.Ф.
+                td 8/9/19
+                td Договор
+            tr
+                td 348-Акт
+                td 348-Акт
+                td OOO “Бизнес-Коннект”
+                td Ожидает пописания
+                td Абуд И.Ф.
+                td 8/9/19
+                td Акт
+            tr
+                td 8977384-С
+                td 8977384-С
+                td OOO “Бизнес-Коннект”
+                td Ожидает пописания
+                td Абуд И.Ф.
+                td 8/9/19
+                td Счет
+
+ul#doc.dropdown-pane.menu.documents_dropdown(data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="20" data-h-offset="-10")
+    li
+        a(href="#")
+            | Скачать
+    li
+        a(href="#")
+            | Сохранить

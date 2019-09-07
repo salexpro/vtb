@@ -62,3 +62,15 @@ input:disabled, input[readonly], textarea:disabled, textarea[readonly]{
         padding: 0 10px;
     }
 }
+
+select.clear{
+    padding: 0;
+    border: 0;
+    height: auto;
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%229%22%20height%3D%225%22%20viewBox%3D%220%200%209%205%22%3E%0D%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%231E4BD2%22%20fill-rule%3D%22evenodd%22%20transform%3D%22rotate%28180%204.5%202.5%29%22%20d%3D%22M4.528.013a.736.736%200%2001.505.208l3.738%203.63a.68.68%200%2001.01.98l.023-.027-.002.002-.065.055a.728.728%200%2001-.832-.008l-.089-.074L4.5%201.558l-3.316%203.22a.73.73%200%2001-.92.083l-.067-.055-.002-.002-.05-.058a.682.682%200%2001.084-.895L3.967.221a.736.736%200%2001.534-.208zM.175%204.788l.02.016.002.002.023.025-.045-.043zm8.65%200l-.045.043.022-.025.002-.002.021-.016z%22%2F%3E%0D%0A%3C%2Fsvg%3E);
+    background-size: auto;
+    font-size: 16px;
+    padding-right: 17px;
+    background-position: right -17px center;
+    height: auto;
+}

@@ -563,8 +563,8 @@ ul.no-bullet, ol.no-bullet {
   padding: 11px 19px;
   border: 1px solid transparent;
   border-radius: 3px;
-  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s;
   font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
   -webkit-appearance: none;
@@ -583,7 +583,7 @@ ul.no-bullet, ol.no-bullet {
   .button.small {
     font-size: 0.75rem; }
   .button.large {
-    font-size: 1.25rem; }
+    font-size: 1rem; }
   .button.expanded {
     display: block;
     width: 100%;
@@ -1365,6 +1365,32 @@ select {
 .no-js [data-responsive-menu] ul {
   display: none; }
 
+.dropdown-pane {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  width: 150px;
+  padding: 0;
+  visibility: hidden;
+  border: none;
+  border-radius: 9px;
+  background-color: #fff;
+  font-size: 1rem; }
+  .dropdown-pane.is-opening {
+    display: block; }
+  .dropdown-pane.is-open {
+    display: block;
+    visibility: visible; }
+
+.dropdown-pane.tiny {
+  width: 100px; }
+
+.dropdown-pane.small {
+  width: 200px; }
+
+.dropdown-pane.large {
+  width: 400px; }
+
 .is-off-canvas-open {
   overflow: hidden; }
 
@@ -1832,22 +1858,35 @@ textarea[readonly] {
     .container {
       padding: 0 10px; } }
 
+select.clear {
+  padding: 0;
+  border: 0;
+  height: auto;
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%229%22%20height%3D%225%22%20viewBox%3D%220%200%209%205%22%3E%0D%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%231E4BD2%22%20fill-rule%3D%22evenodd%22%20transform%3D%22rotate%28180%204.5%202.5%29%22%20d%3D%22M4.528.013a.736.736%200%2001.505.208l3.738%203.63a.68.68%200%2001.01.98l.023-.027-.002.002-.065.055a.728.728%200%2001-.832-.008l-.089-.074L4.5%201.558l-3.316%203.22a.73.73%200%2001-.92.083l-.067-.055-.002-.002-.05-.058a.682.682%200%2001.084-.895L3.967.221a.736.736%200%2001.534-.208zM.175%204.788l.02.016.002.002.023.025-.045-.043zm8.65%200l-.045.043.022-.025.002-.002.021-.016z%22%2F%3E%0D%0A%3C%2Fsvg%3E);
+  background-size: auto;
+  font-size: 16px;
+  padding-right: 17px;
+  background-position: right -17px center;
+  height: auto; }
+
 button {
   outline: none;
   cursor: pointer; }
+
+.button.shrink {
+  padding: 8px 23px;
+  margin: 42px auto 0; }
+  @media screen and (max-width: 63.99875em) {
+    .button.shrink {
+      margin-top: 37px; } }
 
 .button.icon {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
-  padding: 8px 23px;
-  margin: 42px auto 0; }
-  @media screen and (max-width: 63.99875em) {
-    .button.icon {
-      margin-top: 37px; } }
+          align-items: center; }
   .button.icon svg {
-    margin-right: 14px; }
+    margin-right: 10px; }
 
 @media screen and (max-width: 39.99875em) {
   .button.hollow {
@@ -1871,6 +1910,11 @@ button {
       max-width: 335px;
       width: 100%;
       margin: auto; } }
+
+.button.large {
+  min-height: 45px;
+  min-width: 114px;
+  padding: 10px 14px; }
 
 .menu_icon {
   width: 25px;
@@ -2361,6 +2405,30 @@ button {
   @media screen and (max-width: 39.99875em) {
     .form select {
       background-size: 13px; } }
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+  margin: 0 -10px; }
+  .table tr th:first-child, .table tr td:first-child {
+    padding-left: 10px; }
+  .table th {
+    color: #acb6c3;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    border-bottom: 1px solid #e9eef6;
+    padding: 0 15px 20px; }
+  .table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9eef6; }
+  .table [data-toggle] {
+    text-decoration: underline;
+    -webkit-transition: color 300ms;
+    transition: color 300ms; }
+    .table [data-toggle]:hover, .table [data-toggle]:focus {
+      color: #1e4bd2; }
 
 .flag-icon-background, .flag-icon {
   background-size: contain;
@@ -3193,7 +3261,7 @@ button {
       margin-right: 20px; }
     .header_search input {
       height: auto;
-      padding: 8px 20px;
+      padding: 9px 20px;
       padding-right: 50px; }
       @media screen and (max-width: 63.99875em) {
         .header_search input {
@@ -5445,6 +5513,67 @@ button {
             color: #f3f7fa; }
           .register_steps_list li.is_active::after {
             border-color: #1e4bd2; }
+
+.documents {
+  box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+  border-radius: 9px;
+  margin: 30px 25px 0;
+  background-color: #fff;
+  padding: 40px 30px 90px; }
+  .documents_top {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    .documents_top_buttons {
+      padding-left: 20px;
+      display: -webkit-box;
+      display: flex; }
+      .documents_top_buttons .button + .button {
+        margin-left: 30px; }
+  .documents_search {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(100px, 250px) (auto)[5];
+    grid-template-columns: minmax(100px, 250px) repeat(5, auto);
+    grid-gap: 20px;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    padding: 45px 10px 30px;
+    margin: 0 -10px;
+    border-bottom: 1px solid #e9eef6;
+    margin-bottom: 50px; }
+    .documents_search input {
+      height: auto;
+      padding: 9px 20px; }
+    .documents_search .button {
+      -ms-grid-column-align: end;
+          justify-self: end; }
+  .documents_dropdown {
+    display: block;
+    margin: 0;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+    box-shadow: 0 0 30px rgba(107, 118, 131, 0.11);
+    overflow: hidden; }
+    .documents_dropdown.is-open {
+      visibility: visible;
+      opacity: 1;
+      z-index: 2; }
+    .documents_dropdown li + li a::before {
+      left: 10px;
+      width: calc(100% - 20px); }
+    .documents_dropdown a {
+      padding: 10px 15px;
+      min-height: 54px; }
 
 .footer {
   margin: 40px 25px 45px;

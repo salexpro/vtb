@@ -1,0 +1,32 @@
+.table{
+    width: 100%;
+    border-spacing: 0;
+    font-family: $book-font-family;
+    margin: 0 -10px;
+    tr {
+        th, td{
+            &:first-child{
+                padding-left: 10px;
+            }
+        }
+    }
+    th {
+        color: $medium-gray;
+        font-size: 13px;
+        font-weight: 300;
+        text-align: left;
+        border-bottom: 1px solid #e9eef6;
+        padding: 0 15px 20px;
+    }
+    td {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9eef6;
+    }
+    [data-toggle]{
+        text-decoration: underline;
+        transition: color 300ms;
+        &:hover, &:focus{
+            color: $primary-color;
+        }
+    }
+}

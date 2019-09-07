@@ -23,7 +23,7 @@
 @include foundation-menu;
 // @include foundation-menu-icon;
 // @include foundation-drilldown-menu;
-// @include foundation-dropdown;
+@include foundation-dropdown;
 // @include foundation-dropdown-menu;
 // @include foundation-responsive-embed;
 // @include foundation-label;
@@ -65,6 +65,7 @@
 @import 'components/checkbox';
 @import 'components/rating';
 @import 'components/form';
+@import 'components/table';
 // @import 'components/offcanvas';
 
 $flag-icon-css-path: '../assets/img/flags';
@@ -72,10 +73,11 @@ $flag-icon-css-path: '../assets/img/flags';
 
 // Sections
 @import 'sections/header';
-@import 'sections/leftMenu';
+@import 'sections/left_menu';
 @import 'sections/catalog';
 @import 'sections/item';
 @import 'sections/supplier';
 @import 'sections/auction';
 @import 'sections/register';
+@import 'sections/documents';
 @import 'sections/footer';
