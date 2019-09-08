@@ -1,5 +1,5 @@
 .table{
-    width: 100%;
+    width: calc(100% + 20px);
     border-spacing: 0;
     font-family: $book-font-family;
     margin: 0 -10px;
@@ -17,9 +17,10 @@
         text-align: left;
         border-bottom: 1px solid #e9eef6;
         padding: 0 15px 20px;
+        vertical-align: top;
     }
     td {
-        padding: 15px 20px;
+        padding: 20px 15px;
         border-bottom: 1px solid #e9eef6;
     }
     [data-toggle]{
@@ -27,6 +28,18 @@
         transition: color 300ms;
         &:hover, &:focus{
             color: $primary-color;
+        }
+    }
+
+    &--order{
+        margin-top: 40px;
+        tr{
+            th, td{
+                &:first-child{
+                    width: 18px;
+                    padding: 0;
+                }
+            }
         }
     }
 }

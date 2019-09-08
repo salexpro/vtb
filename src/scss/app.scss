@@ -43,7 +43,7 @@
 // @include foundation-tabs;
 // @include foundation-thumbnail;
 // @include foundation-title-bar;
-// @include foundation-tooltip;
+@include foundation-tooltip;
 // @include foundation-top-bar;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
@@ -80,4 +80,5 @@ $flag-icon-css-path: '../assets/img/flags';
 @import 'sections/auction';
 @import 'sections/register';
 @import 'sections/documents';
+@import 'sections/order';
 @import 'sections/footer';

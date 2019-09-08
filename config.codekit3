@@ -3762,6 +3762,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/order.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/order.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/register-2.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3889,6 +3899,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_left_menu.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_order.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_order.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -4188,6 +4208,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/sections/_order.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_order.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_register.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4225,7 +4258,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 589635107.23391294
+	"lastBuiltDate": 589664489.34482098
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

@@ -834,16 +834,16 @@ $titlebar-icon-spacing: 0.25rem;
 // -----------
 
 $has-tip-cursor: help;
-$has-tip-font-weight: $global-weight-bold;
-$has-tip-border-bottom: dotted 1px $dark-gray;
-$tooltip-background-color: $black;
+$has-tip-font-weight: $global-weight-normal;
+$has-tip-border-bottom: none;
+$tooltip-background-color: #00aaff;
 $tooltip-color: $white;
-$tooltip-padding: 0.75rem;
-$tooltip-max-width: 10rem;
+$tooltip-padding: 0.75rem 1rem;
+$tooltip-max-width: 125px;
 $tooltip-font-size: $small-font-size;
-$tooltip-pip-width: 0.75rem;
+$tooltip-pip-width: 7.5px;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
-$tooltip-radius: $global-radius;
+$tooltip-radius: 4px;
 
 // 55. Top Bar
 // -----------

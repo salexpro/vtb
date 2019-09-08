@@ -26,10 +26,15 @@
             height: 18px;
             border-radius: 3px;
             border: 1px solid #8f9399;
-            margin-right: 8px;
             background-position: center;
             background-repeat: no-repeat;
             transition: border-color 250ms, background-color 250ms;
+            &:not(:only-child){
+                margin-right: 8px;
+            }
+        }
+        &:empty::before{
+            // margin: 0;
         }
     }
 }

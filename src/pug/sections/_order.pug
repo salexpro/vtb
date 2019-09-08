@@ -1,0 +1,208 @@
+-
+    const statuses = [
+        {
+            icon: ['plus', [22, 22]],
+            label: 'Новый <br>заказ',
+            active: true
+        },
+        {
+            icon: ['return', [20, 20]],
+            label: 'Обработан'
+        },
+        {
+            icon: ['reservation', [29, 16]],
+            label: 'Резерв',
+            tooltip: 'Изменение статуса по двоному клику'
+        },
+        {
+            icon: ['card', [21, 16]],
+            label: 'Оплачен'
+        },
+        {
+            icon: ['contract', [23, 22]],
+            label: 'Подписан'
+        },
+        {
+            icon: ['airplane', [20, 20]],
+            label: 'Отгружен'
+        },
+        {
+            icon: ['check-thin', [22, 17]],
+            label: 'Выполнен'
+        },
+        {
+            icon: ['close', [17, 17]],
+            label: 'Отменен'
+        },
+    ]
+
+section.order
+    h1.order_title
+        | Заказ #1153
+    .order_content
+        .order_top
+            ul.order_status
+                each status in statuses
+                    li.order_status_item&attributes({
+                        class: status.active ? 'is_active' : false,
+                        'data-tooltip': status.tooltip ? '' : false,
+                        tabindex: status.tooltip ? 1 : false,
+                        title: status.tooltip || false
+                    })
+                        .order_status_icon
+                            +icon(...status.icon)
+                        .order_status_label
+                            !=status.label
+            .order_top_buttons
+                button.button.hollow.large.icon
+                    +icon('calc', [14, 20])
+                    | Расчитать стоимость доставки
+                button.button.hollow.large
+                    | Конструктор договоров
+        .order_info
+            h2
+                | Подробная информация по заказу
+            ul.order_list
+                li
+                    b Покупатель:  
+                    | ВТБ (Отдел розничного взыскания)
+                li
+                    b Тип оплаты:  
+                    | Оплата при получении
+                li
+                    b Способ доставки:  
+                    | Доставка
+                li
+                    b Место поставки:  
+                    | Из карточки торга
+                li
+                    b Дата доставки:  
+                    | 2019-08-30
+                li
+                    b Дата создания:  
+                    | 2019-08-16
+            .order_item
+                ul.order_item_name
+                    li
+                        b Продавец: 
+                        | ВЭБ-Телеком
+                    li
+                        b Наименование: 
+                        | Скамья гиперэкстензия Glute Ham Developer
+
+                ul.order_item_info
+                    li
+                        span Артикул: 
+                        | AF1018C
+                    li
+                        span Количество: 
+                        | 1
+                    li
+                        span Модификация: 
+                        | Базовая
+                    li
+                        span Склад: 
+                        | Основной
+                b.order_item_price
+                    | 7 200 ₽
+            .order_item
+                ul.order_item_name
+                    li
+                        b Продавец: 
+                        | ВЭБ-Телеком
+                    li
+                        b Наименование: 
+                        | Гантель разборная Indigo IN046 16.5 кг
+
+                ul.order_item_info
+                    li
+                        span Артикул: 
+                        | AC1568g98
+                    li
+                        span Количество: 
+                        | 1
+                    li
+                        span Модификация: 
+                        | Базовая
+                    li
+                        span Склад: 
+                        | Основной
+                b.order_item_price
+                    | 2 450 ₽
+            .order_total
+                | Итого:
+                b 9 650 ₽
+        .order_documents
+            h2
+                | Документооборот
+            table.table.table--order
+                thead
+                    tr
+                        th
+                        th № Документа
+                        th Получатель
+                        th Статус
+                        th Ответственный
+                        th
+                            |Отправленно/
+                            br
+                            | Получено
+                        th Тип документа
+                tbody
+                    tr
+                        td
+                            +check('doc1')
+                        td 
+                            button(data-toggle="doc") 1137659-П
+                        td OOO “Бизнес-Коннект”
+                        td Ожидает пописания
+                        td Абуд И.Ф.
+                        td 8/9/19
+                        td Договор
+                    tr
+                        td
+                            +check('doc2')
+                        td 348-Акт
+                        td OOO “Бизнес-Коннект”
+                        td Ожидает пописания
+                        td Абуд И.Ф.
+                        td 8/9/19
+                        td Акт
+                    tr
+                        td
+                            +check('doc3')
+                        td 8977384-С
+                        td OOO “Бизнес-Коннект”
+                        td Ожидает пописания
+                        td Абуд И.Ф.
+                        td 8/9/19
+                        td Счет
+            ul#doc.dropdown-pane.menu.documents_dropdown(data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="20" data-h-offset="-10")
+                li
+                    a(href="#")
+                        | Скачать
+                li
+                    a(href="#")
+                        | Сохранить
+            .order_documents_buttons
+                button.button.hollow.large.icon
+                    +icon('plus', [14, 14])
+                    | Добавить
+                button.button.hollow.large.icon
+                    +icon('contract', [14, 14])
+                    | Подписать
+                button.button.hollow.large.icon
+                    +icon('handshake', [18, 12])
+                    | Еще
+        .order_discuss
+            h2 Обсуждения
+            form.order_discuss_form
+                input(type="text" name="message" placeholder="Написать")
+                button.button.hollow
+                    | Отправить
+
+        .order_messages
+            h2 История сообщений
+            .order_messages_history
+                .order_messages_message
+                    | Подтверждаем соответствие к требованиям

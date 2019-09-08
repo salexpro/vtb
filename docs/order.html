@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Документооборот – ВТБ Бизнес Коннект</title>
+    <title>Заказ #1153 – ВТБ Бизнес Коннект</title>
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <meta property="og:title" content="Документооборот – ВТБ Бизнес Коннект">
+    <meta property="og:title" content="Заказ #1153 – ВТБ Бизнес Коннект">
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
@@ -20,7 +20,7 @@
     <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=589664483" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=589664483" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=589664483" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=db3671cfa041bf0d0417b3a0f5460b2d">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=86b21408a5f5f9f158fa95c5534f2c7b">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -123,91 +123,230 @@
             </svg>
           </button>
         </header>
-        <section class="documents">
-          <div class="documents_top">
-            <h1 class="h2">Документооборот</h1>
-            <div class="documents_top_buttons">
-              <buttton class="button hollow large icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#plus"></use>
-                </svg>Создать
-              </buttton>
-              <button class="button hollow large icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#save"></use>
-                </svg>Сохранить
-              </button>
+        <section class="order">
+          <h1 class="order_title">Заказ #1153</h1>
+          <div class="order_content">
+            <div class="order_top">
+              <ul class="order_status">
+                <li class="order_status_item is_active">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Новый <br>заказ
+                  </div>
+                </li>
+                <li class="order_status_item">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#return"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Обработан
+                  </div>
+                </li>
+                <li class="order_status_item" data-tooltip="" tabindex="1" title="Изменение статуса по двоному клику">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="16">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#reservation"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Резерв
+                  </div>
+                </li>
+                <li class="order_status_item">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="16">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#card"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Оплачен
+                  </div>
+                </li>
+                <li class="order_status_item">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#contract"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Подписан
+                  </div>
+                </li>
+                <li class="order_status_item">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#airplane"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Отгружен
+                  </div>
+                </li>
+                <li class="order_status_item">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#check-thin"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Выполнен
+                  </div>
+                </li>
+                <li class="order_status_item">
+                  <div class="order_status_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="order_status_label">Отменен
+                  </div>
+                </li>
+              </ul>
+              <div class="order_top_buttons">
+                <button class="button hollow large icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20">
+                    <use fill="currentColor" xlink:href="./assets/img/icons.svg#calc"></use>
+                  </svg>Расчитать стоимость доставки
+                </button>
+                <button class="button hollow large">Конструктор договоров</button>
+              </div>
+            </div>
+            <div class="order_info">
+              <h2>Подробная информация по заказу</h2>
+              <ul class="order_list">
+                <li><b>Покупатель:  </b>ВТБ (Отдел розничного взыскания)</li>
+                <li><b>Тип оплаты:  </b>Оплата при получении</li>
+                <li><b>Способ доставки:  </b>Доставка</li>
+                <li><b>Место поставки:  </b>Из карточки торга</li>
+                <li><b>Дата доставки:  </b>2019-08-30</li>
+                <li><b>Дата создания:  </b>2019-08-16</li>
+              </ul>
+              <div class="order_item">
+                <ul class="order_item_name">
+                  <li><b>Продавец: </b>ВЭБ-Телеком</li>
+                  <li><b>Наименование: </b>Скамья гиперэкстензия Glute Ham Developer</li>
+                </ul>
+                <ul class="order_item_info">
+                  <li><span>Артикул: </span>AF1018C</li>
+                  <li><span>Количество: </span>1</li>
+                  <li><span>Модификация: </span>Базовая</li>
+                  <li><span>Склад: </span>Основной</li>
+                </ul><b class="order_item_price">7 200 ₽</b>
+              </div>
+              <div class="order_item">
+                <ul class="order_item_name">
+                  <li><b>Продавец: </b>ВЭБ-Телеком</li>
+                  <li><b>Наименование: </b>Гантель разборная Indigo IN046 16.5 кг</li>
+                </ul>
+                <ul class="order_item_info">
+                  <li><span>Артикул: </span>AC1568g98</li>
+                  <li><span>Количество: </span>1</li>
+                  <li><span>Модификация: </span>Базовая</li>
+                  <li><span>Склад: </span>Основной</li>
+                </ul><b class="order_item_price">2 450 ₽</b>
+              </div>
+              <div class="order_total">Итого:<b>9 650 ₽</b></div>
+            </div>
+            <div class="order_documents">
+              <h2>Документооборот</h2>
+              <table class="table table--order">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>№ Документа</th>
+                    <th>Получатель</th>
+                    <th>Статус</th>
+                    <th>Ответственный</th>
+                    <th>Отправленно/<br>Получено</th>
+                    <th>Тип документа</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" id="doc1"/>
+                        <label for="doc1">
+                        </label>
+                      </div>
+                    </td>
+                    <td> 
+                      <button data-toggle="doc">1137659-П</button>
+                    </td>
+                    <td>OOO “Бизнес-Коннект”</td>
+                    <td>Ожидает пописания</td>
+                    <td>Абуд И.Ф.</td>
+                    <td>8/9/19</td>
+                    <td>Договор</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" id="doc2"/>
+                        <label for="doc2">
+                        </label>
+                      </div>
+                    </td>
+                    <td>348-Акт</td>
+                    <td>OOO “Бизнес-Коннект”</td>
+                    <td>Ожидает пописания</td>
+                    <td>Абуд И.Ф.</td>
+                    <td>8/9/19</td>
+                    <td>Акт</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" id="doc3"/>
+                        <label for="doc3">
+                        </label>
+                      </div>
+                    </td>
+                    <td>8977384-С</td>
+                    <td>OOO “Бизнес-Коннект”</td>
+                    <td>Ожидает пописания</td>
+                    <td>Абуд И.Ф.</td>
+                    <td>8/9/19</td>
+                    <td>Счет</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="dropdown-pane menu documents_dropdown" id="doc" data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="20" data-h-offset="-10">
+                <li><a href="#">Скачать</a></li>
+                <li><a href="#">Сохранить</a></li>
+              </ul>
+              <div class="order_documents_buttons">
+                <button class="button hollow large icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                    <use fill="currentColor" xlink:href="./assets/img/icons.svg#plus"></use>
+                  </svg>Добавить
+                </button>
+                <button class="button hollow large icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                    <use fill="currentColor" xlink:href="./assets/img/icons.svg#contract"></use>
+                  </svg>Подписать
+                </button>
+                <button class="button hollow large icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                    <use fill="currentColor" xlink:href="./assets/img/icons.svg#handshake"></use>
+                  </svg>Еще
+                </button>
+              </div>
+            </div>
+            <div class="order_discuss">
+              <h2>Обсуждения</h2>
+              <form class="order_discuss_form">
+                <input type="text" name="message" placeholder="Написать">
+                <button class="button hollow">Отправить</button>
+              </form>
+            </div>
+            <div class="order_messages">
+              <h2>История сообщений</h2>
+              <div class="order_messages_history">
+                <div class="order_messages_message">Подтверждаем соответствие к требованиям</div>
+              </div>
             </div>
           </div>
-          <form class="documents_search">
-            <input type="search" name="word" placeholder="Поиск">
-            <select class="clear" name="document">
-              <option value="" selected disabled>Документ</option>
-            </select>
-            <select class="clear" name="type">
-              <option value="" selected disabled>Тип</option>
-            </select>
-            <select class="clear" name="status">
-              <option value="" selected disabled>Статус</option>
-            </select>
-            <select class="clear" name="date">
-              <option value="" selected disabled>Дата/Период</option>
-            </select>
-            <button class="button hollow icon alert" type="button" disabled>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11">
-                <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
-              </svg>Очистить
-            </button>
-          </form>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>№ Заказа</th>
-                <th>№ Документа</th>
-                <th>Получатель</th>
-                <th>Статус</th>
-                <th>Ответственный</th>
-                <th>Отправленно/<br>Получено</th>
-                <th>Тип документа</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1137659-П</td>
-                <td> 
-                  <button data-toggle="doc">1137659-П</button>
-                </td>
-                <td>OOO “Бизнес-Коннект”</td>
-                <td>Ожидает пописания</td>
-                <td>Абуд И.Ф.</td>
-                <td>8/9/19</td>
-                <td>Договор</td>
-              </tr>
-              <tr>
-                <td>348-Акт</td>
-                <td>348-Акт</td>
-                <td>OOO “Бизнес-Коннект”</td>
-                <td>Ожидает пописания</td>
-                <td>Абуд И.Ф.</td>
-                <td>8/9/19</td>
-                <td>Акт</td>
-              </tr>
-              <tr>
-                <td>8977384-С</td>
-                <td>8977384-С</td>
-                <td>OOO “Бизнес-Коннект”</td>
-                <td>Ожидает пописания</td>
-                <td>Абуд И.Ф.</td>
-                <td>8/9/19</td>
-                <td>Счет</td>
-              </tr>
-            </tbody>
-          </table>
         </section>
-        <ul class="dropdown-pane menu documents_dropdown" id="doc" data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="25" data-h-offset="-10">
-          <li><a href="#">Скачать</a></li>
-          <li><a href="#">Сохранить</a></li>
-        </ul>
         <footer class="footer">
           <div class="footer_left">
             <p><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></p>
@@ -291,6 +430,6 @@
             </div>Документооборот</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=3973322b9e9c6f30a41117b023ea9c1e"></script>
+    <script src="./js/app.min.js?ckcachebust=75b54ce1861e73485d080a92a1dcd0d2"></script>
   </body>
 </html>
