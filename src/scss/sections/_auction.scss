@@ -17,7 +17,7 @@
     @include breakpoint(small down){
         margin: 15px 10px 0;
     }
-    &--create{
+    &--new{
         flex-wrap: wrap;
         box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
         border-radius: 9px;

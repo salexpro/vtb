@@ -4,10 +4,16 @@
     margin: 30px 25px 0;
     background-color: $white;
     padding: 40px 30px 90px;
+    &--new{
+        padding-bottom: 140px;
+    }
     &_top{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .h2{
+            margin: 0;
+        }
         &_buttons{
             padding-left: 20px;
             display: flex;
@@ -59,6 +65,30 @@
             padding: 10px 15px;
             min-height: 54px;
             // &:hover
+        }
+    }
+    &_new{
+        display: grid;
+        margin-top: 40px;
+        grid-template-areas: 'form check'
+                             'form buttons';
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        &_checkboxes{
+            grid-area: check;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: end;
+            grid-gap: 40px;
+            padding-top: 15px;
+        }
+        &_buttons{
+            grid-area: buttons;
+            align-self: end;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 20px;
+            justify-content: end;
         }
     }
 }

@@ -2188,6 +2188,11 @@ button {
   padding-bottom: 42px;
   position: relative;
   grid-area: form; }
+
+.documents_new > .form--register {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1; }
   @media screen and (max-width: 63.99875em) {
     .form--register {
       padding: 40px 0 0; } }
@@ -2204,6 +2209,18 @@ button {
     @media screen and (max-width: 63.99875em) {
       .form--register::after {
         display: none; } }
+
+.form--document {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: form; }
+
+.documents_new > .form--document {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1; }
+  .form--document .form_input:last-child {
+    margin: 0; }
 
 .form_header {
   margin-bottom: 27px; }
@@ -4989,7 +5006,7 @@ button {
   @media screen and (max-width: 39.99875em) {
     .auction {
       margin: 15px 10px 0; } }
-  .auction--create {
+  .auction--new {
     flex-wrap: wrap;
     box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
     border-radius: 9px;
@@ -4998,11 +5015,11 @@ button {
     grid-row-gap: 0;
         grid-template-areas: "add spec" "buttons buttons"; }
     @media screen and (max-width: 63.99875em) {
-      .auction--create {
+      .auction--new {
         padding: 30px 20px 37px;
             grid-template-areas: "add" "spec" "buttons"; } }
     @media screen and (max-width: 39.99875em) {
-      .auction--create {
+      .auction--new {
         padding: 20px 10px 40px; } }
   .auction_item {
     -ms-grid-row: 1;
@@ -5252,17 +5269,6 @@ button {
     -ms-grid-column-span: 2;
     grid-area: buttons;
     margin-top: 5px; }
-  @media screen and (max-width: 63.99875em){
-      .auction_add {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1; }
-      .auction_spec {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1; }
-      .auction_buttons {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1; } }
     @media screen and (max-width: 63.99875em) {
       .auction_buttons {
         margin-top: 30px; } }
@@ -5322,6 +5328,9 @@ button {
         padding: 30px 20px 34px; }
       .form--register {
     -ms-grid-row: 2;
+    -ms-grid-column: 1; }
+      .form--document {
+    -ms-grid-row: 2;
     -ms-grid-column: 1; } }
     @media screen and (max-width: 39.99875em) {
       .register_content {
@@ -5341,10 +5350,6 @@ button {
     padding-top: 15px;
     padding-bottom: 55px;
     grid-area: info; }
-  @media screen and (max-width: 63.99875em){
-      .register_info {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1; } }
     @media screen and (max-width: 63.99875em) {
       .register_info {
         display: -ms-grid;
@@ -5520,6 +5525,8 @@ button {
   margin: 30px 25px 0;
   background-color: #fff;
   padding: 40px 30px 90px; }
+  .documents--new {
+    padding-bottom: 140px; }
   .documents_top {
     display: -webkit-box;
     display: flex;
@@ -5527,6 +5534,8 @@ button {
             align-items: center;
     -webkit-box-pack: justify;
             justify-content: space-between; }
+    .documents_top .h2 {
+      margin: 0; }
     .documents_top_buttons {
       padding-left: 20px;
       display: -webkit-box;
@@ -5574,6 +5583,59 @@ button {
     .documents_dropdown a {
       padding: 10px 15px;
       min-height: 54px; }
+  .documents_new {
+    display: -ms-grid;
+    display: grid;
+    margin-top: 40px;
+    -ms-grid-rows: auto 30px auto;
+        grid-template-areas: 'form check' 'form buttons';
+    grid-gap: 30px;
+    -ms-grid-columns: 1fr 30px 1fr;
+    grid-template-columns: 1fr 1fr; }
+    .documents_new_checkboxes {
+      -ms-grid-row: 1;
+      -ms-grid-column: 3;
+      grid-area: check;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+      -webkit-box-pack: end;
+              justify-content: end;
+      grid-gap: 40px;
+      padding-top: 15px; }
+    .documents_new_buttons {
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+      grid-area: buttons;
+      -ms-grid-row-align: end;
+          align-self: end;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 20px;
+      -webkit-box-pack: end;
+              justify-content: end; }
+    @media screen and (max-width: 63.99875em){
+      .auction_add {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+      .auction_spec {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; }
+      .auction_buttons {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; }
+      .register_info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+      .documents_new_buttons {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; } }
 
 .footer {
   margin: 40px 25px 45px;
