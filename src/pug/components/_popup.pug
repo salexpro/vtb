@@ -1,0 +1,21 @@
+#new_doc.reveal.large(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    +new_doc()(class="documents--popup")
+    button.reveal_close(aria-label='Close' data-close)
+        +icon('close', [28, 26])
+
+#certs.reveal.reveal--sign(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    h2 Подписать
+    form.form.form--sign
+        select(name="cert")
+            option(value="" selected disabled) Сертификат
+            option(value="1") CN=ИП “Щербаков А.А.; Выдан: 10.07.2019, 11:21
+        .form--sign_buttons
+            input#cert(type="file")
+            label.button.hollow.large(for="cert")
+                | Выбрать
+            button.button.large.icon
+                +icon('contract', [14, 14])
+                | Подписать
+
+    button.reveal_close(aria-label='Close' data-close)
+        +icon('close', [28, 26])

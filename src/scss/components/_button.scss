@@ -40,6 +40,8 @@ button {
         }
     }
     &.large{
+        display: inline-flex;
+        align-items: center;
         min-height: 45px;
         // min-width: 114px;
         padding: 10px 14px;

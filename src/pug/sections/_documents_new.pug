@@ -1,33 +1,34 @@
-section.documents.documents--new
-    .documents_top
-        h1.h2
-            | Новый документ
-        .documents_top_buttons
-            buttton.button.hollow.large.icon
-                +icon('plus', [14, 14])
-                | Загрузить документ
-    form.documents_new
-        .form.form--document
-            .form_input
-                input(type="text", placeholder="Добавлено")
-            .form_input
-                input(type="text", placeholder="Наименование документа")
-            .form_input
-                input(type="text", placeholder="Тип")
-            .form_input
-                input(type="text", placeholder="Отправитель")
-            .form_input
-                input(type="text", placeholder="Получатель")
-        .documents_new_checkboxes
-            +check('link', 'Связать в пакет', true)
-            +check('sign', 'Запросить подписание у контрагента', true)
-        .documents_new_buttons
-            buttton.button.hollow.large.icon(type="button")
-                +icon('plus', [14, 14])
-                | Добавить еще
-            button.button.large.icon(type="button")
-                +icon('save', [14, 14])
-                | Сохранить
-            button.button.hollow.large.icon.alert(type="button")
-                +icon('close', [12, 11])
-                | Отменить
+mixin new_doc(tag)
+    #{tag || 'div'}.documents&attributes(attributes)
+        .documents_top
+            h1.h2
+                | Новый документ
+            .documents_top_buttons
+                buttton.button.hollow.large.icon
+                    +icon('plus', [14, 14])
+                    | Загрузить документ
+        form.documents_new
+            .form.form--document
+                .form_input
+                    input(type="text", placeholder="Добавлено")
+                .form_input
+                    input(type="text", placeholder="Наименование документа")
+                .form_input
+                    input(type="text", placeholder="Тип")
+                .form_input
+                    input(type="text", placeholder="Отправитель")
+                .form_input
+                    input(type="text", placeholder="Получатель")
+            .documents_new_checkboxes
+                +check('link', 'Связать в пакет', true)
+                +check('sign', 'Запросить подписание у контрагента', true)
+            .documents_new_buttons
+                buttton.button.hollow.large.icon(type="button")
+                    +icon('plus', [14, 14])
+                    | Добавить еще
+                button.button.large.icon(type="button")
+                    +icon('save', [14, 14])
+                    | Сохранить
+                button.button.hollow.large.icon.alert(type="button")
+                    +icon('close', [12, 11])
+                    | Отменить

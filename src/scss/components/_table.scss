@@ -30,6 +30,9 @@
             color: $primary-color;
         }
     }
+    .checkbox label::before{
+        margin: 0;
+    }
 
     &--order{
         margin-top: 40px;
