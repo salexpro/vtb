@@ -41,18 +41,19 @@ section.order
         | Заказ #1153
     .order_content
         .order_top
-            ul.order_status
-                each status in statuses
-                    li.order_status_item&attributes({
-                        class: status.active ? 'is_active' : false,
-                        'data-tooltip': status.tooltip ? '' : false,
-                        tabindex: status.tooltip ? 1 : false,
-                        title: status.tooltip || false
-                    })
-                        .order_status_icon
-                            +icon(...status.icon)
-                        .order_status_label
-                            !=status.label
+            .order_status_wrap
+                ul.order_status
+                    each status in statuses
+                        li.order_status_item&attributes({
+                            class: status.active ? 'is_active' : false,
+                            'data-tooltip': status.tooltip ? '' : false,
+                            tabindex: status.tooltip ? 1 : false,
+                            title: status.tooltip || false
+                        })
+                            .order_status_icon
+                                +icon(...status.icon)
+                            .order_status_label
+                                !=status.label
             .order_top_buttons
                 button.button.hollow.large.icon
                     +icon('calc', [14, 20])
@@ -135,48 +136,49 @@ section.order
         .order_documents
             h2
                 | Документооборот
-            table.table.table--order
-                thead
-                    tr
-                        th
-                        th № Документа
-                        th Получатель
-                        th Статус
-                        th Ответственный
-                        th
-                            |Отправленно/
-                            br
-                            | Получено
-                        th Тип документа
-                tbody
-                    tr
-                        td
-                            +check('doc1')
-                        td 
-                            button(data-toggle="doc") 1137659-П
-                        td OOO “Бизнес-Коннект”
-                        td Ожидает пописания
-                        td Абуд И.Ф.
-                        td 8/9/19
-                        td Договор
-                    tr
-                        td
-                            +check('doc2')
-                        td 348-Акт
-                        td OOO “Бизнес-Коннект”
-                        td Ожидает пописания
-                        td Абуд И.Ф.
-                        td 8/9/19
-                        td Акт
-                    tr
-                        td
-                            +check('doc3')
-                        td 8977384-С
-                        td OOO “Бизнес-Коннект”
-                        td Ожидает пописания
-                        td Абуд И.Ф.
-                        td 8/9/19
-                        td Счет
+            .table_wrap.table--order
+                table.table
+                    thead
+                        tr
+                            th
+                            th № Документа
+                            th Получатель
+                            th Статус
+                            th Ответственный
+                            th
+                                |Отправленно/
+                                br
+                                | Получено
+                            th Тип документа
+                    tbody
+                        tr
+                            td
+                                +check('doc1')
+                            td 
+                                button(data-toggle="doc") 1137659-П
+                            td OOO “Бизнес-Коннект”
+                            td Ожидает пописания
+                            td Абуд И.Ф.
+                            td 8/9/19
+                            td Договор
+                        tr
+                            td
+                                +check('doc2')
+                            td 348-Акт
+                            td OOO “Бизнес-Коннект”
+                            td Ожидает пописания
+                            td Абуд И.Ф.
+                            td 8/9/19
+                            td Акт
+                        tr
+                            td
+                                +check('doc3')
+                            td 8977384-С
+                            td OOO “Бизнес-Коннект”
+                            td Ожидает пописания
+                            td Абуд И.Ф.
+                            td 8/9/19
+                            td Счет
             ul#doc.dropdown-pane.menu.documents_dropdown(data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="20" data-h-offset="-10")
                 li
                     a(href="#")

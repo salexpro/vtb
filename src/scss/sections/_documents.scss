@@ -57,7 +57,7 @@
             &_top{
                 display: grid;
                 grid-gap: 50px;
-                justify-content: start;
+                justify-items: start;
                 grid-template-columns: 1fr minmax(220px, 34%);
                 &_buttons{
                     padding: 0;

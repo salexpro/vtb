@@ -11,6 +11,7 @@
         margin: 0 -10px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
+        @include thick-scrollbar;
         @include breakpoint(medium down){
             margin: 0 -8px;
             width: calc(100% + 16px);
@@ -18,12 +19,6 @@
         @include breakpoint(small down){
             margin: 0 -6px;
             width: calc(100% + 12px);
-        }
-        &::-webkit-scrollbar {
-            width: 9px;
-            height: 9px;
-            background-color: #e9eef6;
-            border-radius: 5px;
         }
     }
     tr {
@@ -62,11 +57,20 @@
 
     &--order{
         margin-top: 40px;
+        @include breakpoint(medium down){
+            margin-top: 30px;
+        }
+        @include breakpoint(small down){
+            margin-top: 25px;
+        }
         tr{
             th, td{
                 &:first-child{
                     width: 18px;
                     padding: 0;
+                    @include breakpoint(small down){
+                        padding-left: 6px;
+                    }
                 }
             }
         }
