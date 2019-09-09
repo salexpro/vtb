@@ -5,6 +5,7 @@ button {
 
 .button{
     outline: none;
+    user-select: none;
     &.shrink{
         padding: 8px 23px;
         margin: 42px auto 0;
