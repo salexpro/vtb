@@ -4,6 +4,7 @@ button {
 }
 
 .button{
+    outline: none;
     &.shrink{
         padding: 8px 23px;
         margin: 42px auto 0;
@@ -14,14 +15,15 @@ button {
     &.icon{
         display: flex;
         align-items: center;
+        justify-content: center;
         svg{
             margin-right: 10px;
         }
     }
     &.hollow{
         @include breakpoint(small down){
-            padding-top: 9px;
-            padding-bottom: 9px;
+            // padding-top: 9px;
+            // padding-bottom: 9px;
         }
     }
     &.flat{

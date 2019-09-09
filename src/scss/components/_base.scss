@@ -45,7 +45,13 @@ svg{
 
 .content{
     background-color: $light-gray;
-    flex: 1 1 auto;
+    width: calc(100% - 220px);
+    @include breakpoint(medium down){
+        width: calc(100% - 180px);
+    }
+    @include breakpoint(small down){
+        width: 100%;
+    }
 }
 
 input:disabled, input[readonly], textarea:disabled, textarea[readonly]{
@@ -76,6 +82,12 @@ select{
         padding-right: 17px;
         background-position: right -17px center;
         height: auto;
+        @include breakpoint(medium down){
+            font-size: 14px;
+        }
+        @include breakpoint(small down){
+            width: auto;
+        }
     }
 }
 

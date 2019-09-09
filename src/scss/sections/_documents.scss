@@ -4,6 +4,14 @@
     margin: 30px 25px 0;
     background-color: $white;
     padding: 40px 30px 90px;
+    @include breakpoint(medium down){
+        margin: 15px 15px 0;
+        padding: 30px 20px;
+    }
+    @include breakpoint(small down){
+        margin: 15px 10px 0;
+        padding: 20px 10px 30px;
+    }
     &--new{
         padding-bottom: 140px;
     }
@@ -36,35 +44,70 @@
     }
     &_top{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+        @include breakpoint(small down){
+            display: block;
+        }
         .h2{
-            margin: 0;
+            margin: 8px 20px 8px 0;
+            @include breakpoint(small down){
+                margin: 0 0 20px;
+            }
         }
         &_buttons{
-            padding-left: 20px;
-            display: flex;
-            .button + .button{
-                margin-left: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 30px;
+            // justify-content: center;
+            min-width: 250px;
+            @include breakpoint(medium down){
+                grid-gap: 20px;
+            }
+            @include breakpoint(small down){
+                grid-template-columns: repeat(2, minmax(auto, 152.5px));
+                grid-gap: 30px;
             }
         }
     }
     &_search{
         display: grid;
-        grid-template-columns: minmax(100px, 250px) repeat(5, auto);
+        grid-template-columns: minmax(150px, 250px) repeat(5, auto);
         grid-gap: 20px;
         justify-content: space-between;
         align-items: center;
         padding: 45px 10px 30px;
-        margin: 0 -10px;
+        margin: 0 -10px 50px;
         border-bottom: 1px solid #e9eef6;
-        margin-bottom: 50px;
+        @include breakpoint(medium down){
+            padding: 30px 8px 25px;
+            margin: 0 -8px 15px;
+            grid-template-columns: 150px repeat(4, auto);
+            grid-gap: 15px;
+        }
+        @include breakpoint(small down){
+            grid-template-columns: auto;
+            justify-items: start;
+            padding: 30px 6px 25px;
+            margin: 0 -6px 30px;
+        }
         input{
             height: auto;
             padding: 9px 20px;
+            @include breakpoint(small down){
+                grid-column: 1 / 4;
+            }
         }
         .button{
             justify-self: end;
+            @include breakpoint(medium down){
+                justify-self: stretch;
+            }
+            @include breakpoint(small down){
+                grid-column: 2 / 4;
+                justify-self: end;
+            }
         }
     }
     &_dropdown{
