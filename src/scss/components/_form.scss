@@ -29,13 +29,22 @@
         }
     }
     &--sign{
+        margin-top: 38px;
         &_buttons{
-            display: flex;
-            justify-content: space-between;
             margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(auto, 150px));
+            justify-content: space-between;
+            grid-gap: 16px;
+            @include breakpoint(small down){
+                margin-top: 20px;
+            }
             .button{
-                min-width: 150px;
+                // min-width: 150px;
                 justify-content: center;
+                @include breakpoint(small down){
+                    // min-width: auto;
+                }
             }
         }
     }
@@ -235,7 +244,8 @@
         // background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213%22%20height%3D%2210%22%20viewBox%3D%220%200%2013%2010%22%3E%3Cpath%20transform%3D%22rotate%28180%206.5%205%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M6.73.62l1.376%201.376-.23.23%205.779%205.778-1.377%201.376L6.5%203.602.722%209.38-.655%208.004l5.778-5.779-.229-.229L6.271.62%206.5.849z%22%2F%3E%3C%2Fsvg%3E);
         background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20transform%3D%22rotate%28180%205%203%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M5.48.723l.02.02.02-.02%204.758%204.622-.954.926L5.5%202.557%201.674%206.27.72%205.345z%22%2F%3E%3C%2Fsvg%3E);
         background-size: 15px;
-        background-position: right 13px center;
+        background-position: right -22px center;
+        padding-right: 35px;
         @include breakpoint(small down){
             background-size: 13px;
         }

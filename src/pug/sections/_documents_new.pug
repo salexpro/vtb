@@ -1,7 +1,7 @@
 mixin new_doc(tag)
     #{tag || 'div'}.documents&attributes(attributes)
         .documents_top
-            h1.h2
+            #{tag ? 'h1' : 'h2'}.h2
                 | Новый документ
             buttton.button.hollow.large.icon
                 +icon('plus', [14, 14])

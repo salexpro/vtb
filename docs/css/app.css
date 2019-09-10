@@ -2444,16 +2444,23 @@ button {
   .form--document .form_input:last-child {
     margin: 0; }
 
-.form--sign_buttons {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  margin-top: 30px; }
-  .form--sign_buttons .button {
-    min-width: 150px;
-    -webkit-box-pack: center;
-            justify-content: center; }
+.form--sign {
+  margin-top: 38px; }
+  .form--sign_buttons {
+    margin-top: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(auto, 150px))[2];
+    grid-template-columns: repeat(2, minmax(auto, 150px));
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    grid-gap: 16px; }
+    @media screen and (max-width: 39.99875em) {
+      .form--sign_buttons {
+        margin-top: 20px; } }
+    .form--sign_buttons .button {
+      -webkit-box-pack: center;
+              justify-content: center; }
 
 .form_header {
   margin-bottom: 27px; }
@@ -2651,7 +2658,8 @@ button {
 .form select {
   background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20transform%3D%22rotate%28180%205%203%29%22%20fill%3D%22%231e4bd2%22%20d%3D%22M5.48.723l.02.02.02-.02%204.758%204.622-.954.926L5.5%202.557%201.674%206.27.72%205.345z%22%2F%3E%3C%2Fsvg%3E);
   background-size: 15px;
-  background-position: right 13px center; }
+  background-position: right -22px center;
+  padding-right: 35px; }
   @media screen and (max-width: 39.99875em) {
     .form select {
       background-size: 13px; } }
@@ -2729,6 +2737,21 @@ button {
     @media screen and (max-width: 39.99875em) {
       .reveal-overlay {
         padding: 0; } }
+  @media screen and (max-width: 39.99875em) {
+    .reveal {
+      height: auto;
+      min-height: auto;
+      top: 10px !important;
+      right: 5px;
+      left: 5px;
+      width: calc(100% - 10px);
+      border-radius: 9px; } }
+  @media screen and (max-width: 63.99875em) {
+    .reveal h2 {
+      font-size: 23px; } }
+  @media screen and (max-width: 39.99875em) {
+    .reveal h2 {
+      font-size: 18px; } }
   .reveal_close {
     -webkit-transition: 300ms;
     transition: 300ms;
@@ -2738,11 +2761,29 @@ button {
     right: 20px;
     -webkit-tap-highlight-color: transparent;
     color: #8f9399; }
+    @media screen and (max-width: 63.99875em) {
+      .reveal_close {
+        top: 10px;
+        right: 10px; } }
+    @media screen and (max-width: 39.99875em) {
+      .reveal_close {
+        top: 5px;
+        right: 5px; } }
     .reveal_close:hover, .reveal_close:focus {
       -webkit-transform: rotate(90deg);
               transform: rotate(90deg); }
+    @media screen and (max-width: 63.99875em) {
+      .reveal_close svg {
+        width: 20px;
+        height: auto; } }
   .reveal--sign {
     padding: 48px 38px 50px; }
+    @media screen and (max-width: 63.99875em) {
+      .reveal--sign {
+        padding: 40px 50px 42px; } }
+    @media screen and (max-width: 39.99875em) {
+      .reveal--sign {
+        padding: 25px 10px 27px; } }
   .reveal.fade-in.mui-enter {
     -webkit-transform: translate3d(0, -18px, 0) perspective(435px) rotateX(8deg);
             transform: translate3d(0, -18px, 0) perspective(435px) rotateX(8deg); }
@@ -5909,6 +5950,12 @@ button {
   .documents--popup {
     margin: 0;
     padding: 40px 35px 45px; }
+    @media screen and (max-width: 63.99875em) {
+      .documents--popup {
+        padding: 58px 50px 52px; } }
+    @media screen and (max-width: 39.99875em) {
+      .documents--popup {
+        padding: 48px 10px 36px; } }
     .documents--popup .documents_top {
       display: -ms-grid;
       display: grid;
@@ -5916,6 +5963,13 @@ button {
       justify-items: start;
       -ms-grid-columns: 1fr minmax(220px, 34%);
       grid-template-columns: 1fr minmax(220px, 34%); }
+      @media screen and (max-width: 63.99875em) {
+        .documents--popup .documents_top {
+          -ms-grid-columns: 1fr auto;
+          grid-template-columns: 1fr auto; } }
+      @media screen and (max-width: 39.99875em) {
+        .documents--popup .documents_top {
+          display: block; } }
       .documents--popup .documents_top_buttons {
         padding: 0; }
     .documents--popup .documents_new {
@@ -5924,12 +5978,29 @@ button {
       -ms-grid-columns: 1fr 50px minmax(220px, 34%);
       grid-template-columns: 1fr minmax(220px, 34%);
       grid-gap: 40px 50px; }
+      @media screen and (max-width: 63.99875em) {
+        .documents--popup .documents_new {
+          -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
+          -ms-grid-rows: auto 30px auto 30px auto;
+              grid-template-areas: 'form' 'check' 'buttons';
+          grid-gap: 30px; }
+        .documents--popup .documents_new > .form--register {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+        .documents--popup .documents_new > .form--document {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; } }
       .documents--popup .documents_new_checkboxes {
         padding-top: 22px;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         align-content: start;
         grid-gap: 28px; }
+        @media screen and (max-width: 63.99875em) {
+          .documents--popup .documents_new_checkboxes {
+            padding: 0;
+            grid-gap: 15px; } }
   .documents_top {
     display: -webkit-box;
     display: flex;
@@ -6622,6 +6693,9 @@ button {
     -ms-grid-row: 1;
     -ms-grid-column: 1; }
       .documents--new .documents_new > .documents_new_checkboxes {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1; }
+        .documents--popup .documents_new > .documents_new_checkboxes {
     -ms-grid-row: 3;
     -ms-grid-column: 1; }
       .order_top {
