@@ -6087,11 +6087,13 @@ button {
     visibility: hidden;
     z-index: -1;
     opacity: 0;
-    -webkit-transition: 300ms;
-    transition: 300ms;
+    -webkit-transition: visibility 300ms, opacity 300ms, z-index 300ms;
+    transition: visibility 300ms, opacity 300ms, z-index 300ms;
     font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
     box-shadow: 0 0 30px rgba(107, 118, 131, 0.11);
     overflow: hidden; }
+    .documents_dropdown--wide {
+      width: 237px; }
     .documents_dropdown.is-open {
       visibility: visible;
       opacity: 1;
@@ -6101,7 +6103,7 @@ button {
       width: calc(100% - 20px); }
     .documents_dropdown a {
       padding: 10px 15px;
-      min-height: 54px; }
+      min-height: 52px; }
   .documents_new {
     display: -ms-grid;
     display: grid;
@@ -6244,22 +6246,10 @@ button {
     .order_top_buttons {
       -webkit-box-flex: 0;
               flex: 0 0 auto;
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-      grid-gap: 15px;
       margin-bottom: 30px; }
-      @media screen and (max-width: 63.99875em) {
-        .order_top_buttons {
-          width: 100%;
-          grid-gap: 15px 30px; } }
       @media screen and (max-width: 39.99875em) {
         .order_top_buttons {
-          -ms-grid-columns: auto;
-          grid-template-columns: auto;
-          -webkit-box-pack: center;
-                  justify-content: center;
+          margin: auto;
           margin-bottom: 25px; } }
   .order_status {
     display: -ms-grid;
@@ -6413,8 +6403,25 @@ button {
         .order_info::after {
           width: calc(100% + 12px);
           margin-left: -6px; } }
+    .order_info_seller {
+      font-weight: 600;
+      font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 17px;
+      margin-top: 30px; }
+      @media screen and (max-width: 63.99875em) {
+        .order_info_seller {
+          margin-top: 25px; } }
+      @media screen and (max-width: 39.99875em) {
+        .order_info_seller {
+          margin-top: 20px;
+          font-size: 16px; } }
+      .order_info_seller b {
+        color: #d8d8d8; }
+        @media screen and (max-width: 39.99875em) {
+          .order_info_seller b {
+            font-size: 14px; } }
   .order_list {
-    margin: 25px 0 0;
+    margin: 35px 0 0;
     list-style: none;
     display: -webkit-box;
     display: flex;
@@ -6512,24 +6519,18 @@ button {
       -webkit-box-flex: 1;
               flex: 1 1 50%;
       grid-area: name; }
-      @media screen and (max-width: 39.99875em) {
+      @media screen and (max-width: 63.99875em) {
         .order_item_name {
           font-size: 14px; } }
-      .order_item_name li:first-child {
-        font-weight: 600;
-        font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
-        font-size: 17px; }
-        @media screen and (max-width: 39.99875em) {
-          .order_item_name li:first-child {
-            font-size: 16px; } }
-        .order_item_name li:first-child b {
-          color: #d8d8d8; }
-      .order_item_name li + li {
-        margin-top: 15px; }
       .order_item_name b {
+        display: block;
         font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
         font-size: 16px;
-        color: #acb6c3; }
+        color: #acb6c3;
+        margin-bottom: 15px; }
+        @media screen and (max-width: 74.99875em) {
+          .order_item_name b {
+            display: inline; } }
         @media screen and (max-width: 39.99875em) {
           .order_item_name b {
             font-size: 14px; } }
@@ -6563,14 +6564,15 @@ button {
         @media screen and (max-width: 39.99875em) {
           .order_item_info li {
             -webkit-box-flex: 1;
-                    flex: 1 1 100%; }
-            .order_item_info li + li {
-              margin-top: 12px; } }
+                    flex: 1 1 100%; } }
         .order_item_info li:nth-last-child(-n+2) {
           margin-top: auto; }
           @media screen and (max-width: 74.99875em) {
             .order_item_info li:nth-last-child(-n+2) {
               margin-top: 15px; } }
+        @media screen and (max-width: 39.99875em) {
+          .order_item_info li + li {
+            margin-top: 12px; } }
       .order_item_info span {
         color: #acb6c3; }
     .order_item_price {

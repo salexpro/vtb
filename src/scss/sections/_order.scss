@@ -66,17 +66,9 @@
         }
         &_buttons{
             flex: 0 0 auto;
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-gap: 15px;
             margin-bottom: 30px;
-            @include breakpoint(medium down){
-                width: 100%;
-                grid-gap: 15px 30px;
-            }
             @include breakpoint(small down){
-                grid-template-columns: auto;
-                justify-content: center;
+                margin: auto;
                 margin-bottom: 25px;
             }
         }
@@ -225,9 +217,28 @@
                 margin-left: -6px;
             }
         }
+        &_seller{
+            font-weight: 600;
+            font-family: $header-font-family;
+            font-size: 17px;
+            margin-top: 30px;
+            @include breakpoint(medium down){
+                margin-top: 25px;
+            }
+            @include breakpoint(small down){
+                margin-top: 20px;
+                font-size: 16px;
+            }
+            b{
+                color: #d8d8d8;
+                @include breakpoint(small down){
+                    font-size: 14px;
+                }
+            }
+        }
     }
     &_list{
-        margin: 25px 0 0;
+        margin: 35px 0 0;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
@@ -315,29 +326,34 @@
             font-size: 16px;
             flex: 1 1 50%;
             grid-area: name;
-            @include breakpoint(small down){
+            @include breakpoint(medium down){
                 font-size: 14px;
             }
-            li{
-                &:first-child{
-                    font-weight: 600;
-                    font-family: $header-font-family;
-                    font-size: 17px;
-                    @include breakpoint(small down){
-                        font-size: 16px;
-                    }
-                    b{
-                        color: #d8d8d8;
-                    }
-                }
-                + li {
-                    margin-top: 15px;
-                }
-            }
+            // li{
+            //     &:first-child:not(:last-child){
+            //         font-weight: 600;
+            //         font-family: $header-font-family;
+            //         font-size: 17px;
+            //         @include breakpoint(small down){
+            //             font-size: 16px;
+            //         }
+            //         b{
+            //             color: #d8d8d8;
+            //         }
+            //     }
+            //     + li {
+            //         margin-top: 15px;
+            //     }
+            // }
             b{
+                display: block;
                 font-family: $header-font-family;
                 font-size: 16px;
                 color: $medium-gray;
+                margin-bottom: 15px;
+                @include breakpoint(large down){
+                    display: inline;
+                }
                 @include breakpoint(small down){
                     font-size: 14px;
                 }
@@ -360,14 +376,16 @@
                 }
                 @include breakpoint(small down){
                     flex: 1 1 100%;
-                    + li{
-                        margin-top: 12px;
-                    }
                 }
                 &:nth-last-child(-n+2) {
                     margin-top: auto;
                     @include breakpoint(large down){
                         margin-top: 15px;
+                    }
+                }
+                + li{
+                    @include breakpoint(small down){
+                        margin-top: 12px;
                     }
                 }
             }

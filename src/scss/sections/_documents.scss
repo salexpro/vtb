@@ -174,10 +174,13 @@
         visibility: hidden;
         z-index: -1;
         opacity: 0;
-        transition: 300ms;
+        transition: visibility 300ms, opacity 300ms, z-index 300ms;
         font-family: $book-font-family;
         box-shadow: 0 0 30px rgba(107, 118, 131, 0.11);
         overflow: hidden;
+        &--wide{
+            width: 237px;
+        }
         &.is-open{
             visibility: visible;
             opacity: 1;
@@ -191,7 +194,7 @@
         }
         a {
             padding: 10px 15px;
-            min-height: 54px;
+            min-height: 52px;
             // &:hover
         }
     }

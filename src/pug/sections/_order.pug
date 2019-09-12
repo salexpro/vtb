@@ -58,11 +58,14 @@ section.order
                 button.button.hollow.large.icon
                     +icon('calc', [14, 20])
                     | Расчитать стоимость доставки
-                button.button.hollow.large
-                    | Конструктор договоров
+                //- button.button.hollow.large
+                //-     | Конструктор договоров
         .order_info
             h2
                 | Подробная информация по заказу
+            .order_info_seller
+                b Продавец: 
+                | ВЭБ-Телеком
             ul.order_list
                 li
                     b Покупатель:  
@@ -83,13 +86,9 @@ section.order
                     b Дата создания:  
                     | 2019-08-16
             .order_item
-                ul.order_item_name
-                    li
-                        b Продавец: 
-                        | ВЭБ-Телеком
-                    li
-                        b Наименование: 
-                        | Скамья гиперэкстензия Glute Ham Developer
+                .order_item_name
+                    b Наименование: 
+                    | Скамья гиперэкстензия Glute Ham Developer
 
                 ul.order_item_info
                     li
@@ -107,13 +106,9 @@ section.order
                 b.order_item_price
                     | 7 200 ₽
             .order_item
-                ul.order_item_name
-                    li
-                        b Продавец: 
-                        | ВЭБ-Телеком
-                    li
-                        b Наименование: 
-                        | Гантель разборная Indigo IN046 16.5 кг
+                .order_item_name
+                    b Наименование: 
+                    | Гантель разборная Indigo IN046 16.5 кг
 
                 ul.order_item_info
                     li
@@ -153,7 +148,7 @@ section.order
                     tbody
                         tr
                             td
-                                +check('doc1')
+                                +check('doc1', '', true)
                             td 
                                 button(data-toggle="doc") 1137659-П
                             td OOO “Бизнес-Коннект”
@@ -179,13 +174,6 @@ section.order
                             td Абуд И.Ф.
                             td 8/9/19
                             td Счет
-            ul#doc.dropdown-pane.menu.documents_dropdown(data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="20" data-h-offset="-10")
-                li
-                    a(href="#")
-                        | Скачать
-                li
-                    a(href="#")
-                        | Сохранить
             .order_documents_buttons
                 button.button.hollow.large.icon(data-open='new_doc')
                     +icon('plus', [14, 14])
@@ -193,7 +181,7 @@ section.order
                 button.button.hollow.large.icon(data-open='certs')
                     +icon('contract', [14, 14])
                     | Подписать
-                button.button.hollow.large.icon
+                button.button.hollow.large.icon(data-open='more_menu')
                     +icon('handshake', [18, 12])
                     | Еще
         .order_discuss
@@ -208,3 +196,25 @@ section.order
             .order_messages_history
                 .order_messages_message
                     | Подтверждаем соответствие к требованиям
+
+
+ul#doc.dropdown-pane.menu.documents_dropdown(data-dropdown data-hover="true" data-hover-pane="true" data-v-offset="20" data-h-offset="-10")
+        li
+            a(href="#")
+                | Скачать
+        li
+            a(href="#")
+                | Сохранить
+ul#more_menu.dropdown-pane.menu.documents_dropdown.documents_dropdown--wide(data-dropdown data-position="left" data-alignment="bottom" data-hover="true" data-hover-pane="true" data-h-offset="15")
+        li
+            a(href="#")
+                | Редактировать
+        li
+            a(href="#")
+                | Аннулировать
+        li
+            a(href="#")
+                | Перенести в архив
+        li
+            a(href="#")
+                | Удалить
