@@ -3592,16 +3592,6 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/src/pug/components/_checkbox.pug": {
-		"cB": 1,
-		"cOD": 0,
-		"ft": 512,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/_checkbox.html",
-		"oF": 0,
-		"oS": 0
-		},
 	"/src/pug/components/_filters.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3689,6 +3679,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_register.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/components/_selection.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_selection.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -3802,6 +3802,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/reports.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/reports.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/pages/supplier.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3912,6 +3922,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/sections/_reports.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_reports.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/sections/_supplier.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3996,19 +4016,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/build/scss/css/_button.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/src/scss/components/_checkbox.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/build/scss/css/_checkbox.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -4100,6 +4107,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/build/scss/css/_rating.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/src/scss/components/_selection.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_selection.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -4234,6 +4254,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/sections/_reports.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_reports.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/sections/_supplier.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4258,7 +4291,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 589986634.62153602
+	"lastBuiltDate": 591854413.60743105
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

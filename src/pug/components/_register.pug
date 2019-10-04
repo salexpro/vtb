@@ -45,7 +45,7 @@ mixin register(data)
                         .form_bottom
                             .form_row
                                 .form_input
-                                    +check('terms', 'Соглашаюсь с офертой')
+                                    +selection('checkbox', 'terms', 'terms', 'Соглашаюсь с офертой')
                                 .form_label.form_label--status
                                     | Отправить код повторно через 1:25
                             button.button.flat

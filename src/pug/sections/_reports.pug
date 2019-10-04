@@ -1,0 +1,38 @@
+section.reports
+    h1.h2
+        =name
+    form.reports_filters
+        .reports_filter
+            label.reports_filter_label(for="rItems")
+                | Выберите отчет
+            .reports_filter_input
+                select#rItems.clear(name="items")
+                    option(value="" selected disabled) Отчет по товарам
+        .reports_filter
+            label.reports_filter_label(for="rRange")
+                | Выберите период
+            .reports_filter_input
+                input#rRange(type="text" name="period" placeholder="Дата с       Дата по")
+        .reports_filter.reports_filter--radio
+            +selection('radio', 'novelty', 'lastWeek', 'За прошедшую неделю', true)
+            +selection('radio', 'novelty', 'lastMonth', 'За прошедший месяц')
+        .reports_filter.reports_filter--buttons
+            button.button.large.hollow.icon
+                +icon('result', [15, 20])
+                | Сформировать
+            button.button.large.hollow.icon
+                +icon('upload', [15, 18])
+                | Выгрузить
+    .reports_container
+
+    .reports_buttons
+        button.button.clear.icon
+            +icon('fullscreen', [14, 14])
+            | Развернуть
+
+        button.button.large.icon
+            +icon('upload', [15, 18])
+            | Массовая выгрузка
+        button.button.large.hollow.icon
+            +icon('settings', [17, 16])
+            | Управление подписками

@@ -1,16 +1,34 @@
-.checkbox{
+.selection{
     position: relative;
     font-family: $book-font-family;
-    [type="checkbox"]{
+    [type="checkbox"], [type="radio"]{
         position: absolute;
         opacity: 0;
         z-index: -1;
         width: 18px;
         height: 18px;
+    }
+    [type="checkbox"]{
         &:checked + label::before{
             background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%228%22%20version%3D%221.1%22%20viewBox%3D%220%200%2010%208%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M8.43334%2C0.69124v0l-4.51529%2C4.82498v0l-2.33231%2C-2.49713c-0.1537%2C-0.1906%20-0.37987%2C-0.31055%20-0.63291%2C-0.31055c-0.45984%2C0%20-0.83283%2C0.39786%20-0.83283%2C0.88835c0%2C0.26924%200.11246%2C0.51116%200.2899%2C0.67377l2.92522%2C3.11957c0.14308%2C0.15928%200.34426%2C0.25791%200.56731%2C0.25791c0.00562%2C0%200.01124%2C0%200.01687%2C0c0.00249%2C0%200.00562%2C0%200.00937%2C0c0.22429%2C0%200.42735%2C-0.09863%200.57292%2C-0.25791l5.09822%2C-5.44743c0.14994%2C-0.16061%200.24241%2C-0.38186%200.24241%2C-0.62644c0%2C-0.24458%20-0.09247%2C-0.46584%20-0.24241%2C-0.62645c-0.1487%2C-0.16061%20-0.35488%2C-0.25991%20-0.58292%2C-0.25991c-0.22805%2C0%20-0.43423%2C0.0993%20-0.58292%2C0.25991z%22%2F%3E%3C%2Fsvg%3E);
             background-color: $primary-color;
             border-color: transparent;
+        }
+        + label{
+            &::before{
+                border-radius: 3px;
+            }
+        }
+    }
+    [type="radio"]{
+        &:checked + label::before{
+            background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2010%22%3E%3Cpath%20d%3D%22M0%2C5c0%2C-2.76142%202.23858%2C-5%205%2C-5h0c2.76142%2C0%205%2C2.23858%205%2C5v0c0%2C2.76142%20-2.23858%2C5%20-5%2C5h0c-2.76142%2C0%20-5%2C-2.23858%20-5%2C-5z%22%20fill%3D%22%231e4bd2%22%2F%3E%3C%2Fsvg%3E);
+            background-size: 10px;
+        }
+        + label{
+            &::before{
+                border-radius: 50%;
+            }
         }
     }
     label{
@@ -24,7 +42,6 @@
             flex: 0 0 18px;
             width: 18px;
             height: 18px;
-            border-radius: 3px;
             border: 1px solid #8f9399;
             background-position: center;
             background-repeat: no-repeat;

@@ -62,7 +62,7 @@
 @import 'components/badge';
 @import 'components/breadcrumbs';
 @import 'components/pagination';
-@import 'components/checkbox';
+@import 'components/selection';
 @import 'components/rating';
 @import 'components/form';
 @import 'components/table';
@@ -82,4 +82,5 @@ $flag-icon-css-path: '../assets/img/flags';
 @import 'sections/register';
 @import 'sections/documents';
 @import 'sections/order';
+@import 'sections/reports';
 @import 'sections/footer';

@@ -19,7 +19,7 @@ mixin new_doc(tag)
                 .form_input
                     input(type="text", placeholder="Получатель")
             .documents_new_checkboxes
-                +check('sign', 'Запросить подписание у контрагента', true)
+                +selection('checkbox', 'sign', 'sign', 'Запросить подписание у контрагента', true)
             .documents_new_buttons
                 buttton.button.hollow.large.icon(type="button")
                     +icon('plus', [14, 14])

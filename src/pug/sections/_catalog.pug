@@ -278,50 +278,50 @@ section.catalog
                             a.catalog_filters_accordion-item(href='#') Тип поставщика
                             ul.catalog_filters_accordion-content.is-active
                                 li
-                                    +check('fManufacturer', 'Производитель', true)
+                                    +selection('checkbox', 'kind[]', 'fManufacturer', 'Производитель', true)
                                 li
-                                    +check('fWholesaler', 'Оптовик')
+                                    +selection('checkbox', 'kind[]', 'fWholesaler', 'Оптовик')
                                 li
-                                    +check('fRetail', 'Розничный магазин')
+                                    +selection('checkbox', 'kind[]', 'fRetail', 'Розничный магазин')
                                 li
-                                    +check('fOnline ', 'Онлайн магазин')
+                                    +selection('checkbox', 'kind[]', 'fOnline ', 'Онлайн магазин')
                                 
                         li
                             a.catalog_filters_accordion-item(href='#') Страна
                             ul.catalog_filters_accordion-content
                                 li
-                                    +check('fRussia', 'Россия')
+                                    +selection('checkbox', 'country[]', 'fRussia', 'Россия')
                                 li
-                                    +check('fRussia1', 'Россия')
+                                    +selection('checkbox', 'country[]', 'fRussia1', 'Россия')
                                 li
-                                    +check('fRussia2', 'Россия')
+                                    +selection('checkbox', 'country[]', 'fRussia2', 'Россия')
                         li
                             a.catalog_filters_accordion-item(href='#') Город
                             ul.catalog_filters_accordion-content
                                 li
-                                    +check('fCity', 'Город')
+                                    +selection('checkbox', 'city[]', 'fCity', 'Город')
                                 li
-                                    +check('fCity1', 'Город')
+                                    +selection('checkbox', 'city[]', 'fCity1', 'Город')
                                 li
-                                    +check('fCity2', 'Город')
+                                    +selection('checkbox', 'city[]', 'fCity2', 'Город')
                         li
                             a.catalog_filters_accordion-item(href='#') Город присутствия
                             ul.catalog_filters_accordion-content
                                 li
-                                    +check('fCity3', 'Город присутствия')
+                                    +selection('checkbox', 'presence_city[]', 'fCity3', 'Город присутствия')
                                 li
-                                    +check('fCity4', 'Город присутствия')
+                                    +selection('checkbox', 'presence_city[]', 'fCity4', 'Город присутствия')
                                 li
-                                    +check('fCity5', 'Город присутствия')
+                                    +selection('checkbox', 'presence_city[]', 'fCity5', 'Город присутствия')
                         li
                             a.catalog_filters_accordion-item(href='#') Категории
                             ul.catalog_filters_accordion-content
                                 li
-                                    +check('fCat', 'Категория')
+                                    +selection('checkbox', 'category[]', 'fCat', 'Категория')
                                 li
-                                    +check('fCat1', 'Категория')
+                                    +selection('checkbox', 'category[]', 'fCat1', 'Категория')
                                 li
-                                    +check('fCat2', 'Категория')
+                                    +selection('checkbox', 'category[]', 'fCat2', 'Категория')
                     .catalog_filters_buttons
                         button.button
                             | Применить

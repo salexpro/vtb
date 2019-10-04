@@ -1,0 +1,6 @@
+
+mixin selection(type, name, id, label, is_checked)
+    .selection
+        input(type=type id=id name=name checked=is_checked ? 'checked' : false)
+        label(for=id)
+            =label

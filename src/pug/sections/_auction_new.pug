@@ -86,6 +86,6 @@ form.auction.auction--new
                 button.button.hollow(type="button")
                     | Добавить
     .auction_buttons
-        +check('placeOrder', 'Разместить торг на площадке партнеров', true)
+        +selection('checkbox', 'place', 'placeOrder', 'Разместить торг на площадке партнеров', true)
         button.button
             | Создать

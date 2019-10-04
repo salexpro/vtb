@@ -13,14 +13,14 @@
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=589986630" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=589986630" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=589986630" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=589986630" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=589986630" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=589986630" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=589986630" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=9165c4f10f46953d1761730214af3d67">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=591854412" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=591854412" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=591854412" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=591854412" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=591854412" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=591854412" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=591854412" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=9b382f3207e8f45d463d04091e4b9f1c">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -68,6 +68,12 @@
                   <use fill="currentColor" xlink:href="./assets/img/icons.svg#documents"></use>
                 </svg>
               </div>Документооборот</a></li>
+          <li><a href="/reports.html">
+              <div class="menu_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#analytics"></use>
+                </svg>
+              </div>Отчеты</a></li>
         </ul>
         <button class="button hollow shrink icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11">
@@ -563,29 +569,29 @@
                     <li><a class="catalog_filters_accordion-item" href="#">Тип поставщика</a>
                       <ul class="catalog_filters_accordion-content is-active">
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fManufacturer" checked="checked"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fManufacturer" name="kind[]" checked="checked"/>
                             <label for="fManufacturer">Производитель
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fWholesaler"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fWholesaler" name="kind[]"/>
                             <label for="fWholesaler">Оптовик
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fRetail"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fRetail" name="kind[]"/>
                             <label for="fRetail">Розничный магазин
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fOnline "/>
+                          <div class="selection">
+                            <input type="checkbox" id="fOnline " name="kind[]"/>
                             <label for="fOnline ">Онлайн магазин
                             </label>
                           </div>
@@ -595,22 +601,22 @@
                     <li><a class="catalog_filters_accordion-item" href="#">Страна</a>
                       <ul class="catalog_filters_accordion-content">
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fRussia"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fRussia" name="country[]"/>
                             <label for="fRussia">Россия
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fRussia1"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fRussia1" name="country[]"/>
                             <label for="fRussia1">Россия
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fRussia2"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fRussia2" name="country[]"/>
                             <label for="fRussia2">Россия
                             </label>
                           </div>
@@ -620,22 +626,22 @@
                     <li><a class="catalog_filters_accordion-item" href="#">Город</a>
                       <ul class="catalog_filters_accordion-content">
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCity"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCity" name="city[]"/>
                             <label for="fCity">Город
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCity1"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCity1" name="city[]"/>
                             <label for="fCity1">Город
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCity2"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCity2" name="city[]"/>
                             <label for="fCity2">Город
                             </label>
                           </div>
@@ -645,22 +651,22 @@
                     <li><a class="catalog_filters_accordion-item" href="#">Город присутствия</a>
                       <ul class="catalog_filters_accordion-content">
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCity3"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCity3" name="presence_city[]"/>
                             <label for="fCity3">Город присутствия
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCity4"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCity4" name="presence_city[]"/>
                             <label for="fCity4">Город присутствия
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCity5"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCity5" name="presence_city[]"/>
                             <label for="fCity5">Город присутствия
                             </label>
                           </div>
@@ -670,22 +676,22 @@
                     <li><a class="catalog_filters_accordion-item" href="#">Категории</a>
                       <ul class="catalog_filters_accordion-content">
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCat"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCat" name="category[]"/>
                             <label for="fCat">Категория
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCat1"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCat1" name="category[]"/>
                             <label for="fCat1">Категория
                             </label>
                           </div>
                         </li>
                         <li>
-                          <div class="checkbox">
-                            <input type="checkbox" id="fCat2"/>
+                          <div class="selection">
+                            <input type="checkbox" id="fCat2" name="category[]"/>
                             <label for="fCat2">Категория
                             </label>
                           </div>
@@ -1182,8 +1188,14 @@
                 <use fill="currentColor" xlink:href="./assets/img/icons.svg#documents"></use>
               </svg>
             </div>Документооборот</a></li>
+        <li><a href="/reports.html">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#analytics"></use>
+              </svg>
+            </div>Отчеты</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=e9344616ecfd640537187d8f62bd2500"></script>
+    <script src="./js/app.min.js?ckcachebust=d1f71c0ba95f252f78994af024a01d5d"></script>
   </body>
 </html>
