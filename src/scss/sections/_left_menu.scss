@@ -8,6 +8,15 @@
     @include breakpoint(small down){
         display: none;
     }
+    + .content{
+        width: calc(100% - 220px);
+        @include breakpoint(medium down){
+            width: calc(100% - 180px);
+        }
+        @include breakpoint(small down){
+            width: 100%;
+        }
+    }
 }
 
 .logo{

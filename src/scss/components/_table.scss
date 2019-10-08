@@ -51,7 +51,7 @@
             color: $primary-color;
         }
     }
-    .checkbox label::before{
+    .selection label::before{
         margin: 0;
     }
 
@@ -74,5 +74,12 @@
                 }
             }
         }
+    }
+    &--subs{
+        // white-space: normal;
+    }
+    &_button{
+        color: $primary-color;
+        vertical-align: middle;
     }
 }

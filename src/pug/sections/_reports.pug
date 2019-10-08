@@ -20,7 +20,7 @@ section.reports
             button.button.large.hollow.icon
                 +icon('result', [15, 20])
                 | Сформировать
-            button.button.large.hollow.icon
+            button.button.large.hollow.icon(type="button" data-open="rUpload")
                 +icon('upload', [15, 18])
                 | Выгрузить
     .reports_container
@@ -33,6 +33,6 @@ section.reports
         button.button.large.icon
             +icon('upload', [15, 18])
             | Массовая выгрузка
-        button.button.large.hollow.icon
+        button.button.large.hollow.icon(data-open="sManagement")
             +icon('settings', [17, 16])
             | Управление подписками

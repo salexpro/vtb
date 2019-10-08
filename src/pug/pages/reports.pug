@@ -7,3 +7,123 @@ block const
 
 block content
     include ../sections/_reports
+
+    #newSubscribe.reveal.large.reveal--subscribe(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+        h2 Новая подписка
+        form.form.form--subscribe
+            .form_column
+                .form_input
+                    label.form_label
+                        | Периодичность:
+                    .form_radio
+                        .form_radio_input
+                            input#pDaily(type="radio" name="period" value="daily" checked)
+                            label(for="pDaily")
+                                | Ежедневно
+                        .form_radio_input
+                            input#pWeekly(type="radio" name="period" value="weekly")
+                            label(for="pWeekly")
+                                | Еженедельно
+                        .form_radio_input
+                            input#pMonthly(type="radio" name="period" value="monthly")
+                            label(for="pMonthly")
+                                | Ежемесячно
+                        
+                .form_input
+                    input(type="text" name="time" placeholder="Время") 
+                .form_input
+                    input(type="email" name="email" placeholder="Email")
+            .form_column
+                p.form_label
+                    | Выберите отчеты, которые хотите получать
+                ul.form_checkboxes
+                    each _, i in Array(6)
+                        li
+                            +selection('checkbox', 'report[]', `report${i}`, `Отчет #${i+1}`, (i == 0 || i == 2 || i== 3))
+
+            button.button.flat
+                | Создать
+
+        button.reveal_close(aria-label='Close' data-close)
+            +icon('close', [28, 26])
+
+
+    #rUpload.reveal.large.reveal--upload(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+        h2
+            | Выгрузка отчетов
+        form.form.form--subscribe
+            .form_column
+                p.form_label
+                    | Выберите отчеты, которые хотите выгрузить
+                ul.form_checkboxes
+                    each _, i in Array(6)
+                        li
+                            +selection('checkbox', 'u_report[]', `uReport${i}`, `Отчет #${i+1}`, (i == 0 || i == 2 || i== 3))
+            .form_column
+                p.form_label
+                    | Выберите период времени
+                .form_input
+                    input(type="text" name="u_date_from" placeholder="Дата с") 
+                .form_input
+                    input(type="text" name="u_date_till" placeholder="Дата по")
+                .form_buttons
+                    button.button.large.icon
+                        +icon('upload', [15, 18])
+                        | Выгрузить
+        button.reveal_close(aria-label='Close' data-close)
+            +icon('close', [28, 26])
+
+    #sManagement.reveal.large.reveal--subs_management(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+        .reveal_top
+            h2
+                | Управление подписками
+            button.button.hollow.large.icon(data-open="newSubscribe")
+                +icon('plus', [14, 14])
+                | Создать новую подписку
+        .table_wrap
+            table.table.table--subs
+                thead
+                    tr
+                        th №
+                        th Периодичность
+                        th Время
+                        th Email
+                        th Отчеты
+                        th(colspan="2")
+                            | Вкл
+                tbody
+                    tr
+                        td 1
+                        td ПН, СР, СБ
+                        td 02:00
+                        td akayanniy@yandex.ru
+                        td Отчет #1, Отчет #2, Отчет #3
+                        td
+                            +selection('checkbox', 'subs[]', 'subs1')
+                        td
+                            button.table_button
+                                +icon('settings', [20, 19])
+                    tr
+                        td 2
+                        td Ежедневно
+                        td 12:20
+                        td akayanniy@yandex.ru
+                        td Отчет #6
+                        td
+                            +selection('checkbox', 'subs[]', 'subs2', '', true)
+                        td
+                            button.table_button
+                                +icon('settings', [20, 19])
+                    tr
+                        td 3
+                        td 10-го числа
+                        td 08:30
+                        td zubecnv@yandex.ru
+                        td Отчет #8
+                        td
+                            +selection('checkbox', 'subs[]', 'subs3')
+                        td
+                            button.table_button
+                                +icon('settings', [20, 19])
+        button.reveal_close(aria-label='Close' data-close)
+            +icon('close', [28, 26])
