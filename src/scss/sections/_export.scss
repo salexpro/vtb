@@ -1,0 +1,178 @@
+.export{
+    padding: 80px 0 64px;
+    background: $light-gray;
+    @include breakpoint(small down){
+        padding: 40px 10px 64px;
+    }
+    &_header{
+        font-family: 'VTB Group';
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
+        @include breakpoint(small down){
+            font-size: 18px;
+            line-height: 2.22;
+        }
+    }
+    &_lead{
+        color: rgba(97, 97, 97, 0.85);
+        font-size: 16px;
+        font-family: $book-font-family;
+        text-align: center;
+        line-height: 1.44;
+        @include breakpoint(small down){
+            font-size: 14px;
+            br {
+                display: none;
+            }
+        }
+    }
+    &_steps{
+        position: relative;
+        margin: 72px 0 50px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, minmax(auto, 316px));
+        grid-template-areas: 's1 s2 s3'
+                             's6 s5 s4';
+        grid-gap: 70px 30px;
+        counter-reset: steps;
+        list-style: none;
+        z-index: 1;
+        @include breakpoint(large down){
+            padding-right: 45px;
+        }
+        @include breakpoint(medium down){
+            padding: 0 6%;
+            justify-content: space-evenly;
+            grid-template-columns: repeat(2, minmax(auto, 316px));
+            grid-template-areas: 's1 s2'
+                                 's4 s3'
+                                 's5 s6';
+        }
+        @include breakpoint(small down){
+            margin: 46px 0 20px;
+            padding: 20px 0;
+            justify-content: start;
+            grid-template-columns: repeat(6, 246px);
+            grid-template-areas: 's1 s2 s3 s4 s5 s6';
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: calc(100% + 43px);
+            height: calc((100% + 70px) / 2);
+            border: 2px dashed #0a2896;
+            border-left-width: 0;
+            z-index: -1;
+            background: $light-gray;
+            @include breakpoint(large down){
+                width: calc(100% - 2px);
+            }
+            @include breakpoint(medium down){
+                top: calc(194px / 2);
+                left: 33%;
+                transform: none;
+                height: 262px;
+                width: 65%;
+            }
+            @include breakpoint(small down){
+                height: 0;
+                border-bottom: 0;
+                top: 50%;
+                left: 0;
+                width: calc((246px + 30px) * 6 - 30px);
+            }
+        }
+        &::after{
+            @include breakpoint(medium only){
+                content: '';
+                position: absolute;
+                bottom: calc(194px / 2);
+                right: 33%;
+                height: 262px;
+                width: 65%;
+                border: 2px dashed #0a2896;
+                border-right: 0;
+                z-index: -2;
+            }
+        }
+    }
+    &_step{
+        position: relative;
+        border-radius: 3px;
+        border: 1px solid #dce0eb;
+        background-color: $white;
+        padding: 50px 11% 24px;
+        counter-increment: steps;
+        text-align: center;
+        @include breakpoint(small down){
+            padding: 50px 20px 20px;
+        }
+        &::before{
+            content: counter(steps);
+            position: absolute;
+            top: -30px;
+            left: calc(50% - 30px);
+            width: 60px;
+            height: 60px;
+            border: 2px solid $primary-color;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $primary-color;
+            font-family: $book-font-family;
+            font-size: 29px;
+            font-weight: 300;
+            border-radius: 50%;
+            @include breakpoint(small down){
+                width: 50px;
+                height: 50px;
+                top: -20px;
+                font-size: 26px;
+            }
+        }
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}){
+                grid-area: s#{$i};
+            }
+        }
+        &_title{
+            font-family: $book-font-family;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 11px;
+            min-height: 45px;
+            line-height: 1.25;
+            @include breakpoint(small down){
+                font-size: 16px;
+                min-height: 40px;
+            }
+        }
+        &_descr{
+            color: $dark-gray;
+            font-family: $book-font-family;
+            font-size: 16px;
+            font-weight: 300;
+            min-height: 60px;
+            margin: 0;
+            @include breakpoint(small down){
+                font-size: 14px;
+                min-height: 54px;
+            }
+        }
+    }
+    .button{
+        max-width: 280px;
+        margin: auto;
+        @include breakpoint(small down){
+            max-width: 250px;
+        }
+    }
+}

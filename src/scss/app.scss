@@ -7,7 +7,7 @@
 @include foundation-global-styles;
 //@include foundation-grid;
 // @include foundation-flex-grid;
-// @include foundation-xy-grid-classes;
+@include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -83,4 +83,5 @@ $flag-icon-css-path: '../assets/img/flags';
 @import 'sections/documents';
 @import 'sections/order';
 @import 'sections/reports';
+@import 'sections/export';
 @import 'sections/footer';

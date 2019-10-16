@@ -1,0 +1,59 @@
+-
+    const page = 'main'
+    const name = 'Главная'
+    const title  = `${name ?  `${name} – ` : ''}ВТБ Бизнес Коннект`;
+    const descr  = 'Description';
+    const domain = 'vtb.salex.pro'
+    
+    const steps = [
+        {
+            title: 'Пройдите анкетирование',
+            descr: 'Ответьте на 26 вопросов о деятельности компании'
+        },
+        {
+            title: 'Узнайте сильные и слабые стороны',
+            descr: 'Получите оценку экспортной готовности по 6 направлениям'
+        },
+        {
+            title: 'Получите дорожную карту',
+            descr: 'Изучите сформированный график обучения'
+        },
+        {
+            title: 'Заключите экспортный контракт',
+            descr: 'Выходите на заключение экспортного контракта'
+        },
+        {
+            title: 'Получайте обратную связь',
+            descr: 'Работайте вместе с опытным консультантом'
+        },
+        {
+            title: 'Выбирайте услуги',
+            descr: 'Получите доступ к мерам государственной поддержки экспортёров'
+        },
+    ]
+
+doctype html
+html(lang="ru")
+    include ../components/_head
+    body
+        section.export(style="min-height:100vh")
+            .grid-container
+                h2.export_header
+                    | Акселератор Экспорта
+                p.export_lead
+                    | Оцените свой экспортный потенциал, пройдите обучение и заключите 
+                    br
+                    | экспортный контракт в совместном проекте ВТБ Бизнес-Коннект и Российского 
+                    br
+                    | экспортного центра.
+                ul.export_steps
+                    each step in steps
+                        li.export_step
+                            h3.export_step_title
+                                =step.title
+                            p.export_step_descr
+                                =step.descr
+                a.button.flat(href="#")
+                    | Начать обучение
+
+
