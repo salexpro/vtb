@@ -4,7 +4,7 @@ mixin wallet_info
             +icon('wallet_colored', [31, 31])
             p.wallet_info_num
                 | № вашего кошелька B0B6846557508497A93D03B99779A54E
-            button
+            button.wallet_info_refresh
                 +icon('refresh', [22, 23], '#0a2896')
         .wallet_info_bottom
             .wallet_info_column
@@ -20,7 +20,7 @@ mixin wallet_info
 
 
 section.wallet
-    ul#walletTabs.catalog_tabs(data-tabs data-deep-link="true" data-link-active-class="is_active" data-panel-active-class="is_active" data-link-class="catalog_tab" data-panel-class="wallet_content")
+    ul#walletTabs.catalog_tabs.catalog_tabs--wallet(data-tabs data-deep-link="true" data-link-active-class="is_active" data-panel-active-class="is_active" data-link-class="catalog_tab" data-panel-class="wallet_content")
         li.catalog_tab.is_active
             a.catalog_tab_link(href="#walletPayments" aria-selected="true")
                 | Платежи

@@ -329,6 +329,9 @@
             position: relative;
             min-width: calc(33.33% + 1px);
             // min-width: 130px;
+            @include breakpoint(small down){
+                width: 100%;
+            }
             &:first-child label{
                 border-radius: 3px 0 0 3px;
             }

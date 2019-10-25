@@ -35,5 +35,9 @@
     }
     &_count{
         margin-right: 50px;
+        @include breakpoint(small down){
+            margin-right: 20px;
+            font-size: 13px;
+        }
     }
 }
