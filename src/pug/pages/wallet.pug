@@ -4,6 +4,91 @@ block const
     -
         const page = 'wallet'
         const name = 'Кошелек'
-
+        const popupFields = [
+            {
+                label: 'Получатель:',
+                value: 'ООО ВТБ БИЗНЕС КОННЕКТ'
+            },
+            {
+                label: 'ИНН:',
+                value: '7842170479'
+            },
+            {
+                label: 'Банк получателя:',
+                value: 'Банк ВТБ (ПАО)'
+            },
+            {
+                label: 'БИК:',
+                value: '044525745'
+            },
+            {
+                label: 'КПП:',
+                value: '784201001'
+            },
+            {
+                label: 'Счет:',
+                value: '40702810501000000444'
+            },
+            {
+                label: 'Корр. счет:',
+                value: '30101810345250000745 открыт в Филиале №7701 Банка ВТБ (ПАО) г. Москва'
+            },
+            {
+                label: 'Назначение платежа:',
+                value: 'Перевод средств по договору об использовании системы ОО ВТБ Бизнес Коннект (кошелек № B0B6846557508497A93D03B99779A54E для пополнения баланса). В т.ч. НДС (20%)'
+            },
+        ]
 block content
     include ../sections/_wallet
+
+    #wDetails.reveal.reveal--details(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+        h2
+            | Реквизиты для перевода
+        each field in popupFields
+            .wallet_withdrawal_field
+                .wallet_withdrawal_field_label
+                    =field.label
+                .wallet_withdrawal_field_value
+                    =field.value
+        button.reveal_close(aria-label='Close' data-close)
+            +icon('close', [28, 26])
+
+
+    #wWithdrawal.reveal.reveal--withdrawal(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+        h2
+            | Вывод средств
+        p.reveal_descr
+            | Подтвердите распоряжение о выводе средств кодом из СМС
+        form.reveal_form
+            input(type="text" name="code" placeholder="Код из смс" required)
+            button.button.large(disabled)
+                | Подтвердить
+            button.button.large.hollow
+                | Запросить код
+        p.reveal_status
+            | Запросить новый код возможно через
+            | 
+            span 120
+            | 
+            | сек
+        .reveal_buttons
+            button.button.hollow.large.alert(data-close)
+                | Отменить операцию
+        button.reveal_close(aria-label='Close' data-close)
+            +icon('close', [28, 26])
+
+    #wSuccess.reveal.reveal--success(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+        h2
+            | Вывод средств
+        p.reveal_descr
+            | Запрос за вывод средств успешно сформирован
+        .reveal_success
+            .reveal_success_sum
+                +icon('pay', [40, 40])
+                span
+                    | Сумма:
+                    b 1 680 ₽
+            button.button.large(data-close)
+                | ОК
+        button.reveal_close(aria-label='Close' data-close)
+            +icon('close', [28, 26])

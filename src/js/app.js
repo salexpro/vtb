@@ -25,4 +25,9 @@ $('.item_details_button, .supplier_details_button, .auction_offers_button').clic
     $(this).parent().removeClass('folded')
 })
 
+$('.reveal_form').submit(e => {
+    e.preventDefault();
+    $('#wSuccess').foundation('open')
+})
+
 svg4everybody();

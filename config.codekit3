@@ -3173,6 +3173,16 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/pay.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/pay.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/pickaxe.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -4437,7 +4447,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 593666458.76927602
+	"lastBuiltDate": 593671090.23586702
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

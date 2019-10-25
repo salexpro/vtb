@@ -187,7 +187,7 @@ section.wallet
                         p.wallet_topup_bottom_warn
                             | Внимание! Оплата по счету доступна только с расчетных счетов юредических лиц. Безналичное пополнение кошельков по банковским реквизитам в РФ возможна только в рублях. Информация для пополнения по банковским
                             | 
-                            a(href="#") реквизитам
+                            button(data-open="wDetails") реквизитам
                     .wallet_topup_bottom_column
                         .wallet_topup_bottom_sum
                             +icon('bill', [61, 84])
@@ -281,7 +281,7 @@ section.wallet
                                     .wallet_withdrawal_field_value
                                         =field.value
                         .wallet_withdrawal_buttons
-                            button.button.flat
+                            button.button.flat(data-open="wWithdrawal")
                                 | Вывести 1700 ₽
                             button.button.hollow.large.icon.wallet_withdrawal_button
                                 +icon('edit', [17, 16])

@@ -13,14 +13,14 @@
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=593666545" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=593666545" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=593666545" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=593666545" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=593666545" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=593666545" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=593666545" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=c0f8c0555bd4a4162d7d8979a5bcb651">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=593671084" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=593671084" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=593671084" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=593671084" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=593671084" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=593671084" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=593671084" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=cf9078888a90666377cc41edb8947188">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -271,7 +271,8 @@
                     <p class="wallet_topup_bottom_text">Банковский перевод - выгодный и удобный способ пополнения Кошелька. <br>Укажите сумму пополнения, скачайте счет и оплатите его в отделении банка или прямо в нашем интернет - банке. НДС не облагается. Срок зачисления - до 3 рабочих дней.<br>Комиссию уточняйте у вашего банка</p>
                     <p class="wallet_topup_bottom_warn">
                       Внимание! Оплата по счету доступна только с расчетных счетов юредических лиц. Безналичное пополнение кошельков по банковским реквизитам в РФ возможна только в рублях. Информация для пополнения по банковским
-                       <a href="#">реквизитам</a>
+                       
+                      <button data-open="wDetails">реквизитам</button>
                     </p>
                   </div>
                   <div class="wallet_topup_bottom_column">
@@ -390,7 +391,7 @@
                       <input type="text" placeholder="Сумма к выводу" value="1680">
                     </div>
                     <div class="wallet_withdrawal_buttons">
-                      <button class="button flat">Вывести 1700 ₽</button>
+                      <button class="button flat" data-open="wWithdrawal">Вывести 1700 ₽</button>
                       <button class="button hollow large icon wallet_withdrawal_button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16">
                           <use fill="currentColor" xlink:href="./assets/img/icons.svg#edit"></use>
@@ -406,6 +407,101 @@
             </div>
           </div>
         </section>
+        <div class="reveal reveal--details" id="wDetails" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Реквизиты для перевода</h2>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Получатель:
+            </div>
+            <div class="wallet_withdrawal_field_value">ООО ВТБ БИЗНЕС КОННЕКТ
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">ИНН:
+            </div>
+            <div class="wallet_withdrawal_field_value">7842170479
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Банк получателя:
+            </div>
+            <div class="wallet_withdrawal_field_value">Банк ВТБ (ПАО)
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">БИК:
+            </div>
+            <div class="wallet_withdrawal_field_value">044525745
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">КПП:
+            </div>
+            <div class="wallet_withdrawal_field_value">784201001
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Счет:
+            </div>
+            <div class="wallet_withdrawal_field_value">40702810501000000444
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Корр. счет:
+            </div>
+            <div class="wallet_withdrawal_field_value">30101810345250000745 открыт в Филиале №7701 Банка ВТБ (ПАО) г. Москва
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Назначение платежа:
+            </div>
+            <div class="wallet_withdrawal_field_value">Перевод средств по договору об использовании системы ОО ВТБ Бизнес Коннект (кошелек № B0B6846557508497A93D03B99779A54E для пополнения баланса). В т.ч. НДС (20%)
+            </div>
+          </div>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="reveal reveal--withdrawal" id="wWithdrawal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Вывод средств</h2>
+          <p class="reveal_descr">Подтвердите распоряжение о выводе средств кодом из СМС</p>
+          <form class="reveal_form">
+            <input type="text" name="code" placeholder="Код из смс" required>
+            <button class="button large" disabled>Подтвердить</button>
+            <button class="button large hollow">Запросить код</button>
+          </form>
+          <p class="reveal_status">
+            Запросить новый код возможно через
+             <span>120</span> 
+            сек
+          </p>
+          <div class="reveal_buttons">
+            <button class="button hollow large alert" data-close>Отменить операцию</button>
+          </div>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="reveal reveal--success" id="wSuccess" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Вывод средств</h2>
+          <p class="reveal_descr">Запрос за вывод средств успешно сформирован</p>
+          <div class="reveal_success">
+            <div class="reveal_success_sum">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#pay"></use>
+              </svg><span>Сумма:<b>1 680 ₽</b></span>
+            </div>
+            <button class="button large" data-close>ОК</button>
+          </div>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
         <footer class="footer">
           <div class="footer_left">
             <p><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></p>
@@ -488,6 +584,6 @@
             </div>Отчеты</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=8e419188613ab1343f5c93ab2a107bd4"></script>
+    <script src="./js/app.min.js?ckcachebust=7d2fccaa887b5862370dace2c45ee02d"></script>
   </body>
 </html>

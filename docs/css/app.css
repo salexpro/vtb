@@ -4466,6 +4466,89 @@ button {
     @media screen and (max-width: 39.99875em) {
       .reveal--subs_management {
         padding: 40px 10px 35px; } }
+  .reveal--details {
+    padding: 48px 40px 55px; }
+    @media screen and (max-width: 39.99875em) {
+      .reveal--details {
+        padding: 40px 10px 12px; } }
+  .reveal--withdrawal {
+    padding: 48px 70px 60px; }
+    @media screen and (max-width: 39.99875em) {
+      .reveal--withdrawal {
+        padding: 40px 10px 47px; } }
+  .reveal--success {
+    padding: 48px 40px 64px;
+    max-width: 440px; }
+    @media screen and (max-width: 39.99875em) {
+      .reveal--success {
+        padding: 40px 10px 42px;
+        max-width: none; } }
+  .reveal_descr {
+    margin-bottom: 30px;
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+  .reveal_form {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap; }
+    .reveal_form button, .reveal_form [type="text"] {
+      width: auto;
+      margin-right: 15px;
+      margin-bottom: 10px; }
+      @media screen and (max-width: 39.99875em) {
+        .reveal_form button, .reveal_form [type="text"] {
+          width: 100%;
+          margin-right: 0; } }
+      .reveal_form button:last-child, .reveal_form [type="text"]:last-child {
+        margin-right: 0; }
+        @media screen and (max-width: 39.99875em) {
+          .reveal_form button:last-child, .reveal_form [type="text"]:last-child {
+            margin-bottom: 0; } }
+    .reveal_form [type="text"] {
+      max-width: 160px; }
+      @media screen and (max-width: 39.99875em) {
+        .reveal_form [type="text"] {
+          max-width: none; } }
+  .reveal_status {
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+    color: #acb6c3;
+    margin-top: 20px; }
+    .reveal_status span {
+      color: #1e4bd2; }
+  .reveal_buttons {
+    margin: 25px -10px 0;
+    border-top: 1px solid #f3f7fa;
+    padding: 25px 10px 0; }
+    @media screen and (max-width: 39.99875em) {
+      .reveal_buttons {
+        margin: 20px -5px 0;
+        padding: 15px 5px 0; }
+        .reveal_buttons button {
+          width: 100%; } }
+  .reveal_success {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    .reveal_success_sum {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center; }
+      .reveal_success_sum svg {
+        -webkit-box-flex: 0;
+                flex: 0 0 auto; }
+      .reveal_success_sum span {
+        margin-left: 20px;
+        font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+      .reveal_success_sum b {
+        display: block;
+        margin-top: 6px;
+        font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
+        font-size: 18px; }
+    .reveal_success button {
+      min-width: 120px; }
   .reveal.fade-in.mui-enter {
     -webkit-transform: translate3d(0, -18px, 0) perspective(435px) rotateX(8deg);
             transform: translate3d(0, -18px, 0) perspective(435px) rotateX(8deg); }
@@ -9096,7 +9179,7 @@ button {
       @media screen and (max-width: 39.99875em) {
         .wallet_topup_bottom_warn {
           margin-bottom: 22px; } }
-      .wallet_topup_bottom_warn a {
+      .wallet_topup_bottom_warn button {
         text-decoration: underline; }
     .wallet_topup_bottom_sum {
       display: -webkit-box;
