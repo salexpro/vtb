@@ -23,9 +23,6 @@
             display: none;
         }
     }
-    button:not(.button){
-        color: #8f9399;
-    }
     &_search{
         flex: 1 1 auto;
         max-width: 360px;
@@ -55,6 +52,7 @@
             right: 10px;
             top: 0;
             padding: 9px;
+            color: #8f9399;
             @include breakpoint(medium down){
                 padding: 9px 4px;
                 width: 22px;
@@ -74,7 +72,7 @@
         @include breakpoint(medium down){
             font-size: 13px;
         }
-        li{
+        &_item{
             padding: 14px 20px;
             @include breakpoint(medium down){
                 padding: 13px 15px;
@@ -88,101 +86,109 @@
                     border: 0;
                 }
             }
-        }
-    }
-    &_lang{
-        button:not([class]){
-            display: flex;
-            align-items: center;
-            color: $primary-color;
-        }
-        
-        &--head{
-            @include breakpoint(small down){
-                display: none;
-            }
-            svg{
-                margin-right: 10px;
-                @include breakpoint(medium down){
-                    width: 19px;
-                    height: auto;
+            
+            &--wallet{
+                .header_info_button{
+                    padding-right: 13px;
+                }
+                .badge{
+                    padding: 2px;
                 }
             }
         }
-        &--mobile{
-            font-size: 18px;
-            font-family: $book-font-family;
-            svg{
-                margin-right: 6px;
-            }
-        }
-    }
-    &_user{
-        display: flex;
-        align-items: center;
-        button:not([class]){
-            display: flex;
-            align-items: center;
-            text-align: left;
-            @include breakpoint(small down){
-                display: none;
-            }
-            svg{
-                margin-right: 10px;
-                @include breakpoint(medium down){
-                    width: 16px;
-                    flex: 0 0 16px;
-                    height: auto;
-                }
-            }
-        }
-    }
-    &_notify{
-        margin-left: 20px;
-        position: relative;
-        margin-right: 4px;
-        @include breakpoint(medium down){
-            margin-left: 10px;
-            svg{
-                width: 16px;
-                height: auto;
-            }
-        }
-        @include breakpoint(small down){
-            margin-left: 0;
-        }
-    }
-    &_cart{
-        &[class]{
-            padding-right: 0;
-            @include breakpoint(small down){
-                padding-right: 4px;
-            }
-        }
-        button{
-            display: flex;
-            align-items: center;
-            @include breakpoint(small down){
-                margin-right: 5px;
-            }
-        }
-        &_icon{
+        &_button{
+            display: block;
+            color: #8f9399;
             position: relative;
-            margin-right: 15px;
-            @include breakpoint(medium down){
-                margin: 0;
-                svg{
-                    width: 23px;
-                    height: auto;
-                }
+            margin-right: 5px;
+            transition: color 200ms;
+            &:hover, &:focus{
+                color: $black;
             }
-        }
-        &_label{
-            @include breakpoint(medium down){
-                display: none;
+            svg:only-child{
+                margin-right: -5px;
             }
         }
     }
+    // &_lang{
+    //     button:not([class]){
+    //         display: flex;
+    //         align-items: center;
+    //         color: $primary-color;
+    //     }
+        
+    //     &--head{
+    //         @include breakpoint(small down){
+    //             display: none;
+    //         }
+    //         svg{
+    //             margin-right: 10px;
+    //             @include breakpoint(medium down){
+    //                 width: 19px;
+    //                 height: auto;
+    //             }
+    //         }
+    //     }
+    //     &--mobile{
+    //         font-size: 18px;
+    //         font-family: $book-font-family;
+    //         svg{
+    //             margin-right: 6px;
+    //         }
+    //     }
+    // }
+    // &_user{
+    //     display: flex;
+    //     align-items: center;
+    //     button:not([class]){
+    //         display: flex;
+    //         align-items: center;
+    //         text-align: left;
+    //         @include breakpoint(small down){
+    //             display: none;
+    //         }
+    //         svg{
+    //             margin-right: 10px;
+    //             @include breakpoint(medium down){
+    //                 width: 16px;
+    //                 flex: 0 0 16px;
+    //                 height: auto;
+    //             }
+    //         }
+    //     }
+    // }
+    // &_notify{
+    //     button{
+    //         margin-right: 4px;
+    //         @include breakpoint(medium down){
+    //             margin-left: 10px;
+    //             svg{
+    //                 width: 16px;
+    //                 height: auto;
+    //             }
+    //         }
+    //         @include breakpoint(small down){
+    //             margin-left: 0;
+    //         }
+    //     }
+    // }
+    // &_cart{
+    //     button{
+    //         margin-right: 5px;
+    //         @include breakpoint(medium down){
+    //             margin: 0;
+    //             svg{
+    //                 width: 23px;
+    //                 height: auto;
+    //             }
+    //         }
+    //     }
+    // }
+    // &_wallet{
+    //     button{
+    //         margin-right: 18px;
+    //     }
+    // }
     &_hamb{
         -webkit-tap-highlight-color: transparent;
         user-select: none;
@@ -305,6 +311,19 @@
                     display: block;
                     padding: 5px 10px;
                 }
+            }
+        }
+    }
+    &--wallet{
+        justify-content: flex-start;
+        .header{
+            &_logo{
+                display: block;
+                max-width: none;
+                margin-right: 50px;
+            }
+            &_info{
+                margin-left: auto;
             }
         }
     }

@@ -75,11 +75,25 @@
             }
         }
     }
-    &--subs{
-        // white-space: normal;
-    }
     &_button{
         color: $primary-color;
         vertical-align: middle;
+    }
+    &_sum{
+        &--credit{
+            color: $alert-color;
+        }
+        &--debit{
+            color: $success-color;
+        }
+    }
+    &--wallet{
+        th, td{
+            &:last-child{
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-right: 0;
+            }
+        }
     }
 }

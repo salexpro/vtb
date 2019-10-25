@@ -1,27 +1,29 @@
-header.header(class=(page == 'register') ? 'header--register' : false)
+header.header(class=`header--${page}`)
     a.header_logo(href="/")
         img(src="./assets/img/logo.svg", alt="ВТБ Бизнес Коннект")
     if page != 'register'
         +search()(class="header_search--head")
     ul.header_info
-        +lang('li')(class="header_lang--head")
+        //- +lang('li')(class="header_lang--head")
         if page != 'register'
-            li.header_user
-                button
-                    +icon('user', [20, 22])
-                    | ООО "Погода в дом"
-                button.header_notify
-                    +icon('notification', [20, 22])
+            li.header_info_item
+                button.header_info_button
                     span.badge
                         | 5
-            li.header_cart
-                button
-                    .header_cart_icon
-                        +icon('cart', [25, 22])
-                        span.badge
-                            | 2
-                    span.header_cart_label
-                        | Корзина
+                    +icon('notification', [20, 22])
+            li.header_info_item
+                button.header_info_button
+                    span.badge
+                        | 2
+                    +icon('cart', [25, 22])
+            li.header_info_item.header_info_item--wallet
+                a.header_info_button(href="./wallet.html")
+                    span.badge
+                        | 1700
+                    +icon('wallet', [23, 23])
+            li.header_info_item
+                button.header_info_button
+                    +icon('user', [20, 22])
     if page != 'register'
         button.header_hamb(aria-label='Открыть/Закрыть меню', data-toggle='menu', aria-expanded='false', aria-controls='menu')
             svg.header_hamb_icon(viewBox='0 0 100 100')

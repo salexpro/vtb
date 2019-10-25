@@ -1,0 +1,292 @@
+mixin wallet_info
+    .wallet_info
+        .wallet_info_top
+            +icon('wallet_colored', [31, 31])
+            p.wallet_info_num
+                | № вашего кошелька B0B6846557508497A93D03B99779A54E
+            button
+                +icon('refresh', [22, 23], '#0a2896')
+        .wallet_info_bottom
+            .wallet_info_column
+                p.wallet_info_label
+                    | Доступно:
+                b.wallet_info_sum.wallet_info_sum--primary
+                    | 1 700, 38 ₽
+            .wallet_info_column
+                p.wallet_info_label
+                    | Холдировано:
+                b.wallet_info_sum
+                    | 870, 79 ₽
+
+
+section.wallet
+    ul#walletTabs.catalog_tabs(data-tabs data-deep-link="true" data-link-active-class="is_active" data-panel-active-class="is_active" data-link-class="catalog_tab" data-panel-class="wallet_content")
+        li.catalog_tab.is_active
+            a.catalog_tab_link(href="#walletPayments" aria-selected="true")
+                | Платежи
+        li.catalog_tab
+            a.catalog_tab_link(href="#walletTopup" data-tabs-target="walletTopup")
+                | Пополнение кошелька
+        li.catalog_tab
+            a.catalog_tab_link(href="#walletWithdrawal" data-tabs-target="walletWithdrawal")
+                | Вывод денег
+        li.catalog_tab
+            a.catalog_tab_link(href="#walletMore" data-tabs-target="walletMore")
+                | Еще
+    .catalog_tab_content(data-tabs-content="walletTabs")
+        #walletPayments.wallet_content.is_active
+            h2
+                | Счета и операции
+            form.wallet_filters
+                .wallet_filter
+                    label.wallet_filter_label
+                        | Тип операции:
+                    .form_radio
+                        .form_radio_input
+                            input#wCredit(type="radio" name="type" value="credit" checked)
+                            label(for="wCredit")
+                                | Списания
+                        .form_radio_input
+                            input#wDebit(type="radio" name="type" value="debit")
+                            label(for="wDebit")
+                                | Пополнения
+                .wallet_filter
+                    label.wallet_filter_label(for="wRange")
+                        | Дата начала и дата окончания
+                    input#wRange(type="text" name="period" placeholder="Дата с       Дата по")
+                button.button.flat
+                    | Сохранить
+            .table_wrap
+                table.table.table--wallet
+                    thead
+                        tr
+                            th 
+                                | Номер
+                                br
+                                | операции
+                            th
+                                | Дата
+                                br
+                                | проведения
+                            th
+                                | Время
+                                br
+                                | проведения
+                            th Наименование
+                            th Сумма, ₽
+                            th Документ
+                    tbody
+                        tr
+                            td ENH270
+                            td 01.10.2019
+                            td 12:11
+                            td Списание c кошелька №BC001 за услуги по участию в торге №1398 от 01.10.2019
+                            td
+                                b.table_sum.table_sum--credit
+                                    | -245
+                            td
+                                button.table_button
+                                    +icon('bill', [23, 31])
+                        tr
+                            td ENH271
+                            td 01.10.2019
+                            td 12:15
+                            td Списание c кошелька №BC001 за услуги по участию в торге №1399 от 01.10.2019
+                            td
+                                b.table_sum.table_sum--credit
+                                    | -178
+                            td
+                                button.table_button
+                                    +icon('bill', [23, 31])
+                        tr
+                            td ENH272
+                            td 01.10.2019
+                            td 12:21
+                            td Списание c кошелька №BC001 за услуги по участию в торге №1400 от 01.10.2019
+                            td
+                                b.table_sum.table_sum--credit
+                                    | -111
+                            td
+                                button.table_button
+                                    +icon('bill', [23, 31])
+                        tr
+                            td ENH274
+                            td 02.10.2019
+                            td 12:19
+                            td Платежное поручение на вывод д/с с кошелька №0401060 от 02.10.19
+                            td
+                                b.table_sum.table_sum--credit
+                                    | -2930
+                            td
+                                button.table_button
+                                    +icon('bill', [23, 31])
+                        tr
+                            td ENH274
+                            td 02.10.2019
+                            td 12:24
+                            td Платежное поручение на вывод д/с с кошелька №0401060 от 02.10.19
+                            td
+                                b.table_sum.table_sum--credit
+                                    | -590
+                            td
+                                button.table_button
+                                    +icon('bill', [23, 31])
+            .wallet_bottom
+                .catalog_items_filter.catalog_items_filter--wallet
+                    | Количество строк:
+                    select
+                        option 5
+                        option 10
+                        option 20
+                nav.wallet_pager(aria-label='Страницы')
+                    .pagination_count
+                        | 5 из 45
+                    ul.pagination
+                        li.pagination-previous.disabled
+                            +icon('arrow_left', [8, 13])
+                        li.pagination-next
+                            a(href='#', aria-label='Next page')
+                                +icon('arrow_right', [8, 13])
+
+
+        #walletTopup.wallet_content
+            h2
+                | Пополнение кошелька
+            .wallet_topup
+                .wallet_topup_top
+                    .wallet_topup_options
+                        input(type="radio" id="bankTransfer" name="topUpOption" value="bank" checked)
+                        label.wallet_topup_option(for="bankTransfer")
+                            .wallet_topup_icon
+                                +icon('file_big', [56, 69])
+                            h3.wallet_topup_label
+                                | Банковский перевод
+                        input(type="radio" id="overdraft" name="topUpOption" value="overdreaft")
+                        label.wallet_topup_option(for="overdraft")
+                            .wallet_topup_icon
+                                +icon('accounting', [69, 68])
+                            h3.wallet_topup_label
+                                | Запросить овердрафт
+                        input(type="radio" id="banking" name="topUpOption" value="banking")
+                        label.wallet_topup_option(for="banking")
+                            .wallet_topup_icon
+                                +icon('banking', [69, 69])
+                            h3.wallet_topup_label
+                                | Через интернет - банк
+                    +wallet_info
+                .wallet_topup_bottom
+                    .wallet_topup_bottom_column
+                        h2.wallet_topup_header--small
+                            | Банковский перевод
+                        p.wallet_topup_bottom_text
+                            | Банковский перевод - выгодный и удобный способ пополнения Кошелька. 
+                            br
+                            | Укажите сумму пополнения, скачайте счет и оплатите его в отделении банка или прямо в нашем интернет - банке. НДС не облагается. Срок зачисления - до 3 рабочих дней.
+                            br
+                            | Комиссию уточняйте у вашего банка
+                        p.wallet_topup_bottom_warn
+                            | Внимание! Оплата по счету доступна только с расчетных счетов юредических лиц. Безналичное пополнение кошельков по банковским реквизитам в РФ возможна только в рублях. Информация для пополнения по банковским
+                            | 
+                            a(href="#") реквизитам
+                    .wallet_topup_bottom_column
+                        .wallet_topup_bottom_sum
+                            +icon('bill', [61, 84])
+                            p.wallet_topup_bottom_label
+                                | Сумма к пополнению
+                                b 3 000 ₽
+                        button.button.hollow.large
+                            | Скачать платежное поручение
+
+        -
+            const fields = [
+                [{
+                    label: 'Номер расчетного счета получателя:',
+                    value: '4070281071000000354'
+                },
+                {
+                    label: 'БИК банка получателя:',
+                    value: '044525745'
+                },
+                {
+                    label: 'Банк получателя:',
+                    value: 'Филиал №7701 Банка ВТБ (ПАО)'
+                },
+                {
+                    label: 'Город получателя:',
+                    value: 'Москва'
+                },
+                {
+                    label: 'Наименование получателя:',
+                    value: 'Общество с органиченной ответственностью ВТБ БИЗННЕС КОННЕКТ'
+                },
+                {
+                    label: 'ИНН получателя:',
+                    value: '7842170479'
+                },
+                {
+                    label: 'КПП получателя:',
+                    value: '784201001'
+                }],
+                [{
+                    label: 'Назначение платежа:',
+                    value: 'Перевод собственных денежных средств'
+                },
+                {
+                    label: 'Фамилия плательщика: ',
+                    value: 'Абуд'
+                },
+                {
+                    label: 'Имя плательщика:',
+                    value: 'Илья'
+                },
+                {
+                    label: 'Отчество плательщика:',
+                    value: 'Фалахович'
+                },
+                {
+                    label: 'Сумма к выводу',
+                    value: '1680',
+                    editable: true
+                }]
+            ]
+        #walletWithdrawal.wallet_content
+            h2
+                | Вывод денег
+            .wallet_withdrawal
+                .wallet_withdrawal_top
+                    .wallet_withdrawal_info
+                        h3.wallet_withdrawal_header
+                            | На счет организации или ИП
+                        p.wallet_withdrawal_text
+                            | Переведите деньги на расчетный счет юрлица или ИП по реквизитам.
+                            br
+                            | Деньги будут зачислены в течении 3 рабочих дней. Платежное поручение будет доступно на следующий рабочий день в истории платежей. Для перевода мы используем реквизиты счета указанные в профиле компании.
+                    +wallet_info
+                .wallet_withdrawal_details
+                    .wallet_withdrawal_column
+                        each field in fields[0]
+                            .wallet_withdrawal_field
+                                .wallet_withdrawal_field_label
+                                    =field.label
+                                .wallet_withdrawal_field_value
+                                    =field.value
+                    .wallet_withdrawal_column
+                        each field in fields[1]
+                            .wallet_withdrawal_field
+                                if field.editable
+                                    input(type="text" placeholder=field.label value=field.value)
+                                else
+                                    .wallet_withdrawal_field_label
+                                        =field.label
+                                    .wallet_withdrawal_field_value
+                                        =field.value
+                        .wallet_withdrawal_buttons
+                            button.button.flat
+                                | Вывести 1700 ₽
+                            button.button.hollow.large.icon.wallet_withdrawal_button
+                                +icon('edit', [17, 16])
+                                | Редактировать
+
+
+        #walletMore.wallet_content
+            h2 Еще

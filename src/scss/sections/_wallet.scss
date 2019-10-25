@@ -1,0 +1,237 @@
+.wallet{
+    margin: 30px 25px 0;
+    &_content{
+        background-color: $white;
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        border-radius: 0 0 9px 9px;
+        display: none;
+        padding: 50px 90px 45px;
+        &.is_active{
+            display: block;
+        }
+    }
+    &_filters{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        column-gap: 40px;
+        margin-bottom: 52px;
+    }
+    &_filter{
+        &_label{
+            margin-bottom: 12px;
+        }
+        .form_radio_input{
+            min-width: 130px;
+        }
+        [type="text"] {
+            padding: 8px 15px;
+            height: auto;
+            max-width: 260px;
+        }
+    }
+    &_bottom{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+        font-family: $book-font-family;
+    }
+    &_pager{
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+    &_topup{
+        &_top{
+            display: flex;
+            align-items: flex-end;
+        }
+        &_options{
+            width: 100%;
+            max-width: 860px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            column-gap: 40px;
+            [type="radio"]{
+                display: none;
+                &:checked + label{
+                    opacity: 1;
+                }
+            }
+        }
+        &_option[class]{
+            border: 1px solid #dce0eb;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.3;
+            transition: opacity 250ms;
+            user-select: none;
+            padding: 30px 20px 40px;
+        }
+        &_icon{
+            margin-bottom: 20px;
+        }
+        &_label{
+            margin: 0;
+            font-family: $book-font-family;
+            color: $body-font-color;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        &_bottom{
+            margin-top: 30px;
+            border-top: 1px solid $light-gray;
+            padding-top: 30px;
+            display: flex;
+            &_column{
+                flex: 1 1 50%;
+                padding-right: 18px;
+                & + & {
+                    padding-left: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-left: 1px solid #e9eef6;
+                }
+            }
+            &_text{
+                font-family: $book-font-family;
+            }
+            &_warn{
+                margin-top: 30px;
+                color: $dark-gray;
+                font-family: $book-font-family;
+                a{
+                    text-decoration: underline;
+                }
+            }
+            &_sum{
+                display: flex;
+                align-items: center;
+            }
+            &_label{
+                font-size: 18px;
+                font-weight: 300;
+                margin: 0 0 0 20px;
+                font-family: $book-font-family;
+                b{
+                    display: block;
+                    font-size: 21px;
+                    font-family: $header-font-family;
+                    margin-top: 10px;
+                }
+            }
+        }
+        &_header{
+            &--small{
+                font-size: 20px;
+            }
+        }
+    }
+    &_info{
+        padding-left: 25px;
+        font-family: $book-font-family;
+        align-self: flex-end;
+        &_top{
+            display: flex;
+            align-items: center;
+            color: $dark-gray;
+            font-size: 13px;
+            svg{
+                flex: 0 0 31px;
+            }
+        }
+        &_num{
+            margin: 0 20px 0 15px;
+        }
+        &_bottom{
+            margin-top: 16px;
+            display: flex;
+        }
+        &_column{
+            flex: 1 1 50%;
+            padding: 18px 0 28px;
+            & + &{
+                padding-left: 30px;
+                border-left: 1px solid #e9eef6;
+            }   
+        }
+        &_label{
+            font-family: $book-font-family;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        &_sum{
+            font-size: 21px;
+            font-family: $header-font-family;
+            &--primary{
+                color: $primary-color;
+            }
+        }
+        &_bottom{
+
+        }
+    }
+    &_withdrawal{
+        &_top{
+            display: flex;
+            align-items: flex-start;
+        }
+        &_info{
+            padding: 11px 20px 40px 0;
+            border-right: 1px solid #e9eef6;
+        }
+        &_header{
+            font-size: 20px;
+        }
+        &_text{
+            margin: 0;
+            font-family: $book-font-family;
+            font-size: 16px;
+        }
+        &_details{
+            border-top: 1px solid $light-gray;
+            margin-top: 20px;
+            padding-top: 34px;
+            display: flex;
+        }
+        &_column{
+            position: relative;
+            flex: 1 1 50%;
+            padding: 6px 30px 35px 0;
+            & + &{
+                border-left: 1px solid #e9eef6;
+                padding-left: 30px;
+            }
+        }
+        &_field{
+            font-size: 16px;
+            & + &{
+                margin-top: 18px;
+            }
+            &_label{
+                color: $medium-gray;
+                font-family: $header-font-family;
+                margin-bottom: 12px;
+            }
+            &_value{
+                font-family: $book-font-family;
+            }
+        }
+        &_buttons{
+            margin-top: 40px;
+            border-top: 1px solid $light-gray;
+            padding-top: 45px;
+        }
+        &_button{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

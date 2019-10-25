@@ -2078,10 +2078,10 @@ ul.no-bullet, ol.no-bullet {
       background-color: #83d6ff;
       color: #2f3442; }
   .button.success {
-    background-color: #69a981;
+    background-color: #4cc864;
     color: #2f3442; }
     .button.success:hover, .button.success:focus {
-      background-color: #508b66;
+      background-color: #34a94b;
       color: #2f3442; }
   .button.warning {
     background-color: #ffae00;
@@ -2117,7 +2117,7 @@ ul.no-bullet, ol.no-bullet {
       opacity: 0.5;
       cursor: not-allowed; }
       .button.disabled.success, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #69a981;
+        background-color: #4cc864;
         color: #2f3442; }
     .button.disabled.warning, .button[disabled].warning {
       opacity: 0.5;
@@ -2163,14 +2163,14 @@ ul.no-bullet, ol.no-bullet {
           border: 1px solid #e4f6ff;
           color: #e4f6ff; }
     .button.hollow.success {
-      border: 1px solid #69a981;
-      color: #69a981; }
+      border: 1px solid #4cc864;
+      color: #4cc864; }
       .button.hollow.success:hover, .button.hollow.success:focus {
-        border-color: #325740;
-        color: #325740; }
+        border-color: #206a2f;
+        color: #206a2f; }
         .button.hollow.success:hover.disabled, .button.hollow.success:hover[disabled], .button.hollow.success:focus.disabled, .button.hollow.success:focus[disabled] {
-          border: 1px solid #69a981;
-          color: #69a981; }
+          border: 1px solid #4cc864;
+          color: #4cc864; }
     .button.hollow.warning {
       border: 1px solid #ffae00;
       color: #ffae00; }
@@ -2227,14 +2227,14 @@ ul.no-bullet, ol.no-bullet {
       .button.clear.secondary, .button.clear.secondary.disabled, .button.clear.secondary[disabled], .button.clear.secondary:hover, .button.clear.secondary:hover.disabled, .button.clear.secondary:hover[disabled], .button.clear.secondary:focus, .button.clear.secondary:focus.disabled, .button.clear.secondary:focus[disabled] {
         border-color: transparent; }
     .button.clear.success {
-      border: 1px solid #69a981;
-      color: #69a981; }
+      border: 1px solid #4cc864;
+      color: #4cc864; }
       .button.clear.success:hover, .button.clear.success:focus {
-        border-color: #325740;
-        color: #325740; }
+        border-color: #206a2f;
+        color: #206a2f; }
         .button.clear.success:hover.disabled, .button.clear.success:hover[disabled], .button.clear.success:focus.disabled, .button.clear.success:focus[disabled] {
-          border: 1px solid #69a981;
-          color: #69a981; }
+          border: 1px solid #4cc864;
+          color: #4cc864; }
       .button.clear.success, .button.clear.success.disabled, .button.clear.success[disabled], .button.clear.success:hover, .button.clear.success:hover.disabled, .button.clear.success:hover[disabled], .button.clear.success:focus, .button.clear.success:focus.disabled, .button.clear.success:focus[disabled] {
         border-color: transparent; }
     .button.clear.warning {
@@ -2280,7 +2280,7 @@ ul.no-bullet, ol.no-bullet {
   .button.dropdown.hollow.secondary::after, .button.dropdown.clear.secondary::after {
     border-top-color: #e4f6ff; }
   .button.dropdown.hollow.success::after, .button.dropdown.clear.success::after {
-    border-top-color: #69a981; }
+    border-top-color: #4cc864; }
   .button.dropdown.hollow.warning::after, .button.dropdown.clear.warning::after {
     border-top-color: #ffae00; }
   .button.dropdown.hollow.alert::after, .button.dropdown.clear.alert::after {
@@ -2624,7 +2624,7 @@ select {
     background: #e4f6ff;
     color: #2f3442; }
   .badge.success {
-    background: #69a981;
+    background: #4cc864;
     color: #2f3442; }
   .badge.warning {
     background: #ffae00;
@@ -3722,7 +3722,9 @@ button {
   -webkit-box-pack: center;
           justify-content: center;
   text-align: center;
-  line-height: 8px; }
+  line-height: 8px;
+  border-radius: 8px;
+  font-family: "VTB Group", Helvetica, Roboto, Arial, sans-serif; }
   @media screen and (max-width: 63.99875em) {
     .badge {
       right: -6px;
@@ -3794,6 +3796,8 @@ button {
   @media screen and (max-width: 63.99875em) {
     .pagination .ellipsis::after {
       padding: 2px 5px; } }
+  .pagination_count {
+    margin-right: 50px; }
 
 .selection {
   position: relative;
@@ -4223,7 +4227,7 @@ button {
   margin-top: 12px; }
   .form_radio_input {
     position: relative;
-    width: calc(33.33% + 1px); }
+    min-width: calc(33.33% + 1px); }
     .form_radio_input:first-child label {
       border-radius: 3px 0 0 3px; }
     .form_radio_input:last-child label {
@@ -4350,6 +4354,14 @@ button {
   .table_button {
     color: #1e4bd2;
     vertical-align: middle; }
+  .table_sum--credit {
+    color: #e62632; }
+  .table_sum--debit {
+    color: #4cc864; }
+  .table--wallet th:last-child, .table--wallet td:last-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0; }
 
 .reveal {
   outline: none; }
@@ -5301,8 +5313,6 @@ button {
     @media print, screen and (min-width: 40em) {
       .header_logo {
         display: none; } }
-  .header button:not(.button) {
-    color: #8f9399; }
   .header_search {
     -webkit-box-flex: 1;
             flex: 1 1 auto;
@@ -5328,7 +5338,8 @@ button {
       position: absolute;
       right: 10px;
       top: 0;
-      padding: 9px; }
+      padding: 9px;
+      color: #8f9399; }
       @media screen and (max-width: 63.99875em) {
         .header_search_button {
           padding: 9px 4px;
@@ -5347,99 +5358,34 @@ button {
     @media screen and (max-width: 63.99875em) {
       .header_info {
         font-size: 13px; } }
-    .header_info li {
+    .header_info_item {
       padding: 14px 20px; }
       @media screen and (max-width: 63.99875em) {
-        .header_info li {
+        .header_info_item {
           padding: 13px 15px; } }
       @media screen and (max-width: 39.99875em) {
-        .header_info li {
+        .header_info_item {
           padding: 10px; } }
-      .header_info li + li {
+      .header_info_item + li {
         border-left: 1px solid #e9eef6; }
         @media screen and (max-width: 39.99875em) {
-          .header_info li + li {
+          .header_info_item + li {
             border: 0; } }
-  .header_lang button:not([class]) {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-    color: #1e4bd2; }
-  @media screen and (max-width: 39.99875em) {
-    .header_lang--head {
-      display: none; } }
-  .header_lang--head svg {
-    margin-right: 10px; }
-    @media screen and (max-width: 63.99875em) {
-      .header_lang--head svg {
-        width: 19px;
-        height: auto; } }
-  .header_lang--mobile {
-    font-size: 18px;
-    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
-    .header_lang--mobile svg {
-      margin-right: 6px; }
-  .header_user {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center; }
-    .header_user button:not([class]) {
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-align: center;
-              align-items: center;
-      text-align: left; }
-      @media screen and (max-width: 39.99875em) {
-        .header_user button:not([class]) {
-          display: none; } }
-      .header_user button:not([class]) svg {
-        margin-right: 10px; }
-        @media screen and (max-width: 63.99875em) {
-          .header_user button:not([class]) svg {
-            width: 16px;
-            -webkit-box-flex: 0;
-                    flex: 0 0 16px;
-            height: auto; } }
-  .header_notify {
-    margin-left: 20px;
-    position: relative;
-    margin-right: 4px; }
-    @media screen and (max-width: 63.99875em) {
-      .header_notify {
-        margin-left: 10px; }
-        .header_notify svg {
-          width: 16px;
-          height: auto; } }
-    @media screen and (max-width: 39.99875em) {
-      .header_notify {
-        margin-left: 0; } }
-  .header_cart[class] {
-    padding-right: 0; }
-    @media screen and (max-width: 39.99875em) {
-      .header_cart[class] {
-        padding-right: 4px; } }
-  .header_cart button {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center; }
-    @media screen and (max-width: 39.99875em) {
-      .header_cart button {
-        margin-right: 5px; } }
-  .header_cart_icon {
-    position: relative;
-    margin-right: 15px; }
-    @media screen and (max-width: 63.99875em) {
-      .header_cart_icon {
-        margin: 0; }
-        .header_cart_icon svg {
-          width: 23px;
-          height: auto; } }
-  @media screen and (max-width: 63.99875em) {
-    .header_cart_label {
-      display: none; } }
+      .header_info_item--wallet .header_info_button {
+        padding-right: 13px; }
+      .header_info_item--wallet .badge {
+        padding: 2px; }
+    .header_info_button {
+      display: block;
+      color: #8f9399;
+      position: relative;
+      margin-right: 5px;
+      -webkit-transition: color 200ms;
+      transition: color 200ms; }
+      .header_info_button:hover, .header_info_button:focus {
+        color: #2f3442; }
+      .header_info_button svg:only-child {
+        margin-right: -5px; }
   .header_hamb {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
@@ -5549,6 +5495,15 @@ button {
     .header--register .header_lang {
       display: block;
       padding: 5px 10px; } }
+  .header--wallet {
+    -webkit-box-pack: start;
+            justify-content: flex-start; }
+    .header--wallet .header_logo {
+      display: block;
+      max-width: none;
+      margin-right: 50px; }
+    .header--wallet .header_info {
+      margin-left: auto; }
 
 .left_menu {
   -webkit-box-flex: 0;
@@ -5601,23 +5556,20 @@ button {
         font-size: 14px; } }
   .catalog_tab {
     width: 50%; }
-    @media screen and (max-width: 74.99875em) {
-      .catalog_tab:first-child a {
-        border-top-right-radius: 0; } }
-    @media screen and (max-width: 74.99875em) {
-      .catalog_tab:last-child a {
-        border-top-left-radius: 0; } }
+    .catalog_tab:first-child a {
+      border-top-left-radius: 9px; }
+    .catalog_tab:last-child a {
+      border-top-right-radius: 9px; }
     .catalog_tab a {
       display: block;
-      border-radius: 9px 9px 0 0;
       width: 100%;
       text-align: center;
       padding: 14px;
-      background-color: #1e4bd2;
-      color: #fff;
-      -webkit-transition: color 250ms, background-color 250ms;
-      transition: color 250ms, background-color 250ms;
-      outline: none; }
+      background-color: #fff;
+      -webkit-transition: color 250ms, background-color 250ms, box-shadow 250ms;
+      transition: color 250ms, background-color 250ms, box-shadow 250ms;
+      outline: none;
+      box-shadow: inset 0 0 0 1px #eaedf5; }
       @media screen and (max-width: 63.99875em) {
         .catalog_tab a {
           padding: 13px; } }
@@ -5625,10 +5577,13 @@ button {
         .catalog_tab a {
           padding: 9px; } }
       .catalog_tab a:hover, .catalog_tab a:focus {
-        background-color: #1b43bc; }
+        background-color: #f2f2f2; }
     .catalog_tab.is_active a {
-      background-color: #fff;
-      color: #2f3442; }
+      color: #fff;
+      background-color: #1b43bc;
+      box-shadow: none; }
+    .catalog_tab + .catalog_tab a {
+      border-left: 0; }
   .catalog_content {
     background-color: #fff;
     box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
@@ -5734,6 +5689,11 @@ button {
             width: auto;
             padding-right: 15px;
             background-position: right -15px center; } }
+      .catalog_items_filter--wallet select {
+        font-size: 16px;
+        text-decoration: none;
+        background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.52%205.277l-.02-.02-.02.02L-.277.655.676-.27%204.5%203.443%208.326-.27l.954.926z%22%2F%3E%3C%2Fsvg%3E);
+        background-size: 10px; }
     .catalog_items_button {
       display: none;
       -webkit-box-align: center;
@@ -6482,7 +6442,6 @@ button {
           width: 100%;
           height: 204px;
           background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(43%, rgba(255, 255, 255, 0.93)), to(#fff));
-          background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.93) 43%, #fff 100%);
           background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.93) 43%, #fff 100%); }
           @media screen and (max-width: 39.99875em) {
             .item_details_specs.folded::after {
@@ -6677,7 +6636,6 @@ button {
           width: 100%;
           height: 105px;
           background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(43%, rgba(255, 255, 255, 0.93)), to(#fff));
-          background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.93) 43%, #fff 100%);
           background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.93) 43%, #fff 100%);
           position: absolute;
           bottom: 20px;
@@ -8864,6 +8822,225 @@ button {
     @media screen and (max-width: 39.99875em) {
       .export .button {
         max-width: 250px; } }
+
+.wallet {
+  margin: 30px 25px 0; }
+  .wallet_content {
+    background-color: #fff;
+    box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+    border-radius: 0 0 9px 9px;
+    display: none;
+    padding: 50px 90px 45px; }
+    .wallet_content.is_active {
+      display: block; }
+  .wallet_filters {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    margin-bottom: 52px; }
+  .wallet_filter_label {
+    margin-bottom: 12px; }
+  .wallet_filter .form_radio_input {
+    min-width: 130px; }
+  .wallet_filter [type="text"] {
+    padding: 8px 15px;
+    height: auto;
+    max-width: 260px; }
+  .wallet_bottom {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    margin-top: 30px;
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+  .wallet_pager {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-left: 50px; }
+  .wallet_topup_top {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: end;
+            align-items: flex-end; }
+  .wallet_topup_options {
+    width: 100%;
+    max-width: 860px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+    grid-template-columns: repeat(3, auto);
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px; }
+    .wallet_topup_options [type="radio"] {
+      display: none; }
+      .wallet_topup_options [type="radio"]:checked + label {
+        opacity: 1; }
+  .wallet_topup_option[class] {
+    border: 1px solid #dce0eb;
+    border-radius: 4px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    opacity: 0.3;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    padding: 30px 20px 40px; }
+  .wallet_topup_icon {
+    margin-bottom: 20px; }
+  .wallet_topup_label {
+    margin: 0;
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+    color: #2f3442;
+    font-size: 18px;
+    font-weight: 300; }
+  .wallet_topup_bottom {
+    margin-top: 30px;
+    border-top: 1px solid #f3f7fa;
+    padding-top: 30px;
+    display: -webkit-box;
+    display: flex; }
+    .wallet_topup_bottom_column {
+      -webkit-box-flex: 1;
+              flex: 1 1 50%;
+      padding-right: 18px; }
+      .wallet_topup_bottom_column + .wallet_topup_bottom_column {
+        padding-left: 24px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+                align-items: center;
+        border-left: 1px solid #e9eef6; }
+    .wallet_topup_bottom_text {
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+    .wallet_topup_bottom_warn {
+      margin-top: 30px;
+      color: #6b7683;
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+      .wallet_topup_bottom_warn a {
+        text-decoration: underline; }
+    .wallet_topup_bottom_sum {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center; }
+    .wallet_topup_bottom_label {
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 0 0 20px;
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+      .wallet_topup_bottom_label b {
+        display: block;
+        font-size: 21px;
+        font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
+        margin-top: 10px; }
+  .wallet_topup_header--small {
+    font-size: 20px; }
+  .wallet_info {
+    padding-left: 25px;
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+    align-self: flex-end; }
+    .wallet_info_top {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center;
+      color: #6b7683;
+      font-size: 13px; }
+      .wallet_info_top svg {
+        -webkit-box-flex: 0;
+                flex: 0 0 31px; }
+    .wallet_info_num {
+      margin: 0 20px 0 15px; }
+    .wallet_info_bottom {
+      margin-top: 16px;
+      display: -webkit-box;
+      display: flex; }
+    .wallet_info_column {
+      -webkit-box-flex: 1;
+              flex: 1 1 50%;
+      padding: 18px 0 28px; }
+      .wallet_info_column + .wallet_info_column {
+        padding-left: 30px;
+        border-left: 1px solid #e9eef6; }
+    .wallet_info_label {
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 10px; }
+    .wallet_info_sum {
+      font-size: 21px;
+      font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif; }
+      .wallet_info_sum--primary {
+        color: #1e4bd2; }
+  .wallet_withdrawal_top {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+  .wallet_withdrawal_info {
+    padding: 11px 20px 40px 0;
+    border-right: 1px solid #e9eef6; }
+  .wallet_withdrawal_header {
+    font-size: 20px; }
+  .wallet_withdrawal_text {
+    margin: 0;
+    font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 16px; }
+  .wallet_withdrawal_details {
+    border-top: 1px solid #f3f7fa;
+    margin-top: 20px;
+    padding-top: 34px;
+    display: -webkit-box;
+    display: flex; }
+  .wallet_withdrawal_column {
+    position: relative;
+    -webkit-box-flex: 1;
+            flex: 1 1 50%;
+    padding: 6px 30px 35px 0; }
+    .wallet_withdrawal_column + .wallet_withdrawal_column {
+      border-left: 1px solid #e9eef6;
+      padding-left: 30px; }
+  .wallet_withdrawal_field {
+    font-size: 16px; }
+    .wallet_withdrawal_field + .wallet_withdrawal_field {
+      margin-top: 18px; }
+    .wallet_withdrawal_field_label {
+      color: #acb6c3;
+      font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
+      margin-bottom: 12px; }
+    .wallet_withdrawal_field_value {
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
+  .wallet_withdrawal_buttons {
+    margin-top: 40px;
+    border-top: 1px solid #f3f7fa;
+    padding-top: 45px; }
+  .wallet_withdrawal_button {
+    position: absolute;
+    top: 0;
+    right: 0; }
 
 .footer {
   margin: 40px 25px 45px;

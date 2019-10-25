@@ -21,25 +21,21 @@
     &_tab{
         width: 50%;
         &:first-child a {
-            @include breakpoint(large down){
-                border-top-right-radius: 0;
-            }
+            border-top-left-radius: 9px;
+
         }
         &:last-child a {
-            @include breakpoint(large down){
-                border-top-left-radius: 0;
-            }
+            border-top-right-radius: 9px;
         }
         a{
             display: block;
-            border-radius: 9px 9px 0 0;
             width: 100%;
             text-align: center;
             padding: 14px;
-            background-color: $primary-color;
-            color: $white;
-            transition: color 250ms, background-color 250ms;
+            background-color: $white;
+            transition: color 250ms, background-color 250ms, box-shadow 250ms;
             outline: none;
+            box-shadow: inset 0 0 0 1px #eaedf5;
             @include breakpoint(medium down){
                 padding: 13px;
             }
@@ -47,12 +43,20 @@
                 padding: 9px;
             }
             &:hover, &:focus{
-                background-color: darken($primary-color, 5);
+                background-color: darken($white, 5);
             }
         }
         &.is_active a{
-            background-color: $white;
-            color: $body-font-color;
+            // background-color: $white;
+            color: $white;
+            // color: $body-font-color;
+            background-color: darken($primary-color, 5);
+            box-shadow: none;
+        }
+        & + & {
+            a{
+                border-left: 0;
+            }
         }
     }
     &_content{
@@ -158,6 +162,14 @@
                     width: auto;
                     padding-right: 15px;
                     background-position: right -15px center;
+                }
+            }
+            &--wallet{
+                select{
+                    font-size: 16px;
+                    text-decoration: none;
+                    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.52%205.277l-.02-.02-.02.02L-.277.655.676-.27%204.5%203.443%208.326-.27l.954.926z%22%2F%3E%3C%2Fsvg%3E);
+                    background-size: 10px;
                 }
             }
         }

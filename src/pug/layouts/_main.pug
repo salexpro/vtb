@@ -16,7 +16,7 @@ html(lang="ru")
     include ../components/_head
     body
         main.off-canvas-content.wrap(data-off-canvas-content)
-            if page != 'register'
+            if page != 'register' && page != 'wallet'
                 include ../sections/_left_menu
             .content
                 include ../sections/_header

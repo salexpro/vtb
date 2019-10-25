@@ -327,7 +327,8 @@
         margin-top: 12px;
         &_input{
             position: relative;
-            width: calc(33.33% + 1px);
+            min-width: calc(33.33% + 1px);
+            // min-width: 130px;
             &:first-child label{
                 border-radius: 3px 0 0 3px;
             }

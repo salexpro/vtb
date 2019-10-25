@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Кошелек – ВТБ Бизнес Коннект</title>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="Кошелек – ВТБ Бизнес Коннект">
+    <meta property="og:description" content="Description">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=593654827" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=593654827" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=593654827" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=593654827" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=593654827" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=593654827" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=593654827" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=75e799807f7c4377f722db94d7bf94e2">
+  </head>
+  <body>
+    <main class="off-canvas-content wrap" data-off-canvas-content>
+      <div class="content">
+        <header class="header header--wallet"><a class="header_logo" href="/"><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></a>
+          <form class="header_search header_search--head">
+            <input type="search" placeholder="Поиск" required="required"/>
+            <button class="header_search_button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+          <ul class="header_info">
+            <li class="header_info_item">
+              <button class="header_info_button"><span class="badge">5</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#notification"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="header_info_item">
+              <button class="header_info_button"><span class="badge">2</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#cart"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="header_info_item header_info_item--wallet"><a class="header_info_button" href="./wallet.html"><span class="badge">1700</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet"></use>
+                </svg></a></li>
+            <li class="header_info_item">
+              <button class="header_info_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#user"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <button class="header_hamb" aria-label="Открыть/Закрыть меню" data-toggle="menu" aria-expanded="false" aria-controls="menu">
+            <svg class="header_hamb_icon" viewBox="0 0 100 100">
+              <path class="header_hamb_line header_hamb_line--top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
+              <path class="header_hamb_line header_hamb_line--middle" d="m 30,50 h 40"></path>
+              <path class="header_hamb_line header_hamb_line--bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
+            </svg>
+          </button>
+        </header>
+        <section class="wallet">
+          <ul class="catalog_tabs" id="walletTabs" data-tabs data-deep-link="true" data-link-active-class="is_active" data-panel-active-class="is_active" data-link-class="catalog_tab" data-panel-class="wallet_content">
+            <li class="catalog_tab is_active"><a class="catalog_tab_link" href="#walletPayments" aria-selected="true">Платежи</a></li>
+            <li class="catalog_tab"><a class="catalog_tab_link" href="#walletTopup" data-tabs-target="walletTopup">Пополнение кошелька</a></li>
+            <li class="catalog_tab"><a class="catalog_tab_link" href="#walletWithdrawal" data-tabs-target="walletWithdrawal">Вывод денег</a></li>
+            <li class="catalog_tab"><a class="catalog_tab_link" href="#walletMore" data-tabs-target="walletMore">Еще</a></li>
+          </ul>
+          <div class="catalog_tab_content" data-tabs-content="walletTabs">
+            <div class="wallet_content is_active" id="walletPayments">
+              <h2>Счета и операции</h2>
+              <form class="wallet_filters">
+                <div class="wallet_filter">
+                  <label class="wallet_filter_label">Тип операции:</label>
+                  <div class="form_radio">
+                    <div class="form_radio_input">
+                      <input id="wCredit" type="radio" name="type" value="credit" checked>
+                      <label for="wCredit">Списания</label>
+                    </div>
+                    <div class="form_radio_input">
+                      <input id="wDebit" type="radio" name="type" value="debit">
+                      <label for="wDebit">Пополнения</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="wallet_filter">
+                  <label class="wallet_filter_label" for="wRange">Дата начала и дата окончания</label>
+                  <input id="wRange" type="text" name="period" placeholder="Дата с       Дата по">
+                </div>
+                <button class="button flat">Сохранить</button>
+              </form>
+              <div class="table_wrap">
+                <table class="table table--wallet">
+                  <thead>
+                    <tr>
+                      <th>
+                         Номер<br>операции</th>
+                      <th>Дата<br>проведения</th>
+                      <th>Время<br>проведения</th>
+                      <th>Наименование</th>
+                      <th>Сумма, ₽</th>
+                      <th>Документ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ENH270</td>
+                      <td>01.10.2019</td>
+                      <td>12:11</td>
+                      <td>Списание c кошелька №BC001 за услуги по участию в торге №1398 от 01.10.2019</td>
+                      <td><b class="table_sum table_sum--credit">-245</b></td>
+                      <td>
+                        <button class="table_button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="31">
+                            <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ENH271</td>
+                      <td>01.10.2019</td>
+                      <td>12:15</td>
+                      <td>Списание c кошелька №BC001 за услуги по участию в торге №1399 от 01.10.2019</td>
+                      <td><b class="table_sum table_sum--credit">-178</b></td>
+                      <td>
+                        <button class="table_button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="31">
+                            <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ENH272</td>
+                      <td>01.10.2019</td>
+                      <td>12:21</td>
+                      <td>Списание c кошелька №BC001 за услуги по участию в торге №1400 от 01.10.2019</td>
+                      <td><b class="table_sum table_sum--credit">-111</b></td>
+                      <td>
+                        <button class="table_button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="31">
+                            <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ENH274</td>
+                      <td>02.10.2019</td>
+                      <td>12:19</td>
+                      <td>Платежное поручение на вывод д/с с кошелька №0401060 от 02.10.19</td>
+                      <td><b class="table_sum table_sum--credit">-2930</b></td>
+                      <td>
+                        <button class="table_button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="31">
+                            <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ENH274</td>
+                      <td>02.10.2019</td>
+                      <td>12:24</td>
+                      <td>Платежное поручение на вывод д/с с кошелька №0401060 от 02.10.19</td>
+                      <td><b class="table_sum table_sum--credit">-590</b></td>
+                      <td>
+                        <button class="table_button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="31">
+                            <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="wallet_bottom">
+                <div class="catalog_items_filter catalog_items_filter--wallet">Количество строк:
+                  <select>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>20</option>
+                  </select>
+                </div>
+                <nav class="wallet_pager" aria-label="Страницы">
+                  <div class="pagination_count">5 из 45</div>
+                  <ul class="pagination">
+                    <li class="pagination-previous disabled">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13">
+                        <use fill="currentColor" xlink:href="./assets/img/icons.svg#arrow_left"></use>
+                      </svg>
+                    </li>
+                    <li class="pagination-next"><a href="#" aria-label="Next page">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#arrow_right"></use>
+                        </svg></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="wallet_content" id="walletTopup">
+              <h2>Пополнение кошелька</h2>
+              <div class="wallet_topup">
+                <div class="wallet_topup_top">
+                  <div class="wallet_topup_options">
+                    <input type="radio" id="bankTransfer" name="topUpOption" value="bank" checked>
+                    <label class="wallet_topup_option" for="bankTransfer">
+                      <div class="wallet_topup_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="69">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#file_big"></use>
+                        </svg>
+                      </div>
+                      <h3 class="wallet_topup_label">Банковский перевод</h3>
+                    </label>
+                    <input type="radio" id="overdraft" name="topUpOption" value="overdreaft">
+                    <label class="wallet_topup_option" for="overdraft">
+                      <div class="wallet_topup_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="69" height="68">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#accounting"></use>
+                        </svg>
+                      </div>
+                      <h3 class="wallet_topup_label">Запросить овердрафт</h3>
+                    </label>
+                    <input type="radio" id="banking" name="topUpOption" value="banking">
+                    <label class="wallet_topup_option" for="banking">
+                      <div class="wallet_topup_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#banking"></use>
+                        </svg>
+                      </div>
+                      <h3 class="wallet_topup_label">Через интернет - банк</h3>
+                    </label>
+                  </div>
+                          <div class="wallet_info">
+                            <div class="wallet_info_top">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31">
+                                <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet_colored"></use>
+                              </svg>
+                              <p class="wallet_info_num">№ вашего кошелька B0B6846557508497A93D03B99779A54E</p>
+                              <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23">
+                                  <use fill="#0a2896" xlink:href="./assets/img/icons.svg#refresh"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="wallet_info_bottom">
+                              <div class="wallet_info_column">
+                                <p class="wallet_info_label">Доступно:</p><b class="wallet_info_sum wallet_info_sum--primary">1 700, 38 ₽</b>
+                              </div>
+                              <div class="wallet_info_column">
+                                <p class="wallet_info_label">Холдировано:</p><b class="wallet_info_sum">870, 79 ₽</b>
+                              </div>
+                            </div>
+                          </div>
+                </div>
+                <div class="wallet_topup_bottom">
+                  <div class="wallet_topup_bottom_column">
+                    <h2 class="wallet_topup_header--small">Банковский перевод</h2>
+                    <p class="wallet_topup_bottom_text">Банковский перевод - выгодный и удобный способ пополнения Кошелька. <br>Укажите сумму пополнения, скачайте счет и оплатите его в отделении банка или прямо в нашем интернет - банке. НДС не облагается. Срок зачисления - до 3 рабочих дней.<br>Комиссию уточняйте у вашего банка</p>
+                    <p class="wallet_topup_bottom_warn">
+                      Внимание! Оплата по счету доступна только с расчетных счетов юредических лиц. Безналичное пополнение кошельков по банковским реквизитам в РФ возможна только в рублях. Информация для пополнения по банковским
+                       <a href="#">реквизитам</a>
+                    </p>
+                  </div>
+                  <div class="wallet_topup_bottom_column">
+                    <div class="wallet_topup_bottom_sum">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="61" height="84">
+                        <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+                      </svg>
+                      <p class="wallet_topup_bottom_label">Сумма к пополнению<b>3 000 ₽</b></p>
+                    </div>
+                    <button class="button hollow large">Скачать платежное поручение</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wallet_content" id="walletWithdrawal">
+              <h2>Вывод денег</h2>
+              <div class="wallet_withdrawal">
+                <div class="wallet_withdrawal_top">
+                  <div class="wallet_withdrawal_info">
+                    <h3 class="wallet_withdrawal_header">На счет организации или ИП</h3>
+                    <p class="wallet_withdrawal_text">Переведите деньги на расчетный счет юрлица или ИП по реквизитам.<br>Деньги будут зачислены в течении 3 рабочих дней. Платежное поручение будет доступно на следующий рабочий день в истории платежей. Для перевода мы используем реквизиты счета указанные в профиле компании.</p>
+                  </div>
+                          <div class="wallet_info">
+                            <div class="wallet_info_top">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31">
+                                <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet_colored"></use>
+                              </svg>
+                              <p class="wallet_info_num">№ вашего кошелька B0B6846557508497A93D03B99779A54E</p>
+                              <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23">
+                                  <use fill="#0a2896" xlink:href="./assets/img/icons.svg#refresh"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="wallet_info_bottom">
+                              <div class="wallet_info_column">
+                                <p class="wallet_info_label">Доступно:</p><b class="wallet_info_sum wallet_info_sum--primary">1 700, 38 ₽</b>
+                              </div>
+                              <div class="wallet_info_column">
+                                <p class="wallet_info_label">Холдировано:</p><b class="wallet_info_sum">870, 79 ₽</b>
+                              </div>
+                            </div>
+                          </div>
+                </div>
+                <div class="wallet_withdrawal_details">
+                  <div class="wallet_withdrawal_column">
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Номер расчетного счета получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">4070281071000000354
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">БИК банка получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">044525745
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Банк получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Филиал №7701 Банка ВТБ (ПАО)
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Город получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Москва
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Наименование получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Общество с органиченной ответственностью ВТБ БИЗННЕС КОННЕКТ
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">ИНН получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">7842170479
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">КПП получателя:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">784201001
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wallet_withdrawal_column">
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Назначение платежа:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Перевод собственных денежных средств
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Фамилия плательщика: 
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Абуд
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Имя плательщика:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Илья
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <div class="wallet_withdrawal_field_label">Отчество плательщика:
+                      </div>
+                      <div class="wallet_withdrawal_field_value">Фалахович
+                      </div>
+                    </div>
+                    <div class="wallet_withdrawal_field">
+                      <input type="text" placeholder="Сумма к выводу" value="1680">
+                    </div>
+                    <div class="wallet_withdrawal_buttons">
+                      <button class="button flat">Вывести 1700 ₽</button>
+                      <button class="button hollow large icon wallet_withdrawal_button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#edit"></use>
+                        </svg>Редактировать
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wallet_content" id="walletMore">
+              <h2>Еще</h2>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer_left">
+            <p><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></p>
+            <p>Генеральная лицензия Банка России №1000<br>© ВТБ, 2007 — 2019</p>
+            <p><a href="#" target="_blank">Политика обработки персональных данных</a><br><a href="#" target="_blank">Оферта</a></p>
+          </div>
+          <div class="footer_right">
+            <p>
+              190000, г. Санкт-Петербург, ул. Большая Морская, д. 29
+              Служба Технической поддержки ВТБ «Бизнес-Коннект»:<br><a href="mailto:help@vtbconnect.ru" target="_blank">help@vtbconnect.ru</a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <div class="off-canvas position-top header_mobile" id="menu" data-off-canvas data-transition="overlap" data-auto-focus="false">
+      <div class="header_mobile_top">
+        <form class="header_search header_search--mobile">
+          <input type="search" placeholder="Поиск" required="required"/>
+          <button class="header_search_button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="header_lang header_lang--mobile">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#internet"></use>
+            </svg>RU
+          </button>
+        </div>
+      </div>
+      <button class="header_mobile_user">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18">
+          <use fill="currentColor" xlink:href="./assets/img/icons.svg#user"></use>
+        </svg>ООО "Погода в дом"
+      </button>
+      <ul class="menu vertical menu--left menu--mobile">
+        <li><a href="#">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#clip"></use>
+              </svg>
+            </div>Заказы</a></li>
+        <li><a href="/">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#package"></use>
+              </svg>
+            </div>Товары и поставщики</a></li>
+        <li><a href="/auction.html">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#barcode"></use>
+              </svg>
+            </div>Торги</a></li>
+        <li><a href="#">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#magazine"></use>
+              </svg>
+            </div>Каталог товаров</a></li>
+        <li><a href="#">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#package_up"></use>
+              </svg>
+            </div>Экспорт менеджер</a></li>
+        <li><a href="#">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#hat"></use>
+              </svg>
+            </div>Академия экспорта</a></li>
+        <li><a href="/documents.html">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#documents"></use>
+              </svg>
+            </div>Документооборот</a></li>
+        <li><a href="/reports.html">
+            <div class="menu_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#analytics"></use>
+              </svg>
+            </div>Отчеты</a></li>
+      </ul>
+    </div>
+    <script src="./js/app.min.js?ckcachebust=b3359dc2954e5824e9c1676ea5d9aa5b"></script>
+  </body>
+</html>

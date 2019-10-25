@@ -15,7 +15,7 @@
 		"uuidString": "6DF9D747-8413-4879-B214-3F05CAB77409"
 		}
 	],
-"creatorBuild": "31491",
+"creatorBuild": "31934",
 "files": {
 	"/.browserslistrc": {
 		"cB": 0,
@@ -51,12 +51,6 @@
 		"oF": 1,
 		"sC": 3,
 		"tS": 1
-		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
 		},
 	"/build.zip": {
 		"cB": 0,
@@ -2949,11 +2943,31 @@
 		"plM": 1107547906047,
 		"prP": 0
 		},
+	"/src/assets/img/icons/accounting.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/accounting.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/battery.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
 		"oAP": "/build/assets/img/icons/battery.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/bill.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/bill.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 1103269715967,
@@ -3039,6 +3053,36 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/edit.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/edit.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/expander.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/expander.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/file_big.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/file_big.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/flask.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3099,6 +3143,16 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/online-banking.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/online-banking.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/pacifier.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3134,6 +3188,16 @@
 		"miP": 0,
 		"oA": 0,
 		"oAP": "/build/assets/img/icons/pizza.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/refresh.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/refresh.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 1103269715967,
@@ -3204,6 +3268,26 @@
 		"miP": 0,
 		"oA": 0,
 		"oAP": "/build/assets/img/icons/truck.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/wallet.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/wallet.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/wallet_colored.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/wallet_colored.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 1103269715967,
@@ -3838,6 +3922,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/pages/wallet.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/wallet.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/sections/_auction.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3955,6 +4049,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_supplier.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_wallet.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_wallet.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -4308,6 +4412,19 @@
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
+		},
+	"/src/scss/sections/_wallet.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_wallet.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		}
 	},
 "hooks": [
@@ -4320,7 +4437,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 592242603.82608199
+	"lastBuiltDate": 593654829.39262104
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -4704,6 +4821,7 @@
 			"flagValue": -1
 			}
 		},
+	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 2,
 	"esLintECMAVersion": 5,
 	"esLintEnvironmentsMask": 8193,
@@ -4805,6 +4923,10 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -5154,6 +5276,10 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
+			"optionString": ""
+			},
+		"no-import-assign": {
+			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -5579,6 +5705,10 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-regex-literals": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -6188,7 +6318,6 @@
 		"autoOutputPathStyle": 2,
 		"createSourceMap": 0,
 		"enableJavascript": 0,
-		"ieCompatibility": 1,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -6328,6 +6457,9 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
+	"rollupExternals": "",
+	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
+	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, docs, node_modules, build.zip",
 	"sourceFolderName": "src",
 	"susyVersion": 3,

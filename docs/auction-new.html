@@ -13,14 +13,14 @@
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=592908314" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=592908314" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=592908314" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=592908314" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=592908314" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=592908314" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=592908314" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=6387d44246c011d49bc6b03c79ba4012">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=593654828" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=593654828" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=593654828" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=593654828" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=593654828" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=593654828" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=593654828" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=c261284616638288f24fe2a24115ab5f">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -82,7 +82,7 @@
         </button>
       </aside>
       <div class="content">
-        <header class="header"><a class="header_logo" href="/"><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></a>
+        <header class="header header--auction"><a class="header_logo" href="/"><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></a>
           <form class="header_search header_search--head">
             <input type="search" placeholder="Поиск" required="required"/>
             <button class="header_search_button">
@@ -92,32 +92,29 @@
             </button>
           </form>
           <ul class="header_info">
-            <li class="header_lang header_lang--head">
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#internet"></use>
-                </svg>RU
-              </button>
-            </li>
-            <li class="header_user">
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22">
-                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#user"></use>
-                </svg>ООО "Погода в дом"
-              </button>
-              <button class="header_notify">
+            <li class="header_info_item">
+              <button class="header_info_button"><span class="badge">5</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22">
                   <use fill="currentColor" xlink:href="./assets/img/icons.svg#notification"></use>
-                </svg><span class="badge">5</span>
+                </svg>
               </button>
             </li>
-            <li class="header_cart">
-              <button>
-                <div class="header_cart_icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22">
-                    <use fill="currentColor" xlink:href="./assets/img/icons.svg#cart"></use>
-                  </svg><span class="badge">2</span>
-                </div><span class="header_cart_label">Корзина</span>
+            <li class="header_info_item">
+              <button class="header_info_button"><span class="badge">2</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#cart"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="header_info_item header_info_item--wallet"><a class="header_info_button" href="./wallet.html"><span class="badge">1700</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet"></use>
+                </svg></a></li>
+            <li class="header_info_item">
+              <button class="header_info_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#user"></use>
+                </svg>
               </button>
             </li>
           </ul>
@@ -354,6 +351,6 @@
             </div>Отчеты</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=64126aa71403a371ec816b173f7d751c"></script>
+    <script src="./js/app.min.js?ckcachebust=4a1cdeaae2ab4c553f2622e3522cb689"></script>
   </body>
 </html>
