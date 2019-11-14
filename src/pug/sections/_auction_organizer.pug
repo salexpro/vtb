@@ -1,0 +1,270 @@
+-
+    const statuses = [
+        {
+            icon: ['file_moderator', [18, 22]],
+            label: 'На модерации',
+            active: true
+        },
+        {
+            icon: ['file_publ', [18, 22]],
+            label: 'Опубликован',
+            active: true
+        },
+        {
+            icon: ['file_placed', [19, 20]],
+            label: 'Размещен',
+            active: true
+        },
+        {
+            icon: ['trophy', [17, 19]],
+            label: 'Выбор<br>победителя',
+            active: true
+        },
+        {
+            icon: ['check-thin', [22, 17]],
+            label: 'Завершен',
+            active: true
+        },
+        {
+            icon: ['close', [17, 17]],
+            label: 'Отменен'
+        },
+    ]
+
+.auction.auction--processing
+    section.auction_status
+        .order_status_wrap
+            ul.order_status
+                each status in statuses
+                    li.order_status_item&attributes({
+                        class: status.active ? 'is_active' : false,
+                        'data-tooltip': status.tooltip ? '' : false,
+                        tabindex: status.tooltip ? 1 : false,
+                        title: status.tooltip || false
+                    })
+                        .order_status_icon
+                            +icon(...status.icon)
+                        .order_status_label
+                            !=status.label
+        .auction_status_buttons
+            button.button.hollow.large
+                | Выгрузить протокол
+            button.button.large
+                | Сформировать заказ
+            button.button.hollow.large
+                | Пригласить
+    section.auction_block.auction_block--auction
+        h1.auction_block_title
+            | №8575
+        .auction_block_content
+            ul.auction_block_list
+                li
+                    span Общая информация о торге:
+                    | 
+                    | Поставка мобильных телефонов
+                li
+                    span Категория товаров:
+                    | 
+                    | Компьютеры, электронное и электрическое оборудование, Смартфоны
+                li
+                    span Условия поставки и оплаты товара:
+                    | 
+                    | Указана в прилогаемых файлах
+                li
+                    span Место поставки:
+                    | 
+                    | г Москва, ш Подольское, д 8
+            hr
+            ul.auction_block_list
+                li
+                    span Организатор:
+                    | 
+                    | ВТБ (Закупки ИТ)
+                li
+                    span Контактное лицо:
+                    | 
+                    | Купцов А.Н.
+                li
+                    span Контактный телефон:
+                    | 
+                    | +749577554545 доб. 118-727
+                li
+                    span Дата публикации:
+                    | 
+                    | 16.10.2019 14:59
+                li
+                    span Дата начала приёма заявок:
+                    | 
+                    | 16.10.2019 15:00
+                li
+                    span Дата окончания приёма заявок:
+                    | 
+                    | 18.10.2019 14:00
+            hr
+            ul.auction_block_list
+                li
+                    a(href="#" target="_blank") Проект_Договора_ разовой_поставки_типовой.docx
+                    .auction_block_list-icon
+                        +icon('file', [15, 17])
+                li
+                    a(href="#" target="_blank") Требования_к_закупаемой_продукции__Монитор_27_исправл.docх
+                    .auction_block_list-icon
+                        +icon('file', [15, 17])
+                li
+                    a(href="#" target="_blank") Форма ценового предложения.xlsx
+                    .auction_block_list-icon
+                        +icon('file', [15, 17])
+                hr
+                li
+                    ul.auction_accordion(data-accordion data-allow-all-closed="true") 
+                        li.auction_accordion-item(data-accordion-item)
+                            a.auction_accordion-title(href='#')
+                                b Спецификация # 1:
+                                | 
+                                | Монитор
+                            ul.auction_accordion-content(data-tab-content)
+                                li
+                                    span Наименование:
+                                    | 
+                                    | Монитор
+                                li
+                                    span Код позиции по ОКПД2:
+                                    | 
+                                    | 26.20.11.110
+                        li.auction_accordion-item(data-accordion-item)
+                            a.auction_accordion-title(href='#')
+                                b Спецификация # 2:
+                                | 
+                                | Системный блок
+                            ul.auction_accordion-content(data-tab-content)
+                                li
+                                    span Наименование:
+                                    | 
+                                    | Системный блок
+                                li
+                                    span Код позиции по ОКПД2:
+                                    | 
+                                    | 26.20.11.110
+
+    section.auction_block.auction_block--offers
+        h2.h1.auction_block_title
+            | Предложения участников
+        .auction_block_content
+            form.form.auction_offers_form
+                .form_input.form_input--select
+                    input(type="text" name="cost" placeholder="Стоимость предложения")
+                    select(name="currency")
+                        option RUB
+                        option USD
+                        option EUR
+                .form_input
+                    input(type="text" name="offer" placeholder="Текст предложения")
+                .auction_offers_buttons
+                    button.button.hollow.large.icon
+                        +icon('clip', [14, 14])
+                        | Загрузить ценовое предложение
+                    button.button.large
+                        | Сделать ставку
+            ul.auction_offers_items(data-accordion data-multi-expand="true" data-allow-all-closed="true") 
+                li.auction_offers_item.is-active(data-accordion-item)
+                    a.auction_offers_item_link(href="#")
+                        span.auction_offers_item_content
+                            p.auction_offers_item_title
+                                | ООО «Компания ЭКОАРТ»
+                            ul.auction_block_list
+                                li
+                                    span Дата и время подачи:
+                                    | 
+                                    | 21.10.2019 10:47
+                        span.auction_offers_item_actions
+                            b.auction_offers_item_price
+                                | 607 680 ₽
+                            p.auction_offers_item_status.auction_offers_item_status--winner
+                                | Победитель
+                    ul.auction_block_list(data-tab-content)
+                            li
+                                span Вложения:
+                                | 
+                                a(href="#" target="_blank") КП.pdf
+                            li
+                                span Комментарий:
+                                | 
+                                | Прошу принять мое предложение
+
+                li.auction_offers_item.is-active(data-accordion-item)
+                    a.auction_offers_item_link(href="#")
+                        span.auction_offers_item_content
+                            p.auction_offers_item_title
+                                | ООО «Компания ЭКОАРТ»
+                            ul.auction_block_list
+                                li
+                                    span Дата и время подачи:
+                                    | 
+                                    | 21.10.2019 10:47
+                        span.auction_offers_item_actions
+                            b.auction_offers_item_price
+                                | 800 680 ₽
+                            p.auction_offers_item_status.auction_offers_item_status--declined
+                                | Отклонено
+                    ul.auction_block_list(data-tab-content)
+                            li
+                                span Вложения:
+                                | 
+                                a(href="#" target="_blank") КП.pdf
+                            li
+                                span Комментарий:
+                                | 
+                                | Прошу принять мое предложение
+                    
+                li.auction_offers_item(data-accordion-item)
+                    a.auction_offers_item_link(href="#")
+                        span.auction_offers_item_content
+                            p.auction_offers_item_title
+                                | ООО «Компания ЭКОАРТ»
+                            ul.auction_block_list
+                                li
+                                    span Дата и время подачи:
+                                    | 
+                                    | 21.10.2019 10:47
+                        span.auction_offers_item_actions
+                            b.auction_offers_item_price
+                                | 800 680 ₽
+                            p.auction_offers_item_status.auction_offers_item_status--accepted
+                                | Принято
+                    ul.auction_block_list(data-tab-content)
+                            li
+                                span Вложения:
+                                | 
+                                a(href="#" target="_blank") КП.pdf
+                            li
+                                span Комментарий:
+                                | 
+                                | Прошу принять мое предложение
+
+
+    section.auction_block.auction_block--discuss
+        h2.h1.auction_block_title
+            | Обсуждение
+        .auction_block_content
+            //- form.auction_discuss_form
+                input(type="text" name="message" placeholder="Ваш комментарий")
+                button.button.hollow
+                    | Отправить
+            ul.auction_discuss_comments
+                li.auction_discuss_comment
+                    .auction_discuss_comment_top
+                        b.auction_discuss_comment-name
+                            | OOO Экоарт
+                        time.auction_discuss_comment-date(datetime="2019-10-21")
+                            | 21.10.2019
+                    p.auction_discuss_comment-message
+                        | Уточните ставка в предложении должна ключать НДС?
+                    ul.auction_discuss_replies
+                        li.auction_discuss_comment
+                            .auction_discuss_comment_top
+                                b.auction_discuss_comment-name
+                                    | Банк ВТБ
+                                time.auction_discuss_comment-date(datetime="2019-10-21")
+                                    | 21.10.2019
+                            p.auction_discuss_comment-message
+                                | Да, НДС должна быть включена в ставку

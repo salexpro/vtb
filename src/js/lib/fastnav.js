@@ -13,4 +13,4 @@ const pageWidget = pages => {
     });
 }
 
-pageWidget(['index', 'item', 'supplier', 'auction', 'auction-new', 'documents', 'documents-new', 'order', 'register', 'register-2', 'register-3', 'reports', 'wallet', 'main']);
+pageWidget(['index', 'item', 'supplier', 'auction', 'auction-new', 'auction-organizer', 'documents', 'documents-new', 'order', 'register', 'register-2', 'register-3', 'reports', 'wallet', 'main']);
