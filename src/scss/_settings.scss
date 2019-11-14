@@ -74,6 +74,7 @@ $foundation-palette: (
   success: #4cc864,
   warning: #ffae00,
   alert: #e62632,
+  verifier: rgba(#00aaff, 0.2)
 );
 $light-gray: #f3f7fa;
 $medium-gray: #acb6c3;
@@ -462,8 +463,8 @@ $label-background: $primary-color;
 $label-color: $white;
 $label-color-alt: $black;
 $label-palette: $foundation-palette;
-$label-font-size: 0.8rem;
-$label-padding: 0.33333rem 0.5rem;
+$label-font-size: 12px;
+$label-padding: 0.33333rem 0.8rem;
 $label-radius: $global-radius;
 
 // 22. Media Object

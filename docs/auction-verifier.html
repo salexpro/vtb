@@ -13,14 +13,14 @@
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=595395525" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=595395525" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=595395525" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=595395525" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=595395525" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=595395525" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=595395525" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=b6f65b375acb749f0a5ffb1fba2e4fa8">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=595397829" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=595397829" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=595397829" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=595397829" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=595397829" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=595397829" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=595397829" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=a7d8a156c53a479e2b5bcf8dede1cb64">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -126,7 +126,7 @@
             </svg>
           </button>
         </header>
-        <div class="auction auction--processing">
+        <div class="auction auction--processing auction--verifier">
           <section class="auction_status">
             <div class="order_status_wrap">
               <ul class="order_status">
@@ -281,98 +281,51 @@
                   </ul>
                 </li>
               </ul>
+              <div class="auction_block_buttons">
+                <button class="button hollow large icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16">
+                    <use fill="currentColor" xlink:href="./assets/img/icons.svg#edit"></use>
+                  </svg>Редактировать
+                </button>
+                <button class="button large">Отправить торг на повторную верификацию</button>
+              </div>
             </div>
           </section>
           <section class="auction_block auction_block--offers">
             <h2 class="h1 auction_block_title">Предложения участников</h2>
             <div class="auction_block_content">
-              <form class="form auction_offers_form">
-                <div class="form_input form_input--select">
-                  <input type="text" name="cost" placeholder="Стоимость предложения">
-                  <select name="currency">
-                    <option>RUB</option>
-                    <option>USD</option>
-                    <option>EUR</option>
-                  </select>
-                </div>
-                <div class="form_input">
-                  <input type="text" name="offer" placeholder="Текст предложения">
-                </div>
-                <div class="auction_offers_buttons">
-                  <button class="button hollow large icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#clip"></use>
-                    </svg>Загрузить ценовое предложение
-                  </button>
-                  <button class="button large">Сделать ставку</button>
-                </div>
-              </form>
-              <ul class="auction_offers_items" data-accordion data-multi-expand="true" data-allow-all-closed="true"> 
-                <li class="auction_offers_item is-active" data-accordion-item><a class="auction_offers_item_link" href="#"><span class="auction_offers_item_content">
-                      <p class="auction_offers_item_title">ООО «Компания ЭКОАРТ»</p>
-                      <ul class="auction_block_list">
-                        <li><span>Дата и время подачи:</span> 
-                          21.10.2019 10:47
-                        </li>
-                      </ul></span><span class="auction_offers_item_actions"><b class="auction_offers_item_price">607 680 ₽</b>
-                      <p class="auction_offers_item_status auction_offers_item_status--winner">Победитель</p></span></a>
-                  <ul class="auction_block_list" data-tab-content>
-                    <li><span>Вложения:</span> <a href="#" target="_blank">КП.pdf</a></li>
-                    <li><span>Комментарий:</span> 
-                      Прошу принять мое предложение
-                    </li>
-                  </ul>
-                </li>
-                <li class="auction_offers_item is-active" data-accordion-item><a class="auction_offers_item_link" href="#"><span class="auction_offers_item_content">
-                      <p class="auction_offers_item_title">ООО «Компания ЭКОАРТ»</p>
-                      <ul class="auction_block_list">
-                        <li><span>Дата и время подачи:</span> 
-                          21.10.2019 10:47
-                        </li>
-                      </ul></span><span class="auction_offers_item_actions"><b class="auction_offers_item_price">800 680 ₽</b>
-                      <p class="auction_offers_item_status auction_offers_item_status--declined">Отклонено</p></span></a>
-                  <ul class="auction_block_list" data-tab-content>
-                    <li><span>Вложения:</span> <a href="#" target="_blank">КП.pdf</a></li>
-                    <li><span>Комментарий:</span> 
-                      Прошу принять мое предложение
-                    </li>
-                  </ul>
-                </li>
-                <li class="auction_offers_item" data-accordion-item><a class="auction_offers_item_link" href="#"><span class="auction_offers_item_content">
-                      <p class="auction_offers_item_title">ООО «Компания ЭКОАРТ»</p>
-                      <ul class="auction_block_list">
-                        <li><span>Дата и время подачи:</span> 
-                          21.10.2019 10:47
-                        </li>
-                      </ul></span><span class="auction_offers_item_actions"><b class="auction_offers_item_price">800 680 ₽</b>
-                      <p class="auction_offers_item_status auction_offers_item_status--accepted">Принято</p></span></a>
-                  <ul class="auction_block_list" data-tab-content>
-                    <li><span>Вложения:</span> <a href="#" target="_blank">КП.pdf</a></li>
-                    <li><span>Комментарий:</span> 
-                      Прошу принять мое предложение
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <p class="auction_block_empty auction_block_empty--center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36">
+                  <use fill="#d8d8d8" xlink:href="./assets/img/icons.svg#empty"></use>
+                </svg>Пока нет предложений участников
+              </p>
             </div>
           </section>
           <section class="auction_block auction_block--discuss">
             <h2 class="h1 auction_block_title">Обсуждение</h2>
             <div class="auction_block_content">
+              <p class="auction_block_empty">Нет обсуждений</p>
+            </div>
+          </section>
+          <section class="auction_block auction_block--verifier">
+            <h2 class="h1 auction_block_title">Обсуждение с верификатором</h2>
+            <div class="auction_block_content">
+              <div class="auction_discuss_actions">
+                <p>Действия:</p>
+                <button class="button flat">Согласовать</button>
+                <button class="button hollow flat">Не согласовать</button>
+                <button class="button hollow flat alert">Удалить</button>
+              </div>
+              <form class="auction_discuss_form">
+                <input type="text" name="message" placeholder="Текст сообщения">
+                <button class="button">Добавить комментарий</button>
+              </form>
               <ul class="auction_discuss_comments">
                 <li class="auction_discuss_comment">
-                  <div class="auction_discuss_comment_top"><b class="auction_discuss_comment-name">OOO Экоарт</b>
-                    <time class="auction_discuss_comment-date" datetime="2019-10-21">21.10.2019</time>
+                  <div class="auction_discuss_comment_top"><b class="auction_discuss_comment-name">Никита Зубец<span class="label verifier">Верификатор</span></b>
+                    <time class="auction_discuss_comment-date" datetime="2019-11-07">7.11.2019</time>
                   </div>
-                  <p class="auction_discuss_comment-message">Уточните ставка в предложении должна ключать НДС?</p>
-                  <ul class="auction_discuss_replies">
-                    <li class="auction_discuss_comment">
-                      <div class="auction_discuss_comment_top"><b class="auction_discuss_comment-name">Банк ВТБ</b>
-                        <time class="auction_discuss_comment-date" datetime="2019-10-21">21.10.2019</time>
-                      </div>
-                      <p class="auction_discuss_comment-message">Да, НДС должна быть включена в ставку</p>
-                    </li>
-                  </ul>
+                  <p class="auction_discuss_comment-message">Уважаемый, что за дичь вы хотите разместить на площадке?</p>
                 </li>
               </ul>
             </div>
@@ -460,6 +413,6 @@
             </div>Отчеты</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=2ea34d980c53ba189f8b26eb981132bc"></script>
+    <script src="./js/app.min.js?ckcachebust=b4889873004df185c4026cb1a0c94f5d"></script>
   </body>
 </html>

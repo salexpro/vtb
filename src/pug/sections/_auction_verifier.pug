@@ -27,7 +27,7 @@
         },
     ]
 
-.auction.auction--processing
+.auction.auction--processing.auction--verifier
     section.auction_status
         .order_status_wrap
             ul.order_status
@@ -141,126 +141,55 @@
                                     span Код позиции по ОКПД2:
                                     | 
                                     | 26.20.11.110
+            .auction_block_buttons
+                button.button.hollow.large.icon
+                    +icon('edit', [17, 16])
+                    | Редактировать
+                button.button.large
+                    | Отправить торг на повторную верификацию
+
 
     section.auction_block.auction_block--offers
         h2.h1.auction_block_title
             | Предложения участников
         .auction_block_content
-            form.form.auction_offers_form
-                .form_input.form_input--select
-                    input(type="text" name="cost" placeholder="Стоимость предложения")
-                    select(name="currency")
-                        option RUB
-                        option USD
-                        option EUR
-                .form_input
-                    input(type="text" name="offer" placeholder="Текст предложения")
-                .auction_offers_buttons
-                    button.button.hollow.large.icon
-                        +icon('clip', [14, 14])
-                        | Загрузить ценовое предложение
-                    button.button.large
-                        | Сделать ставку
-            ul.auction_offers_items(data-accordion data-multi-expand="true" data-allow-all-closed="true") 
-                li.auction_offers_item.is-active(data-accordion-item)
-                    a.auction_offers_item_link(href="#")
-                        span.auction_offers_item_content
-                            p.auction_offers_item_title
-                                | ООО «Компания ЭКОАРТ»
-                            ul.auction_block_list
-                                li
-                                    span Дата и время подачи:
-                                    | 
-                                    | 21.10.2019 10:47
-                        span.auction_offers_item_actions
-                            b.auction_offers_item_price
-                                | 607 680 ₽
-                            p.auction_offers_item_status.auction_offers_item_status--winner
-                                | Победитель
-                    ul.auction_block_list(data-tab-content)
-                            li
-                                span Вложения:
-                                | 
-                                a(href="#" target="_blank") КП.pdf
-                            li
-                                span Комментарий:
-                                | 
-                                | Прошу принять мое предложение
+            p.auction_block_empty.auction_block_empty--center
+                +icon('empty', [31, 36], '#d8d8d8')
+                | Пока нет предложений участников
 
-                li.auction_offers_item.is-active(data-accordion-item)
-                    a.auction_offers_item_link(href="#")
-                        span.auction_offers_item_content
-                            p.auction_offers_item_title
-                                | ООО «Компания ЭКОАРТ»
-                            ul.auction_block_list
-                                li
-                                    span Дата и время подачи:
-                                    | 
-                                    | 21.10.2019 10:47
-                        span.auction_offers_item_actions
-                            b.auction_offers_item_price
-                                | 800 680 ₽
-                            p.auction_offers_item_status.auction_offers_item_status--declined
-                                | Отклонено
-                    ul.auction_block_list(data-tab-content)
-                            li
-                                span Вложения:
-                                | 
-                                a(href="#" target="_blank") КП.pdf
-                            li
-                                span Комментарий:
-                                | 
-                                | Прошу принять мое предложение
-                    
-                li.auction_offers_item(data-accordion-item)
-                    a.auction_offers_item_link(href="#")
-                        span.auction_offers_item_content
-                            p.auction_offers_item_title
-                                | ООО «Компания ЭКОАРТ»
-                            ul.auction_block_list
-                                li
-                                    span Дата и время подачи:
-                                    | 
-                                    | 21.10.2019 10:47
-                        span.auction_offers_item_actions
-                            b.auction_offers_item_price
-                                | 800 680 ₽
-                            p.auction_offers_item_status.auction_offers_item_status--accepted
-                                | Принято
-                    ul.auction_block_list(data-tab-content)
-                            li
-                                span Вложения:
-                                | 
-                                a(href="#" target="_blank") КП.pdf
-                            li
-                                span Комментарий:
-                                | 
-                                | Прошу принять мое предложение
 
 
     section.auction_block.auction_block--discuss
         h2.h1.auction_block_title
             | Обсуждение
         .auction_block_content
-            //- form.auction_discuss_form
-                input(type="text" name="message" placeholder="Ваш комментарий")
-                button.button.hollow
-                    | Отправить
+            p.auction_block_empty
+                | Нет обсуждений
+
+    section.auction_block.auction_block--verifier
+        h2.h1.auction_block_title
+            | Обсуждение с верификатором
+        .auction_block_content
+            .auction_discuss_actions
+                p Действия:
+                button.button.flat
+                    | Согласовать
+                button.button.hollow.flat
+                    | Не согласовать
+                button.button.hollow.flat.alert
+                    | Удалить
+            form.auction_discuss_form
+                input(type="text" name="message" placeholder="Текст сообщения")
+                button.button
+                    | Добавить комментарий
             ul.auction_discuss_comments
                 li.auction_discuss_comment
                     .auction_discuss_comment_top
                         b.auction_discuss_comment-name
-                            | OOO Экоарт
-                        time.auction_discuss_comment-date(datetime="2019-10-21")
-                            | 21.10.2019
+                            | Никита Зубец
+                            span.label.verifier
+                                | Верификатор
+                        time.auction_discuss_comment-date(datetime="2019-11-07")
+                            | 7.11.2019
                     p.auction_discuss_comment-message
-                        | Уточните ставка в предложении должна ключать НДС?
-                    ul.auction_discuss_replies
-                        li.auction_discuss_comment
-                            .auction_discuss_comment_top
-                                b.auction_discuss_comment-name
-                                    | Банк ВТБ
-                                time.auction_discuss_comment-date(datetime="2019-10-21")
-                                    | 21.10.2019
-                            p.auction_discuss_comment-message
-                                | Да, НДС должна быть включена в ставку
+                        | Уважаемый, что за дичь вы хотите разместить на площадке?

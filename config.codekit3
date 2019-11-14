@@ -3073,6 +3073,16 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/empty.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/empty.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/expander.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -4306,6 +4316,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/src/scss/components/_label.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/build/scss/css/_label.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/src/scss/components/_menu.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4577,7 +4600,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 595395532.62343299
+	"lastBuiltDate": 595397837.33027697
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
