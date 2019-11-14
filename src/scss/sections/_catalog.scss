@@ -163,18 +163,46 @@
                 border-top: 1px solid #e9eef6;
                 padding: 26px 10px 0;
                 margin: 30px -10px 5px;
+                @include breakpoint(medium down){
+                    margin: 25px 0 -5px;
+                    padding: 25px 0 0;
+                }
+                @include breakpoint(small down){
+                    margin: 10px 0 5px;
+                    padding-top: 15px;
+                    flex-wrap: wrap;
+                    .catalog_items_filter{
+                        display: block;
+                        width: 50%;
+                    }
+                    .button{
+                        order: -1;
+                        width: 100%;
+                        max-width: 260px;
+                        margin: 0 auto 20px;
+                    }
+                }
                 nav{
                     margin-right: auto;
                     margin-left: 30px;
+                    @include breakpoint(small down){
+                        margin: 0;
+                    }
                 }
             }
             &--abottom{
                 margin: 30px 0 0;
                 padding: 0;
                 border: 0;
+                @include breakpoint(small down){
+                    margin-top: 26px;
+                }
                 nav{
                     margin-right: auto;
                     margin-left: 30px;
+                    @include breakpoint(small down){
+                        margin: 0;
+                    }
                 }
             }
         }
