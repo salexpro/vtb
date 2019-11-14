@@ -1,23 +1,26 @@
 .auction{
     margin: 30px 25px 0;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "item offers"
-        "discuss offers";
+
+    // display: grid;
+    // grid-gap: 20px;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-areas:
+    //     "item offers"
+    //     "discuss offers";
     @include breakpoint(medium down){
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "item"
-            "offers"
-            "discuss";
+        // grid-template-columns: 1fr;
+        // grid-template-areas:
+        //     "item"
+        //     "offers"
+        //     "discuss";
         margin: 15px 15px 0;
     }
     @include breakpoint(small down){
         margin: 15px 10px 0;
     }
     &--new{
+        display: grid;
+        grid-gap: 20px;
         flex-wrap: wrap;
         box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
         border-radius: 9px;
@@ -38,13 +41,38 @@
             padding: 20px 10px 40px;
         }
     }
-    &_item{
+    &_block{
         border-radius: 9px;
         overflow: hidden;
         background-color: $white;
         box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
         flex: 0 1 calc(50% - 10px);
         grid-area: item;
+        &--large{
+            .auction{
+                &_block{
+                    &_title{
+                        padding: 19px 30px;
+                        font-size: 23px;
+                    }
+                    &_content{
+                        padding: 30px 30px 60px;
+                    }
+                }
+            }
+        }
+        &--discuss{
+            grid-area: discuss;
+            .auction_item_content{
+                padding: 28px 20px;
+            }
+        }
+        &--offers{
+            grid-area: offers;
+            .auction_item_content{
+                padding-bottom: 20px;
+            }
+        }
         &_title{
             background-color: $secondary-color;
             padding: 18px 20px;
@@ -58,8 +86,16 @@
         &_status{
             color: #1f3d82;
             font-size: 13px;
+            &--placed{
+                color: $success-color;
+            }
+            &--ended{
+                color: $alert-color;
+            }
+
         }
         &_content{
+            position: relative;
             padding: 20px 20px 40px;
             @include breakpoint(small down){
                 padding: 20px 10px;
@@ -84,7 +120,7 @@
                     display: block;
                 }
             }
-            a{
+            a:not(.auction_accordion-title){
                 color: $primary-color;
                 &:hover, &:focus{
                     text-decoration: underline;
@@ -93,6 +129,253 @@
             &-icon{
                 opacity: 0.6;
                 float: right;
+            }
+        }
+    }
+    &_filters{
+        display:grid;
+        column-gap: 55px;
+        grid-template-columns: repeat(3, auto);
+        margin-bottom: 10px;
+        &_more{
+            display: flex;
+            align-items: center;
+            color: $primary-color;
+            font-family: $book-font-family;
+            font-size: 13px;
+            font-weight: 300;
+            padding: 10px 0;
+            > svg{
+                margin-right: 10px;
+            }
+            span{
+                transform: rotate(-180deg);
+                margin-left: 10px;
+                transition: transform 300ms;
+            }
+            &.hover{
+                span{
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+    &_filter{
+        &--search, &--filter{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+            align-items: center;
+        }
+        &--checkboxes{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            height: 50px;
+            .selection{
+                flex: 1 1 50%;
+                &:nth-child(-n+2){
+                    margin-bottom: auto;
+                }
+            }
+        }
+        &_input{
+            position: relative;
+            [type="search"], [type="text"]{
+                padding: 10px 15px;
+                height: auto;
+            }
+            [type="search"] {
+                font-size: 13px;
+                padding-right: 36px;
+            }
+            [readonly]{
+                cursor: default;
+            }
+        }
+        &_button{
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+            transform: translateY(-50%);
+        }
+        &_selection{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: #e9eef6;
+            padding: 4px 15px;
+            display: flex;
+            align-items: center;
+            button{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &_dropdown{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+        border-radius: 0 0 9px 9px;
+        background-color: $white;
+        padding: 30px 30px 65px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        transition: visibility 300ms, opacity 300ms;
+        &.is-open{
+            opacity: 1;
+            visibility: visible;
+        }
+        .form{
+            &_label{
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+            &_input{
+                flex: 0 1 calc(50% - 20px);
+                margin-bottom: 20px;
+            }
+            &_buttons{
+                padding-top: 10px;
+            }
+        }
+    }
+    &_item{
+        padding: 30px 10px;
+        margin: 0 -10px;
+        border-bottom: 1px solid #e9eef6;
+        display: flex;
+        flex-wrap: wrap;
+        &_number{
+            font-family: $header-font-family;
+            font-size: 18px;
+            flex: 1 1 100%;
+            margin-bottom: 10px;
+        }
+        &_left{
+            flex: 0 1 49%;
+            margin: 0;
+            list-style: none;
+        }
+        &_right{
+            flex: 0 1 51%;
+            margin: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: 'field1 status'
+                                 'field2 status'
+                                 'field3 status';
+            row-gap: 13px;
+            li.auction_item_field{
+                margin: 0;
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}){
+                        grid-area: field#{$i};
+                    }
+                }
+            }
+        }
+        &_field{
+            font-family: $book-font-family;
+            font-size: 16px;
+            & + & {
+                margin-top: 13px;
+            }
+            &--actions.auction_item_field{
+                margin-top: 20px;
+                display: flex;
+            }
+            .button.large{
+                padding: 10px 24px;
+            }
+        }
+        &_label{
+            display: block;
+            color: $medium-gray;
+            font-family: $header-font-family;
+            margin-bottom: 6px;
+        }
+        &_options{
+            list-style: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        &_option{
+            margin-left: 25px;
+            display: flex;
+            align-items: center;
+            span{
+                margin-left: 5px;
+            }
+        }
+        &_status{
+            grid-area: status;
+            grid-row: 2 / 3;
+            border-radius: 3px;
+            padding: 12px 19px;
+            font-family: $book-font-family;
+            font-size: 18px;
+            font-weight: 300;
+            justify-self: center;
+            align-self: center;
+            &--placed{
+                background: rgba($success-color, 0.2);
+                color: $success-color;
+            }
+        }
+    }
+    
+    &_accordion{
+        margin: 0;
+        list-style: none;
+        &-content{
+            list-style: none;
+            margin-left: 20px;
+            padding-top: 15px;
+        }
+        &-item{
+            &.is-active{
+                .auction_accordion-title::after{
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        &-title{
+            display: flex;
+            align-items: center;
+            span{
+                margin-right: 5px;
+            }
+            &::after{
+                content: '';
+                width: 11px;
+                height: 7px;
+                background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.97.243l.125-.14a1.13%201.13%200%2000-.094.122A.956.956%200%20015.5.101a.956.956%200%2001.5.124%201.13%201.13%200%2000-.095-.121l.124.139c.084.051.164.117.235.196l4.332%204.825c.407.452.408%201.182.004%201.632l.297-.331a.966.966%200%2001-1.466-.004L5.5%202.183%201.569%206.56a.966.966%200%2001-1.466.004l.297.331a1.249%201.249%200%2001.004-1.632L4.736.439c.071-.08.15-.145.235-.196z%22%2F%3E%3C%2Fsvg%3E);
+                background-repeat: no-repeat;
+                margin-left: auto;
+                transition: transform 250ms;
+                transform: rotate(-180deg);
+            }
+        }
+        &-content{
+            font-size: 13px;
+            li + li{
+                margin-top: 10px;
             }
         }
     }
@@ -139,13 +422,15 @@
         }
         &_comment{
             border-bottom: 1px solid $light-gray;
-            margin-bottom: 16px;
             @include breakpoint(medium down){
                 border: 0;
             }
             @include breakpoint(small down){
                 font-size: 13px;
                 margin-bottom: 10px;
+            }
+            & + & {
+                margin-top: 16px;
             }
             &_top{
                 display: flex;
@@ -275,7 +560,6 @@
             z-index: 2;
         }
     }
-
     &_add{
         grid-area: add;
     }

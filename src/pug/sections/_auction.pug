@@ -1,86 +1,185 @@
-.auction
-    section.auction_item
-        h1.auction_item_title
-            span Xiaomi
-            b.auction_item_status
-                | Опубликовано
-        .auction_item_content
-            ul.auction_item_list
-                li
-                    span Категория товара: 
-                    | 95.22.10.110 - Сотовые телефоны
-                li
-                    span Спецификация/требования к предмету закупки: 
-                    a(href="#" target="_blank") Спецификация.pdf
-                    .auction_item_list-icon
-                        +icon('file', [15, 17])
-                li
-                    span Форма сбора коммерческих предложений: 
-                    a(href="#" target="_blank") КП.pdf
-                    .auction_item_list-icon
-                        +icon('file', [15, 17])
-                li
-                    span Условия поставки: 
-                    | Доставка нашей компанией
-                li
-                    span Оплата товара: 
-                    | 100% после заключения договора
-                li
-                    span Начальная цена: 
-                    b 14 500 ₽
-            hr
-            ul.auction_item_list
-                li
-                    span Организатор: 
-                    | ИП Оганнисян Амаяк Артурович
-                li
-                    span Дата начала: 
-                    | 09.04.2019
-                li
-                    span Дата окончания: 
-                    | 09.07.2019
-    
-    section.auction_offers
-        h2.h1.auction_offers_header
-            | Предложения
-        form.auction_offers_form
-            input(type="text" name="bet" placeholder="Ваша ставка")
-            .auction_offers_form-row
-                input(type="text" name="offer" placeholder="Предложение")
-                button.button
-                    | Принять участие
-        .auction_offers_items.folded
-            each _ in Array(2)
-                each s in ['14 500', '29 000']
-                    .auction_offers_item
-                        b.auction_offers_item-bet
-                            =s
-                            | 
-                            | ₽
-                        p.auction_offers_item-offer
-                            | Подтверждаем соответствие к требованиям
-            each _ in Array(5)                
-                .auction_offers_item
-                    b.auction_offers_item-bet
-                        | 14 500 ₽
-                    p.auction_offers_item-offer
-                        | Подтверждаем соответствие к требованиям
-            button.auction_offers_button
-                | Смотреть все предложения
-        
-    section.auction_discuss
-        h2.h1.auction_discuss_header
-            | Обсуждение
-        form.auction_discuss_form
-            input(type="text" name="message" placeholder="Ваш комментарий")
-            button.button.hollow
-                | Отправить
-        .auction_discuss_comments
-            .auction_discuss_comment
-                .auction_discuss_comment_top
-                    b.auction_discuss_comment-name
-                        | Алексей
-                    time.auction_discuss_comment-date(datetime="2019-04-10")
-                        | 10.04.2019
-                p.auction_discuss_comment-message
-                    | Рассматриваем вариант ежемесечной поставки
+-
+    const items = [
+        {
+            id: 8953,
+            name: 'Поставка лекарственных средств',
+            price_label: 'Не выставлена',
+            organizer: 'Портал Поставщиков г.Москвы',
+            pub_date: '22.10.2019',
+            end_date: '23.10.2019',
+            status: 'placed',
+            status_label: 'Размещено',
+            options: {
+                cash: true,
+                bids: 0
+            }
+        },
+        {
+            id: 8952,
+            name: 'ГБУЗ "Переволоцкая РБ"',
+            price: '11 103.00',
+            organizer: 'Портал Поставщиков г.Москвы',
+            pub_date: '22.10.2019',
+            end_date: '23.10.2019',
+            status: 'placed',
+            status_label: 'Размещено',
+            options: {
+                bids: 0
+            }
+        },
+        {
+            id: 8947,
+            name: 'Поставка товара',
+            price: '3 339.75',
+            organizer: 'Портал Поставщиков г.Москвы',
+            pub_date: '22.10.2019',
+            end_date: '23.10.2019',
+            status: 'placed',
+            status_label: 'Размещено',
+            options: {
+                cash: true,
+                bids: 0
+            }
+        },
+        {
+            id: 8946,
+            name: 'Поставка накопителей для нужд организации',
+            price: '1 250.00',
+            organizer: 'Портал Поставщиков г.Москвы',
+            pub_date: '22.10.2019',
+            end_date: '28.10.2019',
+            status: 'placed',
+            status_label: 'Размещено',
+            options: {
+                cash: true,
+                bids: 0
+            }
+        },
+        {
+            id: 8943,
+            name: 'Водонагреватель на 10 литров',
+            price: '15 300.00',
+            organizer: 'ВТБ (Административно-хозяйственные закупки)',
+            pub_date: '22.10.2019',
+            end_date: '28.10.2019',
+            status: 'placed',
+            status_label: 'Размещено',
+            options: {
+                bids: 0
+            }
+        },
+    ]
+
+section.auction
+    .auction_block.auction_block--large
+        h1.auction_block_title
+            | Торги
+        .auction_block_content
+            form.auction_filters
+                .auction_filter.auction_filter--search
+                    .auction_filter_input
+                        button.auction_filter_button
+                            +icon('search', [13, 16])
+                        input(type="search" name="q" placeholder="Поиск")
+                    .auction_filter_input
+                        button.auction_filter_button
+                            +icon('search', [13, 16])
+                        input(type="search" name="number" placeholder="По номеру")
+                .auction_filter.auction_filter--checkboxes
+                    +selection('checkbox', 'sign[]', 'fMine', 'Только мои', 'mine')
+                    +selection('checkbox', 'sign[]', 'fCurr', 'Действующие', 'current', true)
+                    +selection('checkbox', 'sign[]', 'fParticipant', 'С моим участием', 'participant')
+                    +selection('checkbox', 'sign[]', 'fPartner', 'Партнерские площадки', 'partner')
+                .auction_filter.auction_filter--search
+                    .auction_filter_input.auction_filter_input--multiselect
+                        input(type="text" readonly)
+                        .auction_filter_selection
+                            span г. Москва
+                            button(type="button")
+                                +icon('close', [10, 10])
+                    .auction_filter_input.auction_filter_input--multiselect
+                        input(type="text" placeholder="Выберите свой город" readonly)
+                #aFilters.form.auction_dropdown(data-dropdown data-close-on-click="true" data-v-offset="17" data-h-offset="-30" data-trap-focus="true")
+                    .form_input
+                        input(type="text" name="categories" placeholder="Категории продукта")
+                    .form_input
+                        input(type="text" name="okpd" placeholder="ОКПД2")
+                    .form_input
+                        label.form_label(for="startDate")
+                            | Дата начала
+                        input#startDate(type="text" name="startDate" placeholder="Дата от — Дата до")
+                    .form_input
+                        label.form_label(for="endDate")
+                            | Дата окончания
+                        input#endDate(type="text" name="endDate" placeholder="Дата от — Дата до")
+                    .form_input.form_input--select
+                        select(name="currency")
+                            option RUB
+                            option USD
+                            option EUR
+                        input(type="text" name="startPrice" placeholder="Стартовая цена")
+                    .form_input
+                        input(type="text" name="startPrice" placeholder="Конечная цена")
+                    .form_input
+                        input(type="text" name="status" placeholder="Статус")
+                    .form_input
+                        input(type="text" name="organizer" placeholder="Организатор")
+                    .form_buttons
+                        button.button.hollow.flat(type="reset")
+                            | Очистить
+            button.auction_filters_more(data-toggle="aFilters")
+                +icon('filter', [19, 18])
+                | Дополнительные фильтры
+                span
+                    +icon('arrow_top', [8, 9])
+            +filters()(class="catalog_items_filters--auction")
+            .auction_items
+                each _ in Array(2)
+                    each item in items
+                        .auction_item
+                            p.auction_item_number
+                                | №
+                                =item.id
+                            ul.auction_item_left
+                                li.auction_item_field
+                                    b.auction_item_label
+                                        | Наименование:
+                                    =item.name
+                                li.auction_item_field
+                                    b.auction_item_label
+                                        | Начальная цена:  
+                                    if item.price
+                                        b
+                                            = item.price
+                                            | 
+                                            | ₽
+                                    else
+                                        =item.price_label
+                                li.auction_item_field.auction_item_field--actions
+                                    a.button.hollow.large(href="#")
+                                        | Подробнее
+                                    ul.auction_item_options
+                                        each key in Object.keys(item.options)
+                                            li.auction_item_option
+                                                case key
+                                                    when 'cash'
+                                                        +icon('ruble', [29, 16])
+                                                    when 'bids'
+                                                        +icon('gavel', [17, 17])
+                                                        span=item.options[key]
+                            ul.auction_item_right
+                                li.auction_item_field
+                                    b.auction_item_label
+                                        | Организатор:
+                                    =item.organizer
+                                li.auction_item_field
+                                    b.auction_item_label
+                                        | Дата публикации:  
+                                    =item.pub_date
+                                li.auction_item_field
+                                    b.auction_item_label
+                                        | Дата окончания приема заявок:  
+                                    =item.end_date
+                                .success.auction_item_status(class=`auction_item_status--${item.status}`)
+                                    =item.status_label
+            +filters()(class="catalog_items_filters--abottom")

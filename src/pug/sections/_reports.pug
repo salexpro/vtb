@@ -14,8 +14,8 @@ section.reports
             .reports_filter_input
                 input#rRange(type="text" name="period" placeholder="Дата с       Дата по")
         .reports_filter.reports_filter--radio
-            +selection('radio', 'novelty', 'lastWeek', 'За прошедшую неделю', true)
-            +selection('radio', 'novelty', 'lastMonth', 'За прошедший месяц')
+            +selection('radio', 'novelty', 'lastWeek', 'За прошедшую неделю', 'week', true)
+            +selection('radio', 'novelty', 'lastMonth', 'За прошедший месяц', 'month')
         .reports_filter.reports_filter--buttons
             button.button.large.hollow.icon
                 +icon('result', [15, 20])

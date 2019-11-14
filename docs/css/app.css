@@ -4020,6 +4020,14 @@ button {
             align-items: center;
     -webkit-box-pack: center;
             justify-content: center; }
+  .form_input--select {
+    display: -webkit-box;
+    display: flex; }
+    .form_input--select select {
+      -webkit-box-flex: 0;
+              flex: 0 0 auto;
+      margin-right: 20px;
+      width: auto; }
 
 .form_row {
   display: -webkit-box;
@@ -5777,6 +5785,21 @@ button {
             padding: 22px 0 24px;
             -webkit-box-pack: end;
                     justify-content: flex-end; } }
+      .catalog_items_filters--auction {
+        border: 0;
+        border-top: 1px solid #e9eef6;
+        padding: 26px 10px 0;
+        margin: 30px -10px 5px; }
+        .catalog_items_filters--auction nav {
+          margin-right: auto;
+          margin-left: 30px; }
+      .catalog_items_filters--abottom {
+        margin: 30px 0 0;
+        padding: 0;
+        border: 0; }
+        .catalog_items_filters--abottom nav {
+          margin-right: auto;
+          margin-left: 30px; }
     .catalog_items_filter {
       display: -webkit-box;
       display: flex;
@@ -7120,25 +7143,17 @@ button {
         opacity: 1; }
 
 .auction {
-  margin: 30px 25px 0;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto 20px auto;
-      grid-template-areas: "item offers" "discuss offers"; }
+  margin: 30px 25px 0; }
   @media screen and (max-width: 63.99875em) {
     .auction {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-      -ms-grid-rows: auto 20px auto 20px auto;
-          grid-template-areas: "item" "offers" "discuss";
       margin: 15px 15px 0; } }
   @media screen and (max-width: 39.99875em) {
     .auction {
       margin: 15px 10px 0; } }
   .auction--new {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
     flex-wrap: wrap;
     box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
     border-radius: 9px;
@@ -7153,9 +7168,7 @@ button {
     @media screen and (max-width: 39.99875em) {
       .auction--new {
         padding: 20px 10px 40px; } }
-  .auction_item {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+  .auction_block {
     border-radius: 9px;
     overflow: hidden;
     background-color: #fff;
@@ -7163,7 +7176,22 @@ button {
     -webkit-box-flex: 0;
             flex: 0 1 calc(50% - 10px);
     grid-area: item; }
-    .auction_item_title {
+    .auction_block--large .auction_block_title {
+      padding: 19px 30px;
+      font-size: 23px; }
+    .auction_block--large .auction_block_content {
+      padding: 30px 30px 60px; }
+    .auction_block--discuss {
+      -ms-grid-row: 4;
+      -ms-grid-column: 1;
+      grid-area: discuss; }
+      .auction_block--discuss .auction_item_content {
+        padding: 28px 20px; }
+    .auction_block--offers {
+      grid-area: offers; }
+      .auction_block--offers .auction_item_content {
+        padding-bottom: 20px; }
+    .auction_block_title {
       background-color: #e4f6ff;
       padding: 18px 20px;
       display: -webkit-box;
@@ -7173,42 +7201,298 @@ button {
       -webkit-box-pack: justify;
               justify-content: space-between; }
       @media screen and (max-width: 39.99875em) {
-        .auction_item_title {
+        .auction_block_title {
           padding: 12px 10px; } }
-    .auction_item_status {
+    .auction_block_status {
       color: #1f3d82;
       font-size: 13px; }
-    .auction_item_content {
+      .auction_block_status--placed {
+        color: #4cc864; }
+      .auction_block_status--ended {
+        color: #e62632; }
+    .auction_block_content {
+      position: relative;
       padding: 20px 20px 40px; }
       @media screen and (max-width: 39.99875em) {
-        .auction_item_content {
+        .auction_block_content {
           padding: 20px 10px; } }
-    .auction_item_list {
+    .auction_block_list {
       list-style: none;
       margin: 0;
       font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
       @media screen and (max-width: 39.99875em) {
-        .auction_item_list {
+        .auction_block_list {
           font-size: 13px; } }
-      .auction_item_list li + li {
+      .auction_block_list li + li {
         margin-top: 15px; }
         @media screen and (max-width: 39.99875em) {
-          .auction_item_list li + li {
+          .auction_block_list li + li {
             margin-top: 14px; } }
-      .auction_item_list span {
+      .auction_block_list span {
         color: #acb6c3; }
         @media screen and (max-width: 39.99875em) {
-          .auction_item_list span {
+          .auction_block_list span {
             display: block; } }
-      .auction_item_list a {
+      .auction_block_list a:not(.auction_accordion-title) {
         color: #1e4bd2; }
-        .auction_item_list a:hover, .auction_item_list a:focus {
+        .auction_block_list a:not(.auction_accordion-title):hover, .auction_block_list a:not(.auction_accordion-title):focus {
           text-decoration: underline; }
-      .auction_item_list-icon {
+      .auction_block_list-icon {
         opacity: 0.6;
         float: right; }
+  .auction_filters {
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 55px;
+       -moz-column-gap: 55px;
+            column-gap: 55px;
+    -ms-grid-columns: (auto)[3];
+    grid-template-columns: repeat(3, auto);
+    margin-bottom: 10px; }
+    .auction_filters_more {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center;
+      color: #1e4bd2;
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      padding: 10px 0; }
+      .auction_filters_more > svg {
+        margin-right: 10px; }
+      .auction_filters_more span {
+        -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+        margin-left: 10px;
+        -webkit-transition: -webkit-transform 300ms;
+        transition: -webkit-transform 300ms;
+        transition: transform 300ms;
+        transition: transform 300ms, -webkit-transform 300ms; }
+      .auction_filters_more.hover span {
+        -webkit-transform: rotate(0);
+                transform: rotate(0); }
+  .auction_filter--search, .auction_filter--filter {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-align: center;
+            align-items: center; }
+  .auction_filter--checkboxes {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    height: 50px; }
+    .auction_filter--checkboxes .selection {
+      -webkit-box-flex: 1;
+              flex: 1 1 50%; }
+      .auction_filter--checkboxes .selection:nth-child(-n+2) {
+        margin-bottom: auto; }
+  .auction_filter_input {
+    position: relative; }
+    .auction_filter_input [type="search"], .auction_filter_input [type="text"] {
+      padding: 10px 15px;
+      height: auto; }
+    .auction_filter_input [type="search"] {
+      font-size: 13px;
+      padding-right: 36px; }
+    .auction_filter_input [readonly] {
+      cursor: default; }
+  .auction_filter_button {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 22px;
+    height: 22px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    opacity: 0.7;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .auction_filter_selection {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #e9eef6;
+    padding: 4px 15px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center; }
+    .auction_filter_selection button {
+      margin-left: 10px; }
+  .auction_dropdown {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
+    border-radius: 0 0 9px 9px;
+    background-color: #fff;
+    padding: 30px 30px 65px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-transition: visibility 300ms, opacity 300ms;
+    transition: visibility 300ms, opacity 300ms; }
+    .auction_dropdown.is-open {
+      opacity: 1;
+      visibility: visible; }
+    .auction_dropdown .form_label {
+      margin-bottom: 10px;
+      font-size: 16px; }
+    .auction_dropdown .form_input {
+      -webkit-box-flex: 0;
+              flex: 0 1 calc(50% - 20px);
+      margin-bottom: 20px; }
+    .auction_dropdown .form_buttons {
+      padding-top: 10px; }
+  .auction_item {
+    padding: 30px 10px;
+    margin: 0 -10px;
+    border-bottom: 1px solid #e9eef6;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap; }
+    .auction_item_number {
+      font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 18px;
+      -webkit-box-flex: 1;
+              flex: 1 1 100%;
+      margin-bottom: 10px; }
+    .auction_item_left {
+      -webkit-box-flex: 0;
+              flex: 0 1 49%;
+      margin: 0;
+      list-style: none; }
+    .auction_item_right {
+      -webkit-box-flex: 0;
+              flex: 0 1 51%;
+      margin: 0;
+      list-style: none;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: auto 13px auto 13px auto;
+      grid-template-rows: repeat(3, auto);
+          grid-template-areas: 'field1 status' 'field2 status' 'field3 status';
+      row-gap: 13px; }
+      .auction_item_right li.auction_item_field {
+        margin: 0; }
+        .auction_item_right li.auction_item_field:nth-child(1) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+          grid-area: field1; }
+        .auction_item_right li.auction_item_field:nth-child(2) {
+          -ms-grid-row: 3;
+          -ms-grid-column: 1;
+          grid-area: field2; }
+        .auction_item_right li.auction_item_field:nth-child(3) {
+          -ms-grid-row: 5;
+          -ms-grid-column: 1;
+          grid-area: field3; }
+    .auction_item_field {
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 16px; }
+      .auction_item_field + .auction_item_field {
+        margin-top: 13px; }
+      .auction_item_field--actions.auction_item_field {
+        margin-top: 20px;
+        display: -webkit-box;
+        display: flex; }
+      .auction_item_field .button.large {
+        padding: 10px 24px; }
+    .auction_item_label {
+      display: block;
+      color: #acb6c3;
+      font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
+      margin-bottom: 6px; }
+    .auction_item_options {
+      list-style: none;
+      margin: 0;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center; }
+    .auction_item_option {
+      margin-left: 25px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center; }
+      .auction_item_option span {
+        margin-left: 5px; }
+    .auction_item_status {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 5;
+      -ms-grid-column: 2;
+      grid-area: status;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      grid-row: 2 / 3;
+      border-radius: 3px;
+      padding: 12px 19px;
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      -ms-grid-column-align: center;
+          justify-self: center;
+      -ms-grid-row-align: center;
+          align-self: center; }
+      .auction_item_status--placed {
+        background: rgba(76, 200, 100, 0.2);
+        color: #4cc864; }
+  .auction_accordion {
+    margin: 0;
+    list-style: none; }
+    .auction_accordion-content {
+      list-style: none;
+      margin-left: 20px;
+      padding-top: 15px; }
+    .auction_accordion-item.is-active .auction_accordion-title::after {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+    .auction_accordion-title {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center; }
+      .auction_accordion-title span {
+        margin-right: 5px; }
+      .auction_accordion-title::after {
+        content: '';
+        width: 11px;
+        height: 7px;
+        background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.97.243l.125-.14a1.13%201.13%200%2000-.094.122A.956.956%200%20015.5.101a.956.956%200%2001.5.124%201.13%201.13%200%2000-.095-.121l.124.139c.084.051.164.117.235.196l4.332%204.825c.407.452.408%201.182.004%201.632l.297-.331a.966.966%200%2001-1.466-.004L5.5%202.183%201.569%206.56a.966.966%200%2001-1.466.004l.297.331a1.249%201.249%200%2001.004-1.632L4.736.439c.071-.08.15-.145.235-.196z%22%2F%3E%3C%2Fsvg%3E);
+        background-repeat: no-repeat;
+        margin-left: auto;
+        -webkit-transition: -webkit-transform 250ms;
+        transition: -webkit-transform 250ms;
+        transition: transform 250ms;
+        transition: transform 250ms, -webkit-transform 250ms;
+        -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg); }
+    .auction_accordion-content {
+      font-size: 13px; }
+      .auction_accordion-content li + li {
+        margin-top: 10px; }
   .auction_discuss {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
     border-radius: 9px;
@@ -7248,8 +7532,7 @@ button {
           .auction_discuss_form .button {
             margin-top: 10px; } }
     .auction_discuss_comment {
-      border-bottom: 1px solid #f3f7fa;
-      margin-bottom: 16px; }
+      border-bottom: 1px solid #f3f7fa; }
       @media screen and (max-width: 63.99875em) {
         .auction_discuss_comment {
           border: 0; } }
@@ -7257,6 +7540,8 @@ button {
         .auction_discuss_comment {
           font-size: 13px;
           margin-bottom: 10px; } }
+      .auction_discuss_comment + .auction_discuss_comment {
+        margin-top: 16px; }
       .auction_discuss_comment_top {
         display: -webkit-box;
         display: flex;
@@ -7277,9 +7562,6 @@ button {
       .auction_discuss_comment-message {
         font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
   .auction_offers {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
     -webkit-box-flex: 0;
             flex: 0 1 calc(50% - 10px);
     box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
@@ -7382,12 +7664,12 @@ button {
     grid-area: add; }
   .auction_spec {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
     grid-area: spec; }
   .auction_buttons {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
+    -ms-grid-column-span: 3;
     grid-area: buttons;
     margin-top: 5px; }
     @media screen and (max-width: 63.99875em) {
@@ -7910,7 +8192,7 @@ button {
     .documents_new_buttons {
       -ms-grid-row: 3;
       -ms-grid-column: 1;
-      -ms-grid-column-span: 2;
+      -ms-grid-column-span: 3;
       grid-area: buttons;
       -ms-grid-row-align: end;
           align-self: end;
@@ -7926,14 +8208,14 @@ button {
     -ms-grid-row: 1;
     -ms-grid-column: 1; }
       .auction_spec {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1; }
       .auction_buttons {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1; }
       .documents_new_buttons {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1; } }
       @media screen and (max-width: 63.99875em) {
@@ -7991,6 +8273,12 @@ button {
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
             grid-template-areas: 'top' 'info' 'documents' 'discuss' 'messages'; }
+      .auction_block--discuss {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1; }
+      .auction_discuss {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1; }
       .order_content > .register_info {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -8414,24 +8702,10 @@ button {
           grid-template-columns: 1fr 1fr;
           grid-gap: 15px 24px; } }
   .order_discuss {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: discuss;
     padding-top: 34px; }
-  @media screen and (max-width: 63.99875em){
-    .auction_item {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1; }
-    .auction_discuss {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1; }
-    .auction_offers {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1; }
-    .order_discuss {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1; } }
     @media screen and (max-width: 39.99875em) {
       .order_discuss {
         padding-top: 40px; } }
@@ -8500,6 +8774,9 @@ button {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1; }
+      .order_discuss {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1; }
       .order_messages {
     -ms-grid-row: 5;
     -ms-grid-column: 1; } }

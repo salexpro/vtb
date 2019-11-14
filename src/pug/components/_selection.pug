@@ -1,6 +1,6 @@
 
-mixin selection(type, name, id, label, is_checked)
+mixin selection(type, name, id, label, value, is_checked)
     .selection
-        input(type=type id=id name=name checked=is_checked ? 'checked' : false)
+        input(type=type id=id name=name value=value || false checked=is_checked ? 'checked' : false)
         label(for=id)
             =label

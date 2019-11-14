@@ -1,0 +1,142 @@
+.auction
+    section.auction_block
+        h1.auction_block_title
+            span № 8525
+            b.auction_block_status.auction_block_status--ended
+                | Завершено
+        .auction_block_content
+            ul.auction_block_list
+                li
+                    span Общая информация о торге:
+                    | 
+                    | Монитор взамен торга 7973
+                li
+                    span Категория товаров:
+                    | 
+                    | Компьютеры, электронное и электрическое оборудование
+                li
+                    span Требования:
+                    | 
+                    a(href="#" target="_blank") Проект_Договора_ разовой_поставки_типовой.docx
+                    .auction_block_list-icon
+                        +icon('file', [15, 17])
+                li
+                    a(href="#" target="_blank") Требования_к_закупаемой_продукции__Монитор_27_исправл.docх
+                    .auction_block_list-icon
+                        +icon('file', [15, 17])
+
+                li
+                    span Форма КП:
+                    | 
+                    a(href="#" target="_blank") Форма ценового предложения.xlsx
+                    .auction_block_list-icon
+                        +icon('file', [15, 17])
+                li
+                    span Условия поставки и оплаты товара:
+                    | 
+                    | Согласно приложенному договору
+                li
+                    span Место поставки:
+                    | 
+                    | г Москва, ш Подольское, д 8
+                li
+                    ul.auction_accordion(data-accordion data-allow-all-closed="true") 
+                        li.auction_accordion-block.is-active(data-accordion-block)
+                            a.auction_accordion-title(href='#')
+                                span Спецификации:
+                                | 
+                                | Спецификация # 1: Монитор
+                            ul.auction_accordion-content(data-tab-content)
+                                li
+                                    span Наименование:
+                                    | 
+                                    | Монитор
+                                li
+                                    span Код позиции по ОКПД2:
+                                    | 
+                                    | 26.20.11.110
+
+            hr
+            ul.auction_block_list
+                li
+                    span Организатор:
+                    | 
+                    | ВТБ (Закупки ИТ)
+                li
+                    span Контактное лицо:
+                    | 
+                    | Дмитрий
+                li
+                    span Контактный телефон:
+                    | 
+                    | 89035716404
+                li
+                    span Дата публикации:
+                    | 
+                    | 17.10.2019 11:43
+                li
+                    span Дата начала приёма заявок:
+                    | 
+                    | 17.10.2019 12:00
+                li
+                    span Дата окончания приёма заявок:
+                    | 
+                    | 21.10.2019 12:00
+    section.auction_offers
+        h2.h1.auction_offers_header
+            | Предложения
+        form.auction_offers_form
+            input(type="text" name="bet" placeholder="Ваша ставка")
+            .auction_offers_form-row
+                input(type="text" name="offer" placeholder="Предложение")
+                button.button
+                    | Принять участие
+        .auction_offers_items.folded
+            each _ in Array(2)
+                each s in ['14 500', '29 000']
+                    .auction_offers_block
+                        b.auction_offers_block-bet
+                            =s
+                            | 
+                            | ₽
+                        p.auction_offers_block-offer
+                            | Подтверждаем соответствие к требованиям
+            each _ in Array(5)                
+                .auction_offers_block
+                    b.auction_offers_block-bet
+                        | 14 500 ₽
+                    p.auction_offers_block-offer
+                        | Подтверждаем соответствие к требованиям
+            button.auction_offers_button
+                | Смотреть все предложения
+
+    section.auction_block.auction_block--discuss
+        h2.h1.auction_block_title
+            | Обсуждение
+        .auction_block_content
+            .auction_discuss_comments
+                .auction_discuss_comment
+                    .auction_discuss_comment_top
+                        b.auction_discuss_comment-name
+                            | Алексей
+                        time.auction_discuss_comment-date(datetime="2019-04-10")
+                            | 10.04.2019
+                    p.auction_discuss_comment-message
+                        | Рассматриваем вариант ежемесечной поставки
+
+    //- section.auction_discuss
+        h2.h1.auction_discuss_header
+            | Обсуждение
+        form.auction_discuss_form
+            input(type="text" name="message" placeholder="Ваш комментарий")
+            button.button.hollow
+                | Отправить
+        .auction_discuss_comments
+            .auction_discuss_comment
+                .auction_discuss_comment_top
+                    b.auction_discuss_comment-name
+                        | Алексей
+                    time.auction_discuss_comment-date(datetime="2019-04-10")
+                        | 10.04.2019
+                p.auction_discuss_comment-message
+                    | Рассматриваем вариант ежемесечной поставки

@@ -13,14 +13,14 @@
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=593671083" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=593671083" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=593671083" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=593671083" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=593671083" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=593671083" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=593671083" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=060fd8dc39dce5b6595058ab8dd7f145">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=595385772" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=595385772" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=595385772" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=595385772" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=595385772" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=595385772" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=595385772" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=3c5d0c1638eb6bd59aae0645df5282a2">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -146,12 +146,12 @@
             </div>
             <div class="reports_filter reports_filter--radio">
               <div class="selection">
-                <input type="radio" id="lastWeek" name="novelty" checked="checked"/>
+                <input type="radio" id="lastWeek" name="novelty" value="week" checked="checked"/>
                 <label for="lastWeek">За прошедшую неделю
                 </label>
               </div>
               <div class="selection">
-                <input type="radio" id="lastMonth" name="novelty"/>
+                <input type="radio" id="lastMonth" name="novelty" value="month"/>
                 <label for="lastMonth">За прошедший месяц
                 </label>
               </div>
@@ -221,7 +221,7 @@
               <ul class="form_checkboxes">
                 <li>
                   <div class="selection">
-                    <input type="checkbox" id="report0" name="report[]" checked="checked"/>
+                    <input type="checkbox" id="report0" name="report[]" value="value"/>
                     <label for="report0">Отчет #1
                     </label>
                   </div>
@@ -235,14 +235,14 @@
                 </li>
                 <li>
                   <div class="selection">
-                    <input type="checkbox" id="report2" name="report[]" checked="checked"/>
+                    <input type="checkbox" id="report2" name="report[]" value="value"/>
                     <label for="report2">Отчет #3
                     </label>
                   </div>
                 </li>
                 <li>
                   <div class="selection">
-                    <input type="checkbox" id="report3" name="report[]" checked="checked"/>
+                    <input type="checkbox" id="report3" name="report[]" value="value"/>
                     <label for="report3">Отчет #4
                     </label>
                   </div>
@@ -279,7 +279,7 @@
               <ul class="form_checkboxes">
                 <li>
                   <div class="selection">
-                    <input type="checkbox" id="uReport0" name="u_report[]" checked="checked"/>
+                    <input type="checkbox" id="uReport0" name="u_report[]" value="value"/>
                     <label for="uReport0">Отчет #1
                     </label>
                   </div>
@@ -293,14 +293,14 @@
                 </li>
                 <li>
                   <div class="selection">
-                    <input type="checkbox" id="uReport2" name="u_report[]" checked="checked"/>
+                    <input type="checkbox" id="uReport2" name="u_report[]" value="value"/>
                     <label for="uReport2">Отчет #3
                     </label>
                   </div>
                 </li>
                 <li>
                   <div class="selection">
-                    <input type="checkbox" id="uReport3" name="u_report[]" checked="checked"/>
+                    <input type="checkbox" id="uReport3" name="u_report[]" value="value"/>
                     <label for="uReport3">Отчет #4
                     </label>
                   </div>
@@ -395,7 +395,7 @@
                   <td>Отчет #6</td>
                   <td>
                     <div class="selection">
-                      <input type="checkbox" id="subs2" name="subs[]" checked="checked"/>
+                      <input type="checkbox" id="subs2" name="subs[]" value="6" checked="checked"/>
                       <label for="subs2">
                       </label>
                     </div>
@@ -520,6 +520,6 @@
             </div>Отчеты</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=161135c52367c4770e567c003346b01a"></script>
+    <script src="./js/app.min.js?ckcachebust=3a186cbe84738f38fc6effb94b7bf34c"></script>
   </body>
 </html>

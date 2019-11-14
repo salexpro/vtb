@@ -52,6 +52,12 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/build.zip": {
 		"cB": 0,
 		"ft": 8192,
@@ -2953,6 +2959,16 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/arrow_top.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/arrow_top.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/battery.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3103,6 +3119,16 @@
 		"plM": 1103269715967,
 		"prP": 0
 		},
+	"/src/assets/img/icons/gavel.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/gavel.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
 	"/src/assets/img/icons/hand-shake.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3228,6 +3254,26 @@
 		"miP": 0,
 		"oA": 0,
 		"oAP": "/build/assets/img/icons/ribbon.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/ruble.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/ruble.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 1103269715967,
+		"prP": 0
+		},
+	"/src/assets/img/icons/search.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/icons/search.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 1103269715967,
@@ -3962,6 +4008,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/sections/_auction_old.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_auction_old.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/sections/_catalog.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -4447,7 +4503,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 593671090.23586702
+	"lastBuiltDate": 595385779.716344
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

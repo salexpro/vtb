@@ -30,3 +30,7 @@ mixin filters(position, tab)
                 li.pagination-next
                     a(href='#', aria-label='Next page')
                         +icon('arrow_right', [6, 11])
+        if (attributes.class && attributes.class.includes('auction'))
+            button.button.large.icon
+                +icon('plus', [18, 18])
+                | Создать
