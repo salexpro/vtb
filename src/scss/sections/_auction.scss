@@ -808,13 +808,13 @@
                 padding: 20px 0;
                 padding-right: 13px;
             }
-            &_link{
+            &_top{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 + .auction_block_list{
                     display: none;
-                    margin-top: 8px;
+                    margin-top: 15px;
                 }
             }
             &_title{
@@ -826,7 +826,24 @@
             }
             &_actions{
                 text-align: center;
-                margin: 0;
+                margin: -7px 0 -7px 20px;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 14px;
+                    right: -22px;
+                    width: 11px;
+                    height: 7px;
+                    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.97.243l.125-.14a1.13%201.13%200%2000-.094.122A.956.956%200%20015.5.101a.956.956%200%2001.5.124%201.13%201.13%200%2000-.095-.121l.124.139c.084.051.164.117.235.196l4.332%204.825c.407.452.408%201.182.004%201.632l.297-.331a.966.966%200%2001-1.466-.004L5.5%202.183%201.569%206.56a.966.966%200%2001-1.466.004l.297.331a1.249%201.249%200%2001.004-1.632L4.736.439c.071-.08.15-.145.235-.196z%22%2F%3E%3C%2Fsvg%3E);
+                    background-repeat: no-repeat;
+                    margin-left: auto;
+                    transition: transform 250ms;
+                    transform: rotate(-180deg);
+                    @include breakpoint(small down){
+                        right: -17px;
+                    }
+                }
             }
             &_price{
                 font-family: $header-font-family;
@@ -862,42 +879,25 @@
                     background: rgba($success-color, 0.2);
                 }
             }
-            &::after{
-                content: '';
-                position: absolute;
-                top: 66px;
-                right: -8px;
-                width: 11px;
-                height: 7px;
-                background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.97.243l.125-.14a1.13%201.13%200%2000-.094.122A.956.956%200%20015.5.101a.956.956%200%2001.5.124%201.13%201.13%200%2000-.095-.121l.124.139c.084.051.164.117.235.196l4.332%204.825c.407.452.408%201.182.004%201.632l.297-.331a.966.966%200%2001-1.466-.004L5.5%202.183%201.569%206.56a.966.966%200%2001-1.466.004l.297.331a1.249%201.249%200%2001.004-1.632L4.736.439c.071-.08.15-.145.235-.196z%22%2F%3E%3C%2Fsvg%3E);
-                background-repeat: no-repeat;
-                margin-left: auto;
-                transition: transform 250ms;
-                transform: rotate(-180deg);
-                @include breakpoint(small down){
-                    top: auto;
-                    bottom: 32px;
-                    right: -3px;
-                }
-            }
             &.is-active{
-                &::after{
+                .auction_offers_item_actions::after{
                     transform: rotate(0);
                 }
             }
         }
-        &_button{
-            display: none;
+        &_button {
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%);
+            top: 0;
+            right: -15px;
             padding: 7px;
-            color: $primary-color;
-            font-family: $book-font-family;
-            text-decoration: underline;
-            white-space: nowrap;
+            width: 25px;
+            height: 100%;
             z-index: 2;
+            -webkit-tap-highlight-color: transparent;
+            @include breakpoint(small down){
+                right: -10px;
+                width: 23px;
+            }
         }
     }
     &_add{

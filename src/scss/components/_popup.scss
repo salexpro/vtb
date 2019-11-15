@@ -133,6 +133,14 @@
             max-width: none;
         }
     }
+    &--bet{
+        .reveal_descr{
+            margin-bottom: 20px;
+        }
+        .reveal_success_sum{
+            margin-bottom: 40px;
+        }
+    }
 
     &_descr{
         margin-bottom: 30px;
@@ -151,7 +159,7 @@
                 margin-right: 0;
             }
             &:last-child{
-                margin-right: 0;
+                margin-right: auto;
                 @include breakpoint(small down){
                     margin-bottom: 0;
                 }
@@ -168,7 +176,10 @@
     &_status{
         font-family: $book-font-family;
         color: $medium-gray;
-        margin-top: 20px;
+        margin-top: 10px;
+        @include breakpoint(small down){
+            margin-top: 20px;
+        }
         span{
             color: $primary-color;
         }

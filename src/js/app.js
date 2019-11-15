@@ -25,9 +25,14 @@ $('.item_details_button, .supplier_details_button, .auction_offers_button').clic
     $(this).parent().removeClass('folded')
 })
 
-$('.reveal_form').submit(e => {
+$('.reveal--withdrawal .reveal_form').submit(e => {
     e.preventDefault();
     $('#wSuccess').foundation('open')
+})
+
+$('.reveal--bet .reveal_form').submit(e => {
+    e.preventDefault();
+    $('#betSuccess').foundation('open')
 })
 
 svg4everybody();

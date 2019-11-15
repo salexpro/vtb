@@ -3660,7 +3660,8 @@ button {
         padding: 0 25px;
         max-width: 335px;
         width: 100%;
-        margin: auto; } }
+        margin-left: auto;
+        margin-right: auto; } }
   .button.large {
     display: -webkit-inline-box;
     display: inline-flex;
@@ -4047,6 +4048,11 @@ button {
     @media screen and (max-width: 63.99875em) {
       .form--subscribe > .button {
         margin-top: 30px; } }
+
+.form--bet {
+  margin-top: 16px; }
+  .form--bet .form_input {
+    margin-bottom: 10px; }
 
 .form_header {
   margin-bottom: 27px; }
@@ -4565,6 +4571,10 @@ button {
       .reveal--success {
         padding: 40px 10px 42px;
         max-width: none; } }
+  .reveal--bet .reveal_descr {
+    margin-bottom: 20px; }
+  .reveal--bet .reveal_success_sum {
+    margin-bottom: 40px; }
   .reveal_descr {
     margin-bottom: 30px;
     font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif; }
@@ -4581,7 +4591,7 @@ button {
           width: 100%;
           margin-right: 0; } }
       .reveal_form button:last-child, .reveal_form [type="text"]:last-child {
-        margin-right: 0; }
+        margin-right: auto; }
         @media screen and (max-width: 39.99875em) {
           .reveal_form button:last-child, .reveal_form [type="text"]:last-child {
             margin-bottom: 0; } }
@@ -4593,7 +4603,10 @@ button {
   .reveal_status {
     font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
     color: #acb6c3;
-    margin-top: 20px; }
+    margin-top: 10px; }
+    @media screen and (max-width: 39.99875em) {
+      .reveal_status {
+        margin-top: 20px; } }
     .reveal_status span {
       color: #1e4bd2; }
   .reveal_buttons {
@@ -8090,16 +8103,16 @@ button {
         .auction_offers_item {
           padding: 20px 0;
           padding-right: 13px; } }
-      .auction_offers_item_link {
+      .auction_offers_item_top {
         display: -webkit-box;
         display: flex;
         -webkit-box-align: center;
                 align-items: center;
         -webkit-box-pack: justify;
                 justify-content: space-between; }
-        .auction_offers_item_link + .auction_block_list {
+        .auction_offers_item_top + .auction_block_list {
           display: none;
-          margin-top: 8px; }
+          margin-top: 15px; }
       .auction_offers_item_title {
         font-weight: 600;
         font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif; }
@@ -8107,7 +8120,27 @@ button {
         border-top: 1px solid #f3f7fa; }
       .auction_offers_item_actions {
         text-align: center;
-        margin: 0; }
+        margin: -7px 0 -7px 20px;
+        position: relative; }
+        .auction_offers_item_actions::after {
+          content: '';
+          position: absolute;
+          bottom: 14px;
+          right: -22px;
+          width: 11px;
+          height: 7px;
+          background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.97.243l.125-.14a1.13%201.13%200%2000-.094.122A.956.956%200%20015.5.101a.956.956%200%2001.5.124%201.13%201.13%200%2000-.095-.121l.124.139c.084.051.164.117.235.196l4.332%204.825c.407.452.408%201.182.004%201.632l.297-.331a.966.966%200%2001-1.466-.004L5.5%202.183%201.569%206.56a.966.966%200%2001-1.466.004l.297.331a1.249%201.249%200%2001.004-1.632L4.736.439c.071-.08.15-.145.235-.196z%22%2F%3E%3C%2Fsvg%3E);
+          background-repeat: no-repeat;
+          margin-left: auto;
+          -webkit-transition: -webkit-transform 250ms;
+          transition: -webkit-transform 250ms;
+          transition: transform 250ms;
+          transition: transform 250ms, -webkit-transform 250ms;
+          -webkit-transform: rotate(-180deg);
+                  transform: rotate(-180deg); }
+          @media screen and (max-width: 39.99875em) {
+            .auction_offers_item_actions::after {
+              right: -17px; } }
       .auction_offers_item_price {
         font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
         color: #1f3d82; }
@@ -8135,43 +8168,22 @@ button {
         .auction_offers_item_status--winner {
           color: #4cc864;
           background: rgba(76, 200, 100, 0.2); }
-      .auction_offers_item::after {
-        content: '';
-        position: absolute;
-        top: 66px;
-        right: -8px;
-        width: 11px;
-        height: 7px;
-        background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%3E%3Cpath%20fill%3D%22%231e4bd2%22%20d%3D%22M4.97.243l.125-.14a1.13%201.13%200%2000-.094.122A.956.956%200%20015.5.101a.956.956%200%2001.5.124%201.13%201.13%200%2000-.095-.121l.124.139c.084.051.164.117.235.196l4.332%204.825c.407.452.408%201.182.004%201.632l.297-.331a.966.966%200%2001-1.466-.004L5.5%202.183%201.569%206.56a.966.966%200%2001-1.466.004l.297.331a1.249%201.249%200%2001.004-1.632L4.736.439c.071-.08.15-.145.235-.196z%22%2F%3E%3C%2Fsvg%3E);
-        background-repeat: no-repeat;
-        margin-left: auto;
-        -webkit-transition: -webkit-transform 250ms;
-        transition: -webkit-transform 250ms;
-        transition: transform 250ms;
-        transition: transform 250ms, -webkit-transform 250ms;
-        -webkit-transform: rotate(-180deg);
-                transform: rotate(-180deg); }
-        @media screen and (max-width: 39.99875em) {
-          .auction_offers_item::after {
-            top: auto;
-            bottom: 32px;
-            right: -3px; } }
-      .auction_offers_item.is-active::after {
+      .auction_offers_item.is-active .auction_offers_item_actions::after {
         -webkit-transform: rotate(0);
                 transform: rotate(0); }
     .auction_offers_button {
-      display: none;
       position: absolute;
-      bottom: 0;
-      left: 50%;
-      -webkit-transform: translate(-50%);
-              transform: translate(-50%);
+      top: 0;
+      right: -15px;
       padding: 7px;
-      color: #1e4bd2;
-      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
-      text-decoration: underline;
-      white-space: nowrap;
-      z-index: 2; }
+      width: 25px;
+      height: 100%;
+      z-index: 2;
+      -webkit-tap-highlight-color: transparent; }
+      @media screen and (max-width: 39.99875em) {
+        .auction_offers_button {
+          right: -10px;
+          width: 23px; } }
   .auction_add {
     -ms-grid-row: 1;
     -ms-grid-column: 1;

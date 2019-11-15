@@ -160,14 +160,16 @@
                 .form_input
                     input(type="text" name="offer" placeholder="Текст предложения")
                 .auction_offers_buttons
-                    button.button.hollow.large.icon
+                    input#pOffer(type="file" name="price_offer")
+                    label.button.hollow.large.icon(for="pOffer")
                         +icon('clip', [14, 14])
                         | Загрузить ценовое предложение
-                    button.button.large
+                    button.button.large(type="button" data-open="placeBet")
                         | Сделать ставку
             ul.auction_offers_items(data-accordion data-multi-expand="true" data-allow-all-closed="true") 
                 li.auction_offers_item.is-active(data-accordion-item)
-                    a.auction_offers_item_link(href="#")
+                    a.auction_offers_button(href="#")
+                    .auction_offers_item_top
                         span.auction_offers_item_content
                             p.auction_offers_item_title
                                 | ООО «Компания ЭКОАРТ»
@@ -192,7 +194,8 @@
                                 | Прошу принять мое предложение
 
                 li.auction_offers_item.is-active(data-accordion-item)
-                    a.auction_offers_item_link(href="#")
+                    a.auction_offers_button(href="#")
+                    .auction_offers_item_top
                         span.auction_offers_item_content
                             p.auction_offers_item_title
                                 | ООО «Компания ЭКОАРТ»
@@ -217,7 +220,8 @@
                                 | Прошу принять мое предложение
                     
                 li.auction_offers_item(data-accordion-item)
-                    a.auction_offers_item_link(href="#")
+                    a.auction_offers_button(href="#")
+                    .auction_offers_item_top
                         span.auction_offers_item_content
                             p.auction_offers_item_title
                                 | ООО «Компания ЭКОАРТ»

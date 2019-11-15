@@ -13,14 +13,14 @@
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://vtb.salex.pro/assets/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=595406715" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=595406715" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=595406715" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=595406715" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=595406715" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=595406715" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=595406715" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=d9ca7e75893e640cebf29c7f1f2a3933">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-640x1136.jpg?ckcachebust=595469601" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-750x1294.jpg?ckcachebust=595469601" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1242x2148.jpg?ckcachebust=595469601" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1125x2436.jpg?ckcachebust=595469601" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1536x2048.jpg?ckcachebust=595469601" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-1668x2224.jpg?ckcachebust=595469601" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/assets/splash/launch-2048x2732.jpg?ckcachebust=595469601" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=1fbba664e1b7a3b383ca38299be2df95">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
@@ -299,23 +299,25 @@
                   <input type="text" name="offer" placeholder="Текст предложения">
                 </div>
                 <div class="auction_offers_buttons">
-                  <button class="button hollow large icon">
+                  <input id="pOffer" type="file" name="price_offer">
+                  <label class="button hollow large icon" for="pOffer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
                       <use fill="currentColor" xlink:href="./assets/img/icons.svg#clip"></use>
                     </svg>Загрузить ценовое предложение
-                  </button>
-                  <button class="button large">Сделать ставку</button>
+                  </label>
+                  <button class="button large" type="button" data-open="placeBet">Сделать ставку</button>
                 </div>
               </form>
               <ul class="auction_offers_items" data-accordion data-multi-expand="true" data-allow-all-closed="true"> 
-                <li class="auction_offers_item is-active" data-accordion-item><a class="auction_offers_item_link" href="#"><span class="auction_offers_item_content">
+                <li class="auction_offers_item is-active" data-accordion-item><a class="auction_offers_button" href="#"></a>
+                  <div class="auction_offers_item_top"><span class="auction_offers_item_content">
                       <p class="auction_offers_item_title">ООО «Компания ЭКОАРТ»</p>
                       <ul class="auction_block_list">
                         <li><span>Дата и время подачи:</span> 
                           21.10.2019 10:47
                         </li>
                       </ul></span><span class="auction_offers_item_actions"><b class="auction_offers_item_price">607 680 ₽</b>
-                      <p class="auction_offers_item_status auction_offers_item_status--winner">Победитель</p></span></a>
+                      <p class="auction_offers_item_status auction_offers_item_status--winner">Победитель</p></span></div>
                   <ul class="auction_block_list" data-tab-content>
                     <li><span>Вложения:</span> <a href="#" target="_blank">КП.pdf</a></li>
                     <li><span>Комментарий:</span> 
@@ -323,14 +325,15 @@
                     </li>
                   </ul>
                 </li>
-                <li class="auction_offers_item is-active" data-accordion-item><a class="auction_offers_item_link" href="#"><span class="auction_offers_item_content">
+                <li class="auction_offers_item is-active" data-accordion-item><a class="auction_offers_button" href="#"></a>
+                  <div class="auction_offers_item_top"><span class="auction_offers_item_content">
                       <p class="auction_offers_item_title">ООО «Компания ЭКОАРТ»</p>
                       <ul class="auction_block_list">
                         <li><span>Дата и время подачи:</span> 
                           21.10.2019 10:47
                         </li>
                       </ul></span><span class="auction_offers_item_actions"><b class="auction_offers_item_price">800 680 ₽</b>
-                      <p class="auction_offers_item_status auction_offers_item_status--declined">Отклонено</p></span></a>
+                      <p class="auction_offers_item_status auction_offers_item_status--declined">Отклонено</p></span></div>
                   <ul class="auction_block_list" data-tab-content>
                     <li><span>Вложения:</span> <a href="#" target="_blank">КП.pdf</a></li>
                     <li><span>Комментарий:</span> 
@@ -338,14 +341,15 @@
                     </li>
                   </ul>
                 </li>
-                <li class="auction_offers_item" data-accordion-item><a class="auction_offers_item_link" href="#"><span class="auction_offers_item_content">
+                <li class="auction_offers_item" data-accordion-item><a class="auction_offers_button" href="#"></a>
+                  <div class="auction_offers_item_top"><span class="auction_offers_item_content">
                       <p class="auction_offers_item_title">ООО «Компания ЭКОАРТ»</p>
                       <ul class="auction_block_list">
                         <li><span>Дата и время подачи:</span> 
                           21.10.2019 10:47
                         </li>
                       </ul></span><span class="auction_offers_item_actions"><b class="auction_offers_item_price">800 680 ₽</b>
-                      <p class="auction_offers_item_status auction_offers_item_status--accepted">Принято</p></span></a>
+                      <p class="auction_offers_item_status auction_offers_item_status--accepted">Принято</p></span></div>
                   <ul class="auction_block_list" data-tab-content>
                     <li><span>Вложения:</span> <a href="#" target="_blank">КП.pdf</a></li>
                     <li><span>Комментарий:</span> 
@@ -377,6 +381,127 @@
               </ul>
             </div>
           </section>
+        </div>
+        <div class="reveal reveal--subs_management reveal--bet" id="placeBet" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Сделать ставку</h2>
+          <p class="reveal_descr">Участие в данном Торге осуществляется в соответствие с тарифами площадки.<br>До выбора победителя мы захолдируем на Вашем кошельке денежные средства в размере:</p>
+          <div class="reveal_success_sum">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="45">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+            </svg><span>Сумма к пополнению<b>170,38 ₽</b></span>
+          </div>
+          <form class="reveal_form">
+            <input type="text" name="code" placeholder="Код из смс" required>
+            <button class="button flat">Подтвердить</button>
+            <button class="button flat hollow">Запросить код</button>
+          </form>
+          <p class="reveal_status">
+            Запросить новый код возможно через
+             <span>120</span> 
+            сек
+          </p>
+          <div class="reveal_buttons">
+            <button class="button hollow large alert" data-open="betInsufficient">Отменить операцию</button>
+          </div>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="reveal reveal--success" id="betSuccess" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Сделать ставку</h2>
+          <p class="reveal_descr">Ставка принята</p>
+          <div class="reveal_success">
+            <div class="reveal_success_sum">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#pay"></use>
+              </svg><span>Сумма:<b>170,38 ₽</b></span>
+            </div>
+            <button class="button large" data-close>ОК</button>
+          </div>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="reveal reveal--subs_management" id="betInsufficient" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Сделать ставку</h2>
+          <p class="reveal_descr">Участие в данном Торге осуществляется в соответствие с тарифами площадки.<br>До выбора победителя мы захолдируем на Вашем кошельке денежные средства в размере:</p>
+          <div class="reveal_success">
+            <div class="reveal_success_sum">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="45">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#bill"></use>
+              </svg><span>Сумма к пополнению<b>170,38 ₽</b></span>
+            </div>
+            <button class="button large" data-open="betDetails">Пополнить кошелек</button>
+          </div>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="reveal reveal--details" id="betDetails" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+          <h2>Сделать ставку</h2>
+          <p class="reveal_descr">Заполните реквизиты для пополнения счета</p>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">ФИО участника:
+            </div>
+            <div class="wallet_withdrawal_field_value">Иванов Иван Иванович
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Номер телефона:
+            </div>
+            <div class="wallet_withdrawal_field_value">+7 985 443 45 69
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Наименование компании:
+            </div>
+            <div class="wallet_withdrawal_field_value">ООО РОГА И КОПЫТА
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">ИНН:
+            </div>
+            <div class="wallet_withdrawal_field_value">7842170471
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">Банк получателя:
+            </div>
+            <div class="wallet_withdrawal_field_value">Банк ВТБ (ПАО)
+            </div>
+          </div>
+          <div class="wallet_withdrawal_field">
+            <div class="wallet_withdrawal_field_label">БИК:
+            </div>
+            <div class="wallet_withdrawal_field_value">044525745
+            </div>
+          </div>
+          <form class="form form--bet" action="">
+            <div class="form_input">
+              <input type="text" name="kpp" placeholder="КПП" required>
+            </div>
+            <div class="form_input">
+              <input type="text" name="account" placeholder="Счет" required>
+            </div>
+            <div class="form_input">
+              <input type="text" name="c_account" placeholder="Корр. счет" required>
+            </div>
+            <div class="form_buttons">
+              <button class="button flat">Отправить</button>
+              <button class="button flat hollow alert" type="button" data-close>Отменить операцию</button>
+            </div>
+          </form>
+          <button class="reveal_close" aria-label="Close" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+              <use fill="currentColor" xlink:href="./assets/img/icons.svg#close"></use>
+            </svg>
+          </button>
         </div>
         <footer class="footer">
           <div class="footer_left">
@@ -460,6 +585,6 @@
             </div>Отчеты</a></li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=c4cbdc9e738c1b943c1bcf167d743eff"></script>
+    <script src="./js/app.min.js?ckcachebust=673c5376b6220c8e2831daf5770eaa79"></script>
   </body>
 </html>

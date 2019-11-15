@@ -79,6 +79,12 @@
             }
         }
     }
+    &--bet{
+        margin-top: 16px;
+        .form_input{
+            margin-bottom: 10px;
+        }
+    }
     &_header{
         margin-bottom: 27px;
         @include breakpoint(small down){
