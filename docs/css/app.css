@@ -7352,6 +7352,12 @@ button {
     .auction--verifier > .auction_block--auction {
   -ms-grid-row: 2;
   -ms-grid-column: 1; }
+    .auction_block--organizer .auction_offers_item {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+    .auction_block--organizer .auction_block_content {
+      padding-top: 0;
+      padding-bottom: 0; }
     .auction_block--discuss {
       -ms-grid-row: 5;
       -ms-grid-column: 1;
@@ -7413,7 +7419,7 @@ button {
         color: #e62632; }
     .auction_block_content {
       position: relative;
-      padding: 20px 20px 40px; }
+      padding: 20px; }
       @media screen and (max-width: 63.99875em) {
         .auction_block_content {
           padding-bottom: 26px; } }
@@ -7889,8 +7895,11 @@ button {
   -ms-grid-column-span: 1; }
     @media screen and (max-width: 63.99875em) {
       .auction_status {
-        padding: 20px 10px 24px;
+        padding: 20px 20px 24px;
         display: block; } }
+    @media screen and (max-width: 39.99875em) {
+      .auction_status {
+        padding: 20px 10px 24px; } }
     .auction_status .order_status {
       -ms-grid-columns: (minmax(72px, 1fr))[6];
       grid-template-columns: repeat(6, minmax(72px, 1fr)); }
@@ -7906,6 +7915,8 @@ button {
               column-gap: 25px;
       margin-bottom: 20px;
       margin-left: 20px; }
+      .auction_status_buttons--participant {
+        display: block; }
       @media screen and (max-width: 63.99875em) {
         .auction_status_buttons {
           margin: 20px auto 0;
@@ -8076,9 +8087,8 @@ button {
         padding: 20px 10px; } }
     .auction_offers_header {
       margin-bottom: 20px; }
-    @media screen and (max-width: 39.99875em) {
-      .auction_offers_form {
-        margin-bottom: 10px; } }
+    .auction_offers_form {
+      margin-bottom: 10px; }
     .auction_offers_buttons {
       display: -ms-grid;
       display: grid;
@@ -8097,7 +8107,7 @@ button {
       list-style: none; }
     .auction_offers_item {
       position: relative;
-      padding: 22px 0;
+      padding: 30px 0;
       padding-right: 13px; }
       @media screen and (max-width: 39.99875em) {
         .auction_offers_item {
@@ -8121,9 +8131,21 @@ button {
       .auction_offers_item_actions {
         text-align: center;
         margin: -7px 0 -7px 20px;
-        position: relative; }
+        position: relative;
+        min-height: 64px;
+        max-width: 111px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+                justify-content: flex-end; }
         .auction_offers_item_actions::after {
           content: '';
+          display: none;
           position: absolute;
           bottom: 14px;
           right: -22px;
@@ -8143,16 +8165,23 @@ button {
               right: -17px; } }
       .auction_offers_item_price {
         font-family: "VTB Group Demi", Helvetica, Roboto, Arial, sans-serif;
-        color: #1f3d82; }
+        color: #1f3d82;
+        margin-bottom: 4px; }
+      .auction_offers_item_fee {
+        font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+        font-size: 10px;
+        color: #acb6c3;
+        white-space: nowrap; }
       .auction_offers_item_status {
         margin: 0;
         border-radius: 3px;
         width: 111px;
         padding: 8px 10px;
         font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
-        margin-top: 12px;
+        margin-top: 8px;
         color: #acb6c3;
-        background: rgba(172, 182, 195, 0.2); }
+        background: rgba(172, 182, 195, 0.2);
+        line-height: normal; }
         .auction_offers_item_status--accepted {
           color: #00aaff;
           background: rgba(0, 170, 255, 0.2); }
@@ -8171,6 +8200,8 @@ button {
       .auction_offers_item.is-active .auction_offers_item_actions::after {
         -webkit-transform: rotate(0);
                 transform: rotate(0); }
+      .auction_offers_item[data-accordion-item] .auction_offers_item_actions::after {
+        display: block; }
     .auction_offers_button {
       position: absolute;
       top: 0;
@@ -8211,6 +8242,31 @@ button {
       @media screen and (max-width: 39.99875em) {
         .auction_buttons .button {
           width: 100%; } }
+  .auction_statuses {
+    position: absolute !important;
+    width: 111px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    list-style: none;
+    margin: 0;
+    border: 1px solid #e9eef6;
+    border-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 300ms, opacity 300ms;
+    transition: visibility 300ms, opacity 300ms;
+    z-index: 3; }
+    .auction_statuses.is-open {
+      opacity: 1;
+      visibility: visible; }
+    .auction_statuses li + li {
+      margin-top: 3px; }
+    .auction_statuses .auction_offers_item_status {
+      width: 100%;
+      font-size: 12px;
+      margin: 0;
+      padding: 5px; }
 
 .register {
   box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);

@@ -3772,6 +3772,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/src/pug/components/_auction_popup.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_auction_popup.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/components/_breadcrumbs.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -3909,6 +3919,16 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/auction-organizer.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/pages/auction-participant.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/auction-participant.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -4072,16 +4092,6 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/src/pug/sections/_auction_old.pug": {
-		"cB": 1,
-		"cOD": 0,
-		"ft": 512,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/_auction_old.html",
-		"oF": 0,
-		"oS": 0
-		},
 	"/src/pug/sections/_auction_organizer.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -4089,6 +4099,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/_auction_organizer.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_auction_participant.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/_auction_participant.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -4600,7 +4620,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-doge",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 595469603.46817398
+	"lastBuiltDate": 595613519.83203304
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

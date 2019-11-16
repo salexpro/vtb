@@ -46,100 +46,12 @@
                             +icon(...status.icon)
                         .order_status_label
                             !=status.label
-        .auction_status_buttons
-            button.button.hollow.large
-                | Выгрузить протокол
-            button.button.large
-                | Сформировать заказ
-            button.button.hollow.large
+        .auction_status_buttons.auction_status_buttons--participant
+            button.button.hollow.flat
                 | Пригласить
-    section.auction_block.auction_block--auction.auction_block--organizer
+    section.auction_block.auction_block--auction
         h1.auction_block_title
-            | Предложения участников
-        .auction_block_content
-            ul.auction_offers_items(data-accordion data-multi-expand="true" data-allow-all-closed="true") 
-                li.auction_offers_item.is-active(data-accordion-item)
-                    a.auction_offers_button(href="#")
-                    .auction_offers_item_top
-                        span.auction_offers_item_content
-                            p.auction_offers_item_title
-                                | ООО «Компания ЭКОАРТ»
-                            ul.auction_block_list
-                                li
-                                    span Дата и время подачи:
-                                    | 
-                                    | 21.10.2019 10:47
-                        span.auction_offers_item_actions
-                            b.auction_offers_item_price
-                                | 607 680 ₽
-                            button.auction_offers_item_status.auction_offers_item_status--winner(data-toggle="aStatus")
-                                | Победитель
-                    ul.auction_block_list(data-tab-content)
-                            li
-                                span Вложения:
-                                | 
-                                a(href="#" target="_blank") КП.pdf
-                            li
-                                span Комментарий:
-                                | 
-                                | Прошу принять мое предложение
-
-                li.auction_offers_item.is-active(data-accordion-item)
-                    a.auction_offers_button(href="#")
-                    .auction_offers_item_top
-                        span.auction_offers_item_content
-                            p.auction_offers_item_title
-                                | ООО «Компания ЭКОАРТ»
-                            ul.auction_block_list
-                                li
-                                    span Дата и время подачи:
-                                    | 
-                                    | 21.10.2019 10:47
-                        span.auction_offers_item_actions
-                            b.auction_offers_item_price
-                                | 800 680 ₽
-                            button.auction_offers_item_status.auction_offers_item_status--declined(data-toggle="aStatus")
-                                | Отклонено
-                    ul.auction_block_list(data-tab-content)
-                            li
-                                span Вложения:
-                                | 
-                                a(href="#" target="_blank") КП.pdf
-                            li
-                                span Комментарий:
-                                | 
-                                | Прошу принять мое предложение
-                    
-                li.auction_offers_item(data-accordion-item)
-                    a.auction_offers_button(href="#")
-                    .auction_offers_item_top
-                        span.auction_offers_item_content
-                            p.auction_offers_item_title
-                                | ООО «Компания ЭКОАРТ»
-                            ul.auction_block_list
-                                li
-                                    span Дата и время подачи:
-                                    | 
-                                    | 21.10.2019 10:47
-                        span.auction_offers_item_actions
-                            b.auction_offers_item_price
-                                | 800 680 ₽
-                            button.auction_offers_item_status.auction_offers_item_status--accepted(data-toggle="aStatus")
-                                | Принято
-                    ul.auction_block_list(data-tab-content)
-                            li
-                                span Вложения:
-                                | 
-                                a(href="#" target="_blank") КП.pdf
-                            li
-                                span Комментарий:
-                                | 
-                                | Прошу принять мое предложение
-
-
-    section.auction_block.auction_block--offers
-        h2.h1.auction_block_title
-            | № 8575
+            | №8575
         .auction_block_content
             ul.auction_block_list
                 li
@@ -229,7 +141,84 @@
                                     span Код позиции по ОКПД2:
                                     | 
                                     | 26.20.11.110
-            
+
+    section.auction_block.auction_block--offers
+        h2.h1.auction_block_title
+            | Предложения участников
+        .auction_block_content
+            form.form.auction_offers_form
+                .form_input.form_input--select
+                    input(type="text" name="cost" placeholder="Стоимость предложения")
+                    select(name="currency")
+                        option RUB
+                        option USD
+                        option EUR
+                .form_input
+                    input(type="text" name="offer" placeholder="Текст предложения")
+                .auction_offers_buttons
+                    input#pOffer(type="file" name="price_offer")
+                    label.button.hollow.large.icon(for="pOffer")
+                        +icon('clip', [14, 14])
+                        | Загрузить ценовое предложение
+                    button.button.large(type="button" data-open="placeBet")
+                        | Сделать ставку
+            ul.auction_offers_items(data-accordion data-multi-expand="true" data-allow-all-closed="true") 
+                li.auction_offers_item.is-active
+                    .auction_offers_item_top
+                        span.auction_offers_item_content
+                            p.auction_offers_item_title
+                                | ООО «Компания ЭКОАРТ»
+                            ul.auction_block_list
+                                li
+                                    span Дата и время подачи:
+                                    | 
+                                    | 21.10.2019 10:47
+                        span.auction_offers_item_actions
+                            p.auction_offers_item_status.auction_offers_item_status--winner
+                                | Победитель
+
+                li.auction_offers_item.is-active
+                    .auction_offers_item_top
+                        span.auction_offers_item_content
+                            p.auction_offers_item_title
+                                | ООО «Компания ЭКОАРТ»
+                            ul.auction_block_list
+                                li
+                                    span Дата и время подачи:
+                                    | 
+                                    | 21.10.2019 10:47
+                        span.auction_offers_item_actions
+                            p.auction_offers_item_status.auction_offers_item_status--declined
+                                | Отклонено
+                    
+                li.auction_offers_item(data-accordion-item)
+                    a.auction_offers_button(href="#")
+                    .auction_offers_item_top
+                        span.auction_offers_item_content
+                            p.auction_offers_item_title
+                                | ООО «Компания ЭКОАРТ»
+                            ul.auction_block_list
+                                li
+                                    span Дата и время подачи:
+                                    | 
+                                    | 21.10.2019 10:47
+                        span.auction_offers_item_actions
+                            b.auction_offers_item_price
+                                | 800 680 ₽
+                            small.auction_offers_item_fee
+                                | Комиссия с ндс: 170,38 ₽
+                            p.auction_offers_item_status.auction_offers_item_status--accepted
+                                | Принято
+                    ul.auction_block_list(data-tab-content)
+                            li
+                                span Вложения:
+                                | 
+                                a(href="#" target="_blank") КП.pdf
+                            li
+                                span Комментарий:
+                                | 
+                                | Прошу принять мое предложение
+
 
     section.auction_block.auction_block--discuss
         h2.h1.auction_block_title
@@ -257,23 +246,3 @@
                                     | 21.10.2019
                             p.auction_discuss_comment-message
                                 | Да, НДС должна быть включена в ставку
-                    
-ul#aStatus.auction_statuses(data-dropdown data-close-on-click="true" data-v-offset="-2")
-    li
-        button.auction_offers_item_status
-            | —
-    li
-        button.auction_offers_item_status.auction_offers_item_status--accepted
-            | Принято
-    li
-        button.auction_offers_item_status.auction_offers_item_status--declined
-            | Отклонено
-    li
-        button.auction_offers_item_status.auction_offers_item_status--processing
-            | В обработке
-    li
-        button.auction_offers_item_status.auction_offers_item_status--moderation
-            | На модерации
-    li
-        button.auction_offers_item_status.auction_offers_item_status--winner
-            | Победитель

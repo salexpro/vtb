@@ -1,0 +1,120 @@
+-
+    const popupFields = [
+            {
+                label: 'ФИО участника:',
+                value: 'Иванов Иван Иванович'
+            },
+            {
+                label: 'Номер телефона:',
+                value: '+7 985 443 45 69'
+            },
+            {
+                label: 'Наименование компании:',
+                value: 'ООО РОГА И КОПЫТА'
+            },
+            {
+                label: 'ИНН:',
+                value: '7842170471'
+            },
+            {
+                label: 'Банк получателя:',
+                value: 'Банк ВТБ (ПАО)'
+            },
+            {
+                label: 'БИК:',
+                value: '044525745'
+            },
+        ]
+
+#placeBet.reveal.reveal--subs_management.reveal--bet(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    h2
+        | Сделать ставку
+    p.reveal_descr
+        | Участие в данном Торге осуществляется в соответствие с тарифами площадки.
+        br
+        | До выбора победителя мы захолдируем на Вашем кошельке денежные средства в размере:
+    .reveal_success_sum
+        +icon('bill', [35, 45])
+        span
+            | Сумма к пополнению
+            b 170,38 ₽
+    form.reveal_form
+        input(type="text" name="code" placeholder="Код из смс" required)
+        button.button.flat
+            | Подтвердить
+        button.button.flat.hollow
+            | Запросить код
+    p.reveal_status
+        | Запросить новый код возможно через
+        | 
+        span 120
+        | 
+        | сек
+    .reveal_buttons
+        button.button.hollow.large.alert(data-open="betInsufficient")
+            | Отменить операцию
+    button.reveal_close(aria-label='Close' data-close)
+        +icon('close', [28, 26])
+
+#betSuccess.reveal.reveal--success(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    h2
+        | Сделать ставку
+    p.reveal_descr
+        | Ставка принята
+    .reveal_success
+        .reveal_success_sum
+            +icon('pay', [40, 40])
+            span
+                | Сумма:
+                b 170,38 ₽
+        button.button.large(data-close)
+            | ОК
+    button.reveal_close(aria-label='Close' data-close)
+        +icon('close', [28, 26])
+
+#betInsufficient.reveal.reveal--subs_management(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    h2
+        | Сделать ставку
+    p.reveal_descr
+        | Участие в данном Торге осуществляется в соответствие с тарифами площадки.
+        br
+        | До выбора победителя мы захолдируем на Вашем кошельке денежные средства в размере:
+    //- .reveal_success
+    .reveal_success_sum
+        +icon('bill', [35, 45])
+        span
+            | Сумма к пополнению
+            b 170,38 ₽
+    .form_buttons
+        button.button.large(data-open="betDetails")
+            | Пополнить кошелек
+        button.button.hollow.large
+            | Продолжить с отсрочкой платежа
+    button.reveal_close(aria-label='Close' data-close)
+        +icon('close', [28, 26])
+
+#betDetails.reveal.reveal--details(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    h2
+        | Сделать ставку
+    p.reveal_descr
+        | Заполните реквизиты для пополнения счета
+    each field in popupFields
+        .wallet_withdrawal_field
+            .wallet_withdrawal_field_label
+                =field.label
+            .wallet_withdrawal_field_value
+                =field.value
+    form.form.form--bet(action="")
+        .form_input
+            input(type="text" name="kpp" placeholder="КПП" required)
+        .form_input
+            input(type="text" name="account" placeholder="Счет" required)
+        .form_input
+            input(type="text" name="c_account" placeholder="Корр. счет" required)
+        .form_buttons
+            button.button.flat
+                | Отправить
+            button.button.flat.hollow.alert(type="button" data-close)
+                | Отменить операцию
+    button.reveal_close(aria-label='Close' data-close)
+        +icon('close', [28, 26])
