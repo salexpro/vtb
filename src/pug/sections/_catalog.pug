@@ -81,108 +81,138 @@ section.catalog
     .catalog_tab_content(data-tabs-content="catalogTabs")
         #catalogGoods.catalog_content.is_active
             #itemsLeft.catalog_left
-                +menu([
-                    {
-                        icon: ['startup', [20, 20]],
-                        title: 'Авиация и космос'
-                    },
-                    {
-                        icon: ['car', [28, 11]],
-                        title: 'Автомобили'
-                    },
-                    {
-                        icon: ['resort', [20, 21]],
-                        title: 'Гостиницы и рестораны',
-                    },
-                    {
-                        icon: ['pickaxe', [23, 22]],
-                        title: 'Добыча полезных ископаемых и бурение'
-                    },
-                    {
-                        icon: ['home', [20, 20]],
-                        title: 'Дом, сад и предметы быта'
-                    },
-                    {
-                        icon: ['password', [20, 23]],
-                        title: 'Защита и безопасность'
-                    },
-                    {
-                        icon: ['cream', [24, 23]],
-                        title: 'Здоровье и красота'
-                    },
-                    {
-                        icon: ['nails', [23, 25]],
-                        title: 'Металлы'
-                    },
-                    {
-                        icon: ['shirt', [22, 19]],
-                        title: 'Одежда, обувь, текстиль и кожа'
-                    },
-                    {
-                        icon: ['handshake', [26, 16]],
-                        title: 'Организация работы бизнеса'
-                    },
-                    {
-                        icon: ['fruits', [27, 22]],
-                        title: 'Продукты питания и напитки'
-                    },
-                    {
-                        icon: ['bowling', [22, 22]],
-                        title: 'Развлечения и досуг'
-                    },
-                    {
-                        icon: ['logs', [23, 22]],
-                        title: 'Сельское хозяйство и лесоводство'
-                    },
-                    {
-                        icon: ['triangle', [23, 22]],
-                        title: 'Строительство',
-                    },
-                    {
-                        icon: ['web', [19, 18]],
-                        title: 'Телекоммуникации и IT'
-                    },
-                    {
-                        icon: ['truck', [25, 16]],
-                        title: 'Транспортировка и грузоперевозки'
-                    },
-                    {
-                        icon: ['box', [20, 20]],
-                        title: 'Упаковка и хранение'
-                    },
-                    {
-                        icon: ['flask', [14, 20]],
-                        title: 'Химия'
-                    },
-                    {
-                        icon: ['coffee', [16, 22]],
-                        title: 'Электротехника и электроника'
-                    },
-                    {
-                        icon: ['city_hall', [22, 23]],
-                        title: 'Социальная сфера, образование'
-                    },
-                    {
-                        icon: ['battery', [25, 21]],
-                        title: 'Другие'
-                    },
-                    {
-                        icon: ['diesel', [16, 22]],
-                        title: 'Нефтепродукты/топливо'
-                    },
-                    {
-                        icon: ['pizza', [23, 19]],
-                        title: 'Услуги'
-                    },
-                    {
-                        icon: ['pacifier', [19, 18]],
-                        title: 'Детские товары'
-                    },
-                    {
-                        icon: ['ribbon', [21, 19]],
-                        title: 'Аксессуары'
-                    }
-                ], true)(class="vertical menu--items")
+                .catalog_left_container
+                    .catalog_left_level(data-level="1")
+                        +menu([
+                            {
+                                icon: ['startup', [20, 20]],
+                                title: 'Авиация и космос'
+                            },
+                            {
+                                icon: ['car', [28, 11]],
+                                title: 'Автомобили'
+                            },
+                            {
+                                icon: ['resort', [20, 21]],
+                                title: 'Гостиницы и рестораны',
+                            },
+                            {
+                                icon: ['pickaxe', [23, 22]],
+                                title: 'Добыча полезных ископаемых и бурение'
+                            },
+                            {
+                                icon: ['home', [20, 20]],
+                                title: 'Дом, сад и предметы быта'
+                            },
+                            {
+                                icon: ['password', [20, 23]],
+                                title: 'Защита и безопасность'
+                            },
+                            {
+                                icon: ['cream', [24, 23]],
+                                title: 'Здоровье и красота'
+                            },
+                            {
+                                icon: ['nails', [23, 25]],
+                                title: 'Металлы'
+                            },
+                            {
+                                icon: ['shirt', [22, 19]],
+                                title: 'Одежда, обувь, текстиль и кожа'
+                            },
+                            {
+                                icon: ['handshake', [26, 16]],
+                                title: 'Организация работы бизнеса'
+                            },
+                            {
+                                icon: ['fruits', [27, 22]],
+                                title: 'Продукты питания и напитки'
+                            },
+                            {
+                                icon: ['bowling', [22, 22]],
+                                title: 'Развлечения и досуг'
+                            },
+                            {
+                                icon: ['logs', [23, 22]],
+                                title: 'Сельское хозяйство и лесоводство'
+                            },
+                            {
+                                icon: ['triangle', [23, 22]],
+                                title: 'Строительство',
+                            },
+                            {
+                                icon: ['web', [19, 18]],
+                                title: 'Телекоммуникации и IT'
+                            },
+                            {
+                                icon: ['truck', [25, 16]],
+                                title: 'Транспортировка и грузоперевозки'
+                            },
+                            {
+                                icon: ['box', [20, 20]],
+                                title: 'Упаковка и хранение'
+                            },
+                            {
+                                icon: ['flask', [14, 20]],
+                                title: 'Химия'
+                            },
+                            {
+                                icon: ['coffee', [16, 22]],
+                                title: 'Электротехника и электроника'
+                            },
+                            {
+                                icon: ['city_hall', [22, 23]],
+                                title: 'Социальная сфера, образование'
+                            },
+                            {
+                                icon: ['battery', [25, 21]],
+                                title: 'Другие'
+                            },
+                            {
+                                icon: ['diesel', [16, 22]],
+                                title: 'Нефтепродукты/топливо'
+                            },
+                            {
+                                icon: ['pizza', [23, 19]],
+                                title: 'Услуги'
+                            },
+                            {
+                                icon: ['pacifier', [19, 18]],
+                                title: 'Детские товары'
+                            },
+                            {
+                                icon: ['ribbon', [21, 19]],
+                                title: 'Аксессуары'
+                            }
+                        ], 2)(class="vertical menu--items")
+
+                    .catalog_left_level(data-level="2")
+                        button.catalog_left_cat(data-level="1")
+                            +icon('arrow_left', [7, 13])
+                            | Категории
+                        p.catalog_left_header
+                            | Строительство
+                        +menu([
+                            {title: 'Оборудование для ванных комнат'},
+                            {title: 'Баки, контейнеры, урны, пепельницы'},
+                            {title: 'Мебель для гостиниц и ресторанов'},
+                            {title: 'Оборудование для кухни'},
+                            {title: 'Информационные стойки, таблички, указатели'},
+                            {title: 'Системы хранения'}
+                        ], 3)(class="menu--category")
+
+                    .catalog_left_level(data-level="3")
+                        button.catalog_left_cat(data-level="2")
+                            +icon('arrow_left', [7, 13])
+                            | Строительство
+                        p.catalog_left_header
+                            | Оборудование для ванных комнат
+                        +menu([
+                            {title: 'Диспансеры'},
+                            {title: 'Зеркала косметические'},
+                            {title: 'Фены для гостиниц'},
+                        ])(class="menu--category")
+
             .catalog_items
                 +filters('top', 'itemsLeft')
                 each item in itemsGoods

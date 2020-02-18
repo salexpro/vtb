@@ -3775,6 +3775,14 @@ button {
   .menu--mobile a {
     padding: 13px 15px; }
 
+.menu--category li {
+  width: 100%; }
+
+.menu--category a {
+  padding: 10px 15px; }
+  .menu--category a::before {
+    display: none; }
+
 .badge {
   font-weight: 700;
   position: absolute;
@@ -5811,7 +5819,8 @@ button {
   .catalog_left {
     -webkit-box-flex: 0;
             flex: 0 0 310px;
-    border-right: 1px solid #f3f7fa; }
+    border-right: 1px solid #f3f7fa;
+    overflow: hidden; }
     @media screen and (max-width: 74.99875em) {
       .catalog_left {
         position: absolute;
@@ -5828,7 +5837,6 @@ button {
         border-radius: 0 0 9px 9px;
         box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
         max-height: calc(100% - 53px);
-        overflow: auto;
         border: 0; }
         .catalog_left.is-open {
           visibility: visible;
@@ -5842,6 +5850,42 @@ button {
       .catalog_left--filters {
         max-width: none;
         width: 100%; } }
+    @media screen and (max-width: 39.99875em) {
+      .catalog_left {
+        max-width: 300px; } }
+    .catalog_left_container {
+      display: -webkit-box;
+      display: flex;
+      -webkit-transition: -webkit-transform 300ms;
+      transition: -webkit-transform 300ms;
+      transition: transform 300ms;
+      transition: transform 300ms, -webkit-transform 300ms; }
+    .catalog_left_level {
+      -webkit-box-flex: 1;
+              flex: 1 1 100%;
+      min-width: 310px; }
+      @media screen and (max-width: 39.99875em) {
+        .catalog_left_level {
+          min-width: 300px; } }
+    .catalog_left_cat {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center;
+      font-size: 18px;
+      padding: 16px 3px;
+      font-weight: 400;
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+      margin: 0 8px 20px;
+      border-bottom: 1px solid #f3f7fa;
+      width: calc(100% - 16px); }
+      .catalog_left_cat svg {
+        margin-right: 10px; }
+    .catalog_left_header {
+      text-transform: uppercase;
+      color: rgba(47, 52, 66, 0.2);
+      font-family: "VTB Group Book", Helvetica, Roboto, Arial, sans-serif;
+      padding: 0 15px; }
   .catalog_items {
     position: relative;
     -webkit-box-flex: 1;

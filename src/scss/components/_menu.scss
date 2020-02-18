@@ -118,4 +118,15 @@
             padding: 13px 15px;
         }
     }
+    &--category{
+        li{
+            width: 100%;
+        }
+        a{
+            padding: 10px 15px;
+            &::before{
+                display: none;
+            }
+        }
+    }
 }

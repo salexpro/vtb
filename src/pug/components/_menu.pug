@@ -1,4 +1,4 @@
-mixin menu(data, mod)
+mixin menu(data, lvl)
     - 
         data = data || [
             {
@@ -47,7 +47,8 @@ mixin menu(data, mod)
     ul.menu&attributes(attributes)
         each item, i in data
             li(class=item.active || (item.link && item.link.includes(page)) ? 'active' : '')
-                a(href=item.link || '#' data-open=(mod && i==2) ? 'catalogCats' : false data-position=(mod && i==2) ? 'right' : false)
-                    .menu_icon
-                        +icon(...item.icon)
+                a(href=item.link || '#' data-level=lvl||false)
+                    if item.icon
+                        .menu_icon
+                            +icon(...item.icon)
                     =item.title

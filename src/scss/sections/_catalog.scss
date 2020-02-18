@@ -93,6 +93,7 @@
         // max-width: 310px;
         flex: 0 0 310px;
         border-right: 1px solid $light-gray;
+        overflow: hidden;
         @include breakpoint(large down){
             position: absolute;
             top: 0 !important;
@@ -107,7 +108,6 @@
             border-radius: 0 0 9px 9px;
             box-shadow: 0 0 25px rgba(107, 118, 131, 0.1);
             max-height: calc(100% - 53px);
-            overflow: auto;
             border: 0;
             &.is-open{
                 visibility: visible;
@@ -124,6 +124,40 @@
                 max-width: none;
                 width: 100%;
             }
+        }
+        @include breakpoint(small down){
+            max-width: 300px;
+        }
+        &_container{
+            display: flex;
+            transition: transform 300ms;
+        }
+        &_level{
+            flex: 1 1 100%;
+            min-width: 310px;
+            @include breakpoint(small down){
+                min-width: 300px;
+            }
+        }
+        &_cat{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            padding: 16px 3px;
+            font-weight: 400;
+            font-family: $book-font-family;
+            margin: 0 8px 20px;
+            border-bottom: 1px solid $light-gray;
+            width: calc(100% - 16px);
+            svg{
+                margin-right: 10px;
+            }
+        }
+        &_header{
+            text-transform: uppercase;
+            color: rgba(47, 52, 66, 0.2);
+            font-family: $book-font-family;
+            padding: 0 15px;
         }
     }
     &_items{

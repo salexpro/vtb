@@ -35,4 +35,12 @@ $('.reveal--bet .reveal_form').submit(e => {
     $('#betSuccess').foundation('open')
 })
 
+const levels = $('.catalog_left .catalog_left_level').length;
+$('.catalog_left_container').css('width', `${levels * 100}%`)
+
+$('.catalog_left [data-level]').click(e => {
+    const level = $(e.target).data('level');
+    $('.catalog_left_container').css('transform', `translateX(-${(level-1) / levels * 100}%)`)
+})
+
 svg4everybody();
